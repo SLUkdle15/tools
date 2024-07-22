@@ -21,9 +21,12 @@ import com.google.api.services.sheets.v4.model.UpdateValuesResponse;
 import com.google.api.services.sheets.v4.model.ValueRange;
 
 import java.io.*;
+import java.nio.file.Path;
 import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 /* class to demonstrate use of Drive files list API */
 public class DriveQuickstart {
@@ -90,8 +93,11 @@ public class DriveQuickstart {
 
         File testcaseAccount = getFileByName(service, "Testcase_Account");
         // duplicate file by ID
-        // String newId = duplicate(service, testcaseAccount.getId());
-        updateSheets(service2, "1khqRrn8fueHc1wxJsvlx_iie1a4ojosQ0VY3p-22G1I");
+        String newId = duplicate(service, testcaseAccount.getId());
+        List<TestResult> testResults = CSVReader.read(Path.of("C:\\Users\\Admin\\Desktop\\projects\\fpt\\tool\\src\\main\\java\\org\\example\\Report.csv"));
+        Map<String, CSVResultType> map = testResults.stream().collect(Collectors.toMap(TestResult::getId, TestResult::getResult));
+        updateSheets(service2, map, newId);
+
     }
 
     private static String duplicate(Drive service, String fileId) throws IOException {
@@ -102,30 +108,53 @@ public class DriveQuickstart {
         return upload.getId();
     }
 
-    private static void updateSheets(Sheets service2, String spreadsheetId) throws IOException {
+    /**
+     * @param service2      Sheet Driver
+     * @param testResults   processed data extracted from csv file
+     * @param spreadsheetId id of sheet want to update
+     * @throws IOException process of updating data from google sheet requires handle this exception
+     */
+    private static void updateSheets(Sheets service2, Map<String, CSVResultType> testResults, String spreadsheetId) throws IOException {
         // default first sheet and max
         final String range = "A:ZZZ";
         ValueRange response = service2.spreadsheets().values()
                 .get(spreadsheetId, range)
                 .execute();
         List<List<Object>> values = response.getValues();
-        String processedRanged = calculateSelectedRow(values);
+        int[] calculatedIndexes = calculateSelectedRow(values);
+        int header = calculatedIndexes[0];
+        int resultColumn = calculatedIndexes[1];
+        int tsIdColumn = calculatedIndexes[2];
         //update
         List<List<Object>> updatedValues = new ArrayList<>();
-        updatedValues.add(new ArrayList<>());// the priority lines
-        updatedValues.add(new ArrayList<>());// the priority lines
-        updatedValues.add(new ArrayList<>() {{
-            add("OK");
-            add(null);
-            add(null);
-            add(null);
-            add(null);
-            add(null);
-            add(null);
-        }});// the priority lines
+        updatedValues.add(new ArrayList<>()); //header
+        for (int i = header; i < values.size(); i++) {
+            List<Object> r = values.get(i);
+            if (r.size() > tsIdColumn) {
+                String testId = r.get(tsIdColumn).toString();
+                if (testResults.containsKey(testId)) {
+                    ExcelResultType resultType = ResultTypeConverter.from(testResults.get(testId));
+                    updatedValues.add(new ArrayList<>() {{
+                        add(resultType.toString());
+                        add(null);
+                        add(null);
+                        add(null);
+                        add(null);
+                        add(null);
+                        add(null);
+                    }});
+                } else {
+                    updatedValues.add(new ArrayList<>());
+                }
+            } else {
+                updatedValues.add(new ArrayList<>());
+            }
+        }
+
         UpdateValuesResponse result;
         try {
             // Updates the values in the specified range.
+            String processedRanged = Character.toString(resultColumn + 65) + calculatedIndexes[0] + ":" + Character.toString(tsIdColumn + 65) + values.size();
             ValueRange body = new ValueRange()
                     .setValues(updatedValues);
             result = service2.spreadsheets().values().update(spreadsheetId, processedRanged, body)
@@ -143,7 +172,7 @@ public class DriveQuickstart {
         }
     }
 
-    private static String calculateSelectedRow(List<List<Object>> values) {
+    private static int[] calculateSelectedRow(List<List<Object>> values) {
         int header = 0;
         int resultColumn = 0;
         int tsIdColumn = 0;
@@ -162,7 +191,7 @@ public class DriveQuickstart {
                 break;
             }
         }
-        return Character.toString(resultColumn + 65) + header + ":" + Character.toString(tsIdColumn + 65) + values.size();
+        return new int[]{header, resultColumn, tsIdColumn};
     }
 
     private static File getFileByName(Drive service, String fileName) throws IOException {
