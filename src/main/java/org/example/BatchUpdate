@@ -1,0 +1,14 @@
+ BatchUpdateSpreadsheetRequest batchRequest = new BatchUpdateSpreadsheetRequest();
+            Request request = new Request();
+            UpdateDimensionPropertiesRequest updateDimensionPropertiesRequest = new UpdateDimensionPropertiesRequest();
+            DimensionProperties properties = new DimensionProperties();
+            properties.setPixelSize(21);
+            updateDimensionPropertiesRequest.setProperties(properties);
+            DimensionRange rangeP = new DimensionRange();
+            rangeP.setDimension("ROWS");
+            rangeP.setStartIndex(0);
+            rangeP.setEndIndex(values.size());
+            updateDimensionPropertiesRequest.setRange(rangeP);
+            request.setUpdateDimensionProperties(updateDimensionPropertiesRequest);
+            batchRequest.setRequests(List.of(request));
+            service2.spreadsheets().batchUpdate(spreadsheetId, batchRequest);

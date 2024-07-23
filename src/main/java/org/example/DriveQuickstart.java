@@ -17,8 +17,7 @@ import com.google.api.services.drive.DriveScopes;
 import com.google.api.services.drive.model.File;
 import com.google.api.services.drive.model.FileList;
 import com.google.api.services.sheets.v4.Sheets;
-import com.google.api.services.sheets.v4.model.UpdateValuesResponse;
-import com.google.api.services.sheets.v4.model.ValueRange;
+import com.google.api.services.sheets.v4.model.*;
 
 import java.io.*;
 import java.nio.file.Path;
@@ -78,33 +77,42 @@ public class DriveQuickstart {
     }
 
     public static void main(String... args) throws IOException, GeneralSecurityException {
-        // Build a new authorized API client service for drive.
-        final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
-        Drive service = new Drive.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
-                .setApplicationName(APPLICATION_NAME)
-                .build();
+        try {
+            String csvLocation = args[0];
+            String fileName = args[1];
 
-        // Build a new authorized API client service for sheet.
-        Sheets service2 =
-                new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
-                        .setApplicationName(APPLICATION_NAME)
-                        .build();
-        //read csv file
+            // Build a new authorized API client service for drive.
+            final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
+            Drive service = new Drive.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
+                    .setApplicationName(APPLICATION_NAME)
+                    .build();
 
-        File testcaseAccount = getFileByName(service, "Testcase_Account");
-        // duplicate file by ID
-        String newId = duplicate(service, testcaseAccount.getId());
-        List<TestResult> testResults = CSVReader.read(Path.of("C:\\Users\\Admin\\Desktop\\projects\\fpt\\tool\\src\\main\\java\\org\\example\\Report.csv"));
-        Map<String, CSVResultType> map = testResults.stream().collect(Collectors.toMap(TestResult::getId, TestResult::getResult));
-        updateSheets(service2, map, newId);
+            // Build a new authorized API client service for sheet.
+            Sheets service2 =
+                    new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
+                            .setApplicationName(APPLICATION_NAME)
+                            .build();
+            //read csv file
 
+            File testcaseAccount = getFileByName(service, fileName);
+            // duplicate file by ID
+            String newId = duplicate(service, testcaseAccount.getId());
+            List<TestResult> testResults = CSVReader.read(Path.of(csvLocation));
+            Map<String, CSVResultType> map = testResults.stream().collect(Collectors.toMap(TestResult::getId, TestResult::getResult));
+            updateSheets(service2, map, newId);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("ArrayIndexOutOfBoundsException caught");
+        }
     }
 
     private static String duplicate(Drive service, String fileId) throws IOException {
         File fileMetadata = new File();
         fileMetadata.setName("abc");
         fileMetadata.setMimeType("application/vnd.google-apps.spreadsheet");
-        File upload = service.files().copy(fileId, fileMetadata).setFields("id").execute();
+        File upload = service.files()
+                .copy(fileId, fileMetadata)
+                .setFields("id")
+                .execute();
         return upload.getId();
     }
 
@@ -126,6 +134,32 @@ public class DriveQuickstart {
         int resultColumn = calculatedIndexes[1];
         int tsIdColumn = calculatedIndexes[2];
         //update
+        List<List<Object>> updatedValues = calculateChange(testResults, header, values, tsIdColumn);
+
+        UpdateValuesResponse result;
+        try {
+            // Updates the values in the specified range.
+            String processedRanged = Character.toString(resultColumn + 65) + calculatedIndexes[0] + ":" + Character.toString(tsIdColumn + 65) + values.size();
+            ValueRange body = new ValueRange()
+                    .setValues(updatedValues);
+            result = service2.spreadsheets().values().update(spreadsheetId, processedRanged, body)
+                    .setValueInputOption("RAW")
+                    .execute();
+            System.out.printf("%d cells updated.", result.getUpdatedCells());
+
+            // Resize
+        } catch (GoogleJsonResponseException e) {
+            // TODO(developer) - handle error appropriately
+            GoogleJsonError error = e.getDetails();
+            if (error.getCode() == 404) {
+                System.out.printf("Spreadsheet not found with id '%s'.\n", spreadsheetId);
+            } else {
+                throw e;
+            }
+        }
+    }
+
+    private static List<List<Object>> calculateChange(Map<String, CSVResultType> testResults, int header, List<List<Object>> values, int tsIdColumn) {
         List<List<Object>> updatedValues = new ArrayList<>();
         updatedValues.add(new ArrayList<>()); //header
         for (int i = header; i < values.size(); i++) {
@@ -150,26 +184,7 @@ public class DriveQuickstart {
                 updatedValues.add(new ArrayList<>());
             }
         }
-
-        UpdateValuesResponse result;
-        try {
-            // Updates the values in the specified range.
-            String processedRanged = Character.toString(resultColumn + 65) + calculatedIndexes[0] + ":" + Character.toString(tsIdColumn + 65) + values.size();
-            ValueRange body = new ValueRange()
-                    .setValues(updatedValues);
-            result = service2.spreadsheets().values().update(spreadsheetId, processedRanged, body)
-                    .setValueInputOption("RAW")
-                    .execute();
-            System.out.printf("%d cells updated.", result.getUpdatedCells());
-        } catch (GoogleJsonResponseException e) {
-            // TODO(developer) - handle error appropriately
-            GoogleJsonError error = e.getDetails();
-            if (error.getCode() == 404) {
-                System.out.printf("Spreadsheet not found with id '%s'.\n", spreadsheetId);
-            } else {
-                throw e;
-            }
-        }
+        return updatedValues;
     }
 
     private static int[] calculateSelectedRow(List<List<Object>> values) {
@@ -202,10 +217,9 @@ public class DriveQuickstart {
                 .execute();
         List<File> files = result.getFiles();
         if (files == null || files.isEmpty()) {
-            System.out.println("No files found.");
-            return new File();
+            throw new FileNotFoundException("No files found.");
         } else {
-            System.out.println("Files:");
+            System.out.println("Files History:");
             for (File file : files) {
                 System.out.printf("%s (%s)\n", file.getName(), file.getId());
             }
