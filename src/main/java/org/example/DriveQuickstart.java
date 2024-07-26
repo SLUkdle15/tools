@@ -80,7 +80,7 @@ public class DriveQuickstart {
         try {
             String csvLocation = args[0];
             String fileName = args[1];
-
+            // System.out.println(StringEscapeUtils.unescapeJava(fileName).equals("Testcase_Đang xem"));
             // Build a new authorized API client service for drive.
             final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
             Drive service = new Drive.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
@@ -93,10 +93,9 @@ public class DriveQuickstart {
                             .setApplicationName(APPLICATION_NAME)
                             .build();
             //read csv file
-
             File testcaseAccount = getFileByName(service, fileName);
             // duplicate file by ID
-            String newId = duplicate(service, testcaseAccount.getId());
+            String newId = duplicate(service, testcaseAccount.getId(), testcaseAccount.getName());
             List<TestResult> testResults = CSVReader.read(Path.of(csvLocation));
             Map<String, CSVResultType> map = testResults.stream().collect(Collectors.toMap(TestResult::getId, TestResult::getResult));
             updateSheets(service2, map, newId);
@@ -105,9 +104,9 @@ public class DriveQuickstart {
         }
     }
 
-    private static String duplicate(Drive service, String fileId) throws IOException {
+    private static String duplicate(Drive service, String fileId, String fileName) throws IOException {
         File fileMetadata = new File();
-        fileMetadata.setName("abc");
+        fileMetadata.setName(fileName + "_" + System.currentTimeMillis());
         fileMetadata.setMimeType("application/vnd.google-apps.spreadsheet");
         File upload = service.files()
                 .copy(fileId, fileMetadata)
