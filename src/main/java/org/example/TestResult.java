@@ -9,14 +9,14 @@ public class TestResult {
     private final String note;
 
     public TestResult(String id, String name, String result, String note) {
-        this.id = id;
+        this.id = id.replaceAll("\\s", "");
         this.name = name;
         this.result = CSVResultType.valueOf(result.toUpperCase(Locale.ROOT));
         this.note = note;
     }
 
     public String getId() {
-        return id.replaceAll("\\s", "");
+        return id;
     }
 
     public String getName() {

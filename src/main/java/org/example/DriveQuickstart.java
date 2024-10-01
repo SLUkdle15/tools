@@ -15,7 +15,6 @@ import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.drive.Drive;
 import com.google.api.services.drive.DriveScopes;
 import com.google.api.services.drive.model.File;
-import com.google.api.services.drive.model.FileList;
 import com.google.api.services.sheets.v4.Sheets;
 import com.google.api.services.sheets.v4.model.*;
 
@@ -79,29 +78,77 @@ public class DriveQuickstart {
     public static void main(String... args) throws IOException, GeneralSecurityException {
         try {
             String csvLocation = args[0];
-            String fileName = args[1];
-            // System.out.println(StringEscapeUtils.unescapeJava(fileName).equals("Testcase_Đang xem"));
+            // String fileName = args[1];
+
             // Build a new authorized API client service for drive.
             final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
             Drive service = new Drive.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
                     .setApplicationName(APPLICATION_NAME)
                     .build();
 
-            // Build a new authorized API client service for sheet.
+            // Build a new authorized  API client service for sheet.
             Sheets service2 =
                     new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
                             .setApplicationName(APPLICATION_NAME)
                             .build();
-            //read csv file
-            File testcaseAccount = getFileByName(service, fileName);
-            // duplicate file by ID
-            String newId = duplicate(service, testcaseAccount.getId(), testcaseAccount.getName());
-            List<TestResult> testResults = CSVReader.read(Path.of(csvLocation));
+            String folderName = "x";
+            //get files from drive
+            File folder = SearchService.getFolder(service, folderName);
+            List<File> files = SearchService.listXLSX(service, folder.getId());
+
+            //create new folder
+            //get system millisecond time
+            String newId = System.currentTimeMillis() + "";
+            File aFolder = createFolder(service, folderName + "_" + newId);
+            List<String> clones = duplicateFiles(service, files, aFolder.getId());
+
+            List<TestResult> testResults = TestResultFactory.readAll(Path.of(csvLocation));
             Map<String, CSVResultType> map = testResults.stream().collect(Collectors.toMap(TestResult::getId, TestResult::getResult));
-            updateSheets(service2, map, newId);
+            System.out.println(map);
+
+            //updateSheets(service2, map, newId);
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("ArrayIndexOutOfBoundsException caught");
         }
+    }
+
+    private static File createFolder(Drive service, String folderName) throws GoogleJsonResponseException {
+        // File's metadata.
+        File fileMetadata = new File();
+        fileMetadata.setName(folderName);
+        fileMetadata.setMimeType("application/vnd.google-apps.folder");
+        try {
+            File file = service.files().create(fileMetadata)
+                    .setFields("id")
+                    .execute();
+            System.out.println("Folder ID: " + file.getId());
+            return file;
+        } catch (GoogleJsonResponseException e) {
+            System.err.println("Unable to create folder: " + e.getDetails());
+            throw e;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    //duplicate multiple files in a folder
+    private static List<String> duplicateFiles(Drive service, List<File> files, String folderId) throws IOException {
+        List<String> newIds = new ArrayList<>();
+        for (File file : files) {
+            System.out.println("Uploading: " + file.getName());
+            File fileMetadata = new File();
+            String name = file.getName();
+            fileMetadata.setParents(List.of(folderId));
+            fileMetadata.setName(name);
+            fileMetadata.setMimeType("application/vnd.google-apps.spreadsheet");
+            File upload = service.files()
+                    .copy(file.getId(), fileMetadata)
+                    .setFields("id")
+                    .execute();
+            newIds.add(upload.getId());
+            System.out.println("DOnE: " + file.getName());
+        }
+        return newIds;
     }
 
     private static String duplicate(Drive service, String fileId, String fileName) throws IOException {
@@ -206,24 +253,6 @@ public class DriveQuickstart {
             }
         }
         return new int[]{header, resultColumn, tsIdColumn};
-    }
-
-    private static File getFileByName(Drive service, String fileName) throws IOException {
-        FileList result = service.files().list()
-                .setQ("name='" + fileName + ".xlsx'")
-                .setPageSize(10)
-                .setFields("nextPageToken, files(id, name)")
-                .execute();
-        List<File> files = result.getFiles();
-        if (files == null || files.isEmpty()) {
-            throw new FileNotFoundException("No files found.");
-        } else {
-            System.out.println("Files History:");
-            for (File file : files) {
-                System.out.printf("%s (%s)\n", file.getName(), file.getId());
-            }
-            return files.get(0);
-        }
     }
 }
 // [END drive_quickstart]
