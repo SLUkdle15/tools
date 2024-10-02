@@ -21,7 +21,7 @@ public class SearchService {
             throw new FileNotFoundException("No files found.");
         } else {
             for (File file : files) {
-                System.out.printf("%s (%s)\n", file.getName(), file.getId());
+                System.out.println("Folder processing: " + file.getName() + " (" + file.getId() + ")" + " contains: ");
             }
             return files.get(0);
         }

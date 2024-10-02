@@ -102,10 +102,11 @@ public class DriveQuickstart {
             List<File> clones = duplicateFiles(service, files, aFolder.getId());
 
             List<SheetUpdateAction> testResults = SheetUpdateActionFactory.from(Path.of(csvLocation), clones);
-            System.out.println("Processing " + testResults.size() + " files");
+            System.out.println("Processing " + testResults.size() + " csv files");
 
             //update sheets
             for (SheetUpdateAction action : testResults) {
+                System.out.println("Updating sheet: " + action.getSheetName());
                 updateSheets(service2, action.getChanges(), action.getSheetId());
             }
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -122,7 +123,7 @@ public class DriveQuickstart {
             File file = service.files().create(fileMetadata)
                     .setFields("id")
                     .execute();
-            System.out.println("Folder ID: " + file.getId());
+            System.out.println("new Folder created with ID: " + file.getId());
             return file;
         } catch (GoogleJsonResponseException e) {
             System.err.println("Unable to create folder: " + e.getDetails());
@@ -167,20 +168,20 @@ public class DriveQuickstart {
         int resultColumn = calculatedIndexes[1];
         int tsIdColumn = calculatedIndexes[2];
         //update
-        List<List<Object>> updatedValues = calculateChange(testResults, header, values, tsIdColumn);
+        List<List<Object>> updatedValues = calculateChange(header + 1, tsIdColumn, testResults, values);
 
         UpdateValuesResponse result;
         try {
             // Updates the values in the specified range.
-            String processedRanged = Character.toString(resultColumn + 65) + calculatedIndexes[0] + ":" + Character.toString(tsIdColumn + 65) + values.size();
+            int starting = header + 1;
+            String processedRanged = Character.toString(resultColumn + 65) + starting + ":" + Character.toString(tsIdColumn + 65) + values.size();
+            System.out.println("Updating range: " + processedRanged);
             ValueRange body = new ValueRange()
                     .setValues(updatedValues);
             result = service2.spreadsheets().values().update(spreadsheetId, processedRanged, body)
                     .setValueInputOption("RAW")
                     .execute();
-            System.out.printf("%d cells updated.", result.getUpdatedCells());
-
-            // Resize
+            System.out.printf("%d cells updated.\n", result.getUpdatedCells());
         } catch (GoogleJsonResponseException e) {
             // TODO(developer) - handle error appropriately
             GoogleJsonError error = e.getDetails();
@@ -192,11 +193,49 @@ public class DriveQuickstart {
         }
     }
 
-    private static List<List<Object>> calculateChange(Map<String, CSVResultType> testResults, int header, List<List<Object>> values, int tsIdColumn) {
+    /**
+     * @param values: sheet data
+     * @return indexes of header row, result column and tags column
+     */
+    private static int[] calculateSelectedRow(List<List<Object>> values) {
+        int header = 0;
+        int resultColumn = 0;
+        int tsIdColumn = 0;
+        for (int i = 0; i < values.size(); i++) {
+            List<Object> row = values.get(i);
+            if (!row.isEmpty() && row.get(0).equals("TC_ID")) {
+                header = i; //contains TC_ID counting from 0
+                for (int j = 0; j < row.size(); j++) {
+                    String column = row.get(j).toString();
+                    if (column.equals("Result")) {
+                        resultColumn = j;
+                    } else if (column.equals("TS_ID")) {
+                        tsIdColumn = j;
+                    }
+                }
+                break;
+            }
+        }
+        return new int[]{header, resultColumn, tsIdColumn};
+    }
+
+    /**
+     * @param testResults
+     * @param starting
+     * @param values
+     * @param tsIdColumn  tags column index (assuming this column always behind result column)
+     *                    Dont need result column index because it is always start from this column
+     * @return 2d list of updated values
+     */
+    private static List<List<Object>> calculateChange(int starting, int tsIdColumn, Map<String, CSVResultType> testResults, List<List<Object>> values) {
         List<List<Object>> updatedValues = new ArrayList<>();
         updatedValues.add(new ArrayList<>()); //header
-        for (int i = header; i < values.size(); i++) {
+
+        //go through each row after header
+        for (int i = starting; i < values.size(); i++) {
             List<Object> r = values.get(i);
+
+            //check if this row has tags column
             if (r.size() > tsIdColumn) {
                 String testId = r.get(tsIdColumn).toString();
                 if (testResults.containsKey(testId)) {
@@ -211,35 +250,13 @@ public class DriveQuickstart {
                         add(null);
                     }});
                 } else {
-                    updatedValues.add(new ArrayList<>());
+                    updatedValues.add(new ArrayList<>()); //skip this row
                 }
             } else {
-                updatedValues.add(new ArrayList<>());
+                updatedValues.add(new ArrayList<>()); //skip this row
             }
         }
         return updatedValues;
-    }
-
-    private static int[] calculateSelectedRow(List<List<Object>> values) {
-        int header = 0;
-        int resultColumn = 0;
-        int tsIdColumn = 0;
-        for (int i = 0; i < values.size(); i++) {
-            List<Object> row = values.get(i);
-            if (!row.isEmpty() && row.get(0).equals("TC_ID")) {
-                header = i + 1;
-                for (int j = 0; j < row.size(); j++) {
-                    String column = row.get(j).toString();
-                    if (column.equals("Result")) {
-                        resultColumn = j;
-                    } else if (column.equals("TS_ID")) {
-                        tsIdColumn = j;
-                    }
-                }
-                break;
-            }
-        }
-        return new int[]{header, resultColumn, tsIdColumn};
     }
 }
 // [END drive_quickstart]
