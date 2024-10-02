@@ -77,7 +77,7 @@ public class DriveQuickstart {
     public static void main(String... args) throws IOException, GeneralSecurityException {
         try {
             String csvLocation = args[0];
-            // String fileName = args[1];
+            String folderName = args[1];
 
             // Build a new authorized API client service for drive.
             final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
@@ -90,7 +90,7 @@ public class DriveQuickstart {
                     new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
                             .setApplicationName(APPLICATION_NAME)
                             .build();
-            String folderName = "x";
+
             //get files from drive
             File folder = SearchService.getFolder(service, folderName);
             List<File> files = SearchService.listXLSX(service, folder.getId());
