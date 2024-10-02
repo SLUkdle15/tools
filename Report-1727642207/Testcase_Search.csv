@@ -1,0 +1,7 @@
+"Tags","Testname","Result","Note"
+"","Kiểm tra chọn vào suggest search","passed",""
+"","Kiểm tra vào màn hình Search khi đã lưu 5 nội dung","passed",""
+"","Kiểm tra nhập text bằng Keyboard ảo","passed",""
+"","Kiểm tra màn hình trả về kết quả giống với input khi nhập 1 ký tự","passed",""
+"","Kiểm tra SL trending search","passed",""
+"","Kiểm tra SL trending VOD","passed",""

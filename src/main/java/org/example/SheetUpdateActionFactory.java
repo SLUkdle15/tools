@@ -11,13 +11,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class TestResultFactory {
+public class SheetUpdateActionFactory {
     /**
      * construct a list of Test Result from a csv file
+     *
      * @param path path of the csv
      * @return list of Test Result objects
      */
-    public static List<TestResult> readFile(Path path) {
+    private static List<TestResult> readFile(Path path) {
         try (Stream<String> s = Files.lines(path)) {
             int initialCapacity = (int) s.count();
             List<TestResult> list = new ArrayList<>(initialCapacity);
@@ -25,7 +26,7 @@ public class TestResultFactory {
             final CSVFormat csvFormat = CSVFormat.Builder.create()
                     .setDelimiter(',')
                     .setHeader(
-                        "id", "name", "result", "notes"
+                            "Tags", "Testname", "Result", "Note"
                     )
                     .setSkipHeaderRecord(true)
                     .build();
@@ -44,12 +45,15 @@ public class TestResultFactory {
     }
 
     //create a function to read multiple csv file from directory
-    public static List<TestResult> readAll(Path directory) {
+    public static List<SheetUpdateAction> from(Path directory) {
         try {
-            List<TestResult> list = new ArrayList<>();
+            List<SheetUpdateAction> list = new ArrayList<>();
             Files.list(directory)
                     .filter(path -> path.toString().endsWith(".csv"))
-                    .forEach(path -> list.addAll(readFile(path)));
+                    .forEach(path -> {
+                        SheetUpdateAction action = new SheetUpdateAction(path.getFileName().toString(), readFile(path));
+                        list.add(action);
+                    });
             return list;
         } catch (IOException e) {
             throw new RuntimeException(e);

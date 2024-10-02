@@ -5,6 +5,7 @@ public class ResultTypeConverter {
         return switch (type) {
             case FAILED -> ExcelResultType.NG;
             case PASSED -> ExcelResultType.OK;
+            case SKIPPED -> ExcelResultType.Cancelled;
         };
     }
 }

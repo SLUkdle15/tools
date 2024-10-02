@@ -1,0 +1,41 @@
+"Tags","Testname","Result","Note"
+"TS_TS_55 ","Player - Seek - Kiểm tra play chương trình timeshift khi seek từ live về timeshift","passed",""
+"TS_TS_56 ","Player - Seek - Kiểm tra play chương trình live khi seek từ timeshift về live","passed",""
+"TS_TS_70 ","Player - Kiểm tra nhấn icon Back khi đang play chương trình timeshift","passed",""
+"TS_TS_71 ","Player - Kiểm tra nhấn icon Back khi đang play chương trình live","passed",""
+"TS_TS_73 ","Player - Kiểm tra nhấn button Trở về đang phát khi đang play chương trình timeshift","passed",""
+"TS_TS_49 ","Timeshift seek - Player - Kiểm tra mở player với kênh không có timeshift seek","passed",""
+"TS_TS_50 ","Timeshift seek - Player - Kiểm tra mở player với kênh có timeshift trường hợp đang ở chương trình live","failed","INFO: Selected Item Info Selected Item: VTV1 HD of Block: Kênh cơ bản
+Actual timeline should contains 00:00:00:10
+"">>>> Actual timeline should contains 00:00:00:10 actual: false ,expect: true
+Check [Player Current Duration in Player Page] present
+"">>>> Check [Player Current Duration in Player Page] present actual: false ,expect: true
+Check [Player Total Duration in Player Page] present
+"">>>> Check [Player Total Duration in Player Page] present actual: false ,expect: true
+Check [Icon Live in Player Page] not present
+"">>>> Check [Icon Live in Player Page] not present actual: true ,expect: false
+Element Player Des in Player Page not null
+"">>>> Element Player Des in Player Page not null actual: false ,expect: true
+Element Player Des in Player Pagenot null check
+"">>>> Element Player Des in Player Pagenot null check actual: false ,expect: true
+Check [Player Des in Player Page] contains text: [Cải cách hành chính: Long An đẩy mạnh thu hút đầu tư] actual Text 
+"">>>> Check [Player Des in Player Page] contains text: [Cải cách hành chính: Long An đẩy mạnh thu hút đầu tư] actual Text  actual: false ,expect: true
+Check [Text [Tat che do xem lai] in Player Page] present
+"">>>> Check [Text [Tat che do xem lai] in Player Page] present actual: false ,expect: true
+Actual timeline should contains 00:00:00:00
+"">>>> Actual timeline should contains 00:00:00:00 actual: false ,expect: true
+Check [Player Current Duration in Player Page] present
+"">>>> Check [Player Current Duration in Player Page] present actual: false ,expect: true
+Check [Player Total Duration in Player Page] present
+"">>>> Check [Player Total Duration in Player Page] present actual: false ,expect: true
+Check [Icon Live in Player Page] not present
+"">>>> Check [Icon Live in Player Page] not present actual: true ,expect: false
+Element Player Des in Player Page not null
+"">>>> Element Player Des in Player Page not null actual: false ,expect: true
+Element Player Des in Player Pagenot null check
+"">>>> Element Player Des in Player Pagenot null check actual: false ,expect: true
+Check [Player Des in Player Page] contains text: [Cải cách hành chính: Long An đẩy mạnh thu hút đầu tư] actual Text 
+"">>>> Check [Player Des in Player Page] contains text: [Cải cách hành chính: Long An đẩy mạnh thu hút đầu tư] actual Text  actual: false ,expect: true
+Check [Text [Tat che do xem lai] in Player Page] present
+"">>>> Check [Text [Tat che do xem lai] in Player Page] present actual: false ,expect: true"
+"TS_TS_51 ","Timeshift seek - Player - Kiểm tra mở player với kênh có timeshift, trường hợp đang ở chương trình timeshift","passed",""

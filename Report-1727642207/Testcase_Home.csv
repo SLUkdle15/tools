@@ -1,0 +1,97 @@
+"Tags","Testname","Result","Note"
+"TS_Home_144 ","Kiểm tra giao diện block Danh mục","failed","Check [Title Img] attribute content-desc contains V-League, actual text attribute: Thể thao
+"">>>> Check [Title Img] attribute content-desc contains V-League, actual text attribute: Thể thao actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Thể thao, actual text attribute: Âm nhạc
+"">>>> Check [Title Img] attribute content-desc contains Thể thao, actual text attribute: Âm nhạc actual: false ,expect: true
+Check [Title Img] attribute content-desc contains NBA, actual text attribute: Phim lẻ
+"">>>> Check [Title Img] attribute content-desc contains NBA, actual text attribute: Phim lẻ actual: false ,expect: true
+Check [Title Img] attribute content-desc contains K+, actual text attribute: Giải trí
+"">>>> Check [Title Img] attribute content-desc contains K+, actual text attribute: Giải trí actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Âm nhạc, actual text attribute: Anime
+"">>>> Check [Title Img] attribute content-desc contains Âm nhạc, actual text attribute: Anime actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Phim lẻ, actual text attribute: Podcast
+"">>>> Check [Title Img] attribute content-desc contains Phim lẻ, actual text attribute: Podcast actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Giải trí, actual text attribute: HBO GO
+"">>>> Check [Title Img] attribute content-desc contains Giải trí, actual text attribute: HBO GO actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Anime, actual text attribute: Học tập
+"">>>> Check [Title Img] attribute content-desc contains Anime, actual text attribute: Học tập actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Podcast, actual text attribute: 4K
+"">>>> Check [Title Img] attribute content-desc contains Podcast, actual text attribute: 4K actual: false ,expect: true
+Check [Title Img] attribute content-desc contains HBO GO, actual text attribute: Galaxy Play
+"">>>> Check [Title Img] attribute content-desc contains HBO GO, actual text attribute: Galaxy Play actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Học tập, actual text attribute: Play Duo
+"">>>> Check [Title Img] attribute content-desc contains Học tập, actual text attribute: Play Duo actual: false ,expect: true
+Check [Title Img] attribute content-desc contains 4K, actual text attribute: Shop Play
+"">>>> Check [Title Img] attribute content-desc contains 4K, actual text attribute: Shop Play actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Galaxy Play, actual text attribute: Speed Test
+"">>>> Check [Title Img] attribute content-desc contains Galaxy Play, actual text attribute: Speed Test actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Play Duo, actual text attribute: Ứng dụng
+"">>>> Check [Title Img] attribute content-desc contains Play Duo, actual text attribute: Ứng dụng actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Shop Play, actual text attribute: Game elofun
+"">>>> Check [Title Img] attribute content-desc contains Shop Play, actual text attribute: Game elofun actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Speed Test, actual text attribute: Game Mobi
+"">>>> Check [Title Img] attribute content-desc contains Speed Test, actual text attribute: Game Mobi actual: false ,expect: true"
+"TS_Home_147 ","Kiểm tra hiển thị khi nhấn vào item Ứng dụng","passed",""
+"TS_Home_148 ","Kiểm tra redirect khi nhấn vào các item trong block Danh mục (trừ item Ứng dụng)","passed",""
+"TS_Home_150 ","Kiểm tra hiển thị của item thuộc chế độ giám sát trẻ em khi được nhấn vào","passed",""
+"TS_Home_71 ","Kiểm tra giao diện block Theo dõi khi chưa đăng nhập tài khoản FPT Play","passed",""
+"TS_Home_70 ","Kiểm tra giao diện block Theo dõi khi đã đăng nhập tài khoản FPT Play, có VOD theo dõi","passed",""
+"TS_Home_74 ","Kiểm tra số lượng item <= số lượng tối đa trong block - Đã đăng nhập tài khoản FPT Play, có VOD Theo dõi","passed",""
+"TS_Home_75 ","Kiểm tra số lượng item > số lượng tối đa trong block - Đã đăng nhập tài khoản FPT Play, có VOD Theo dõi","skipped","----DATA ISSUE ----Data issue: Block Theo dõi having less than 30 items expected [true] but found [false]"
+"TS_Home_76 ","Kiểm tra thao tác click vào item ""Xem tất cả"" thành công - Đã đăng nhập tài khoản FPT Play, có VOD Theo dõi","skipped","----DATA ISSUE ----Data issue: Block Theo dõi having less than 30 items expected [true] but found [false]"
+"TS_Home_77 ","Kiểm tra add thêm item vào block Đang xem đã đăng nhập tài khoản FPT Play/ Kiểm tra remove 1 item ra khỏi block Theo dõi","passed",""
+"TS_Home_78 ","Kiểm tra add thêm item vào block Đang xem đã đăng nhập tài khoản FPT Play/ Kiểm tra remove 1 item ra khỏi block Theo dõi","passed",""
+"TS_Home_46 ","Kiểm tra vị trí block highlight","passed",""
+"TS_Home_151 ","Kiểm tra giao diện block Kênh cá nhân","skipped","----DATA ISSUE ----Api Trang chủ does not return Kênh cá nhân expected [true] but found [false]"
+"TS_Home_154 ","Kiểm tra redirect khi nhấn vào các item trong block Kênh cá nhân - Đối với kênh số 1 - Chưa đăng nhập tài khoản FPT Play","skipped","----DATA ISSUE ----Api Trang chủ does not return Kênh cá nhân expected [true] but found [false]"
+"TS_Home_156 ","Kiểm tra redirect khi nhấn vào các item trong block Kênh cá nhân - Đối với các kênh khác kênh số 1 - Chưa đăng nhập tài khoản FPT Play","skipped","----DATA ISSUE ----Api Trang chủ does not return Kênh cá nhân expected [true] but found [false]"
+"TS_Home_155 ","Kiểm tra redirect khi nhấn vào các item trong block Kênh cá nhân - Đối với kênh số 1 - Đã đăng nhập tài khoản FPT Play","skipped","----DATA ISSUE ----Api Trang chủ does not return Kênh cá nhân expected [true] but found [false]"
+"TS_Home_157 ","Kiểm tra redirect khi nhấn vào các item trong block Kênh cá nhân - Đối với các kênh khác kênh số 1 - Đã đăng nhập tài khoản FPT Play","skipped","----DATA ISSUE ----Api Trang chủ does not return Kênh cá nhân expected [true] but found [false]"
+"TS_ome_0159 TS_Home_161 ","Kiểm tra nhấn chọn 1 kênh thuộc gói MAX khi đăng nhập tài khoản chưa đủ điều kiện","skipped","----DATA ISSUE ----Api Trang chủ does not return Kênh cá nhân expected [true] but found [false]"
+"TS_ome_0159 TS_Home_161 ","Kiểm tra nhấn chọn 1 kênh thuộc gói VIP khi đăng nhập tài khoản chưa đủ điều kiện","skipped","----DATA ISSUE ----Api Trang chủ does not return Kênh cá nhân expected [true] but found [false]"
+"TS_Home_161 ","Kiểm tra nhấn chọn 1 kênh thuộc gói MAX khi đăng nhập tài khoản chưa đủ điều kiện","skipped","----DATA ISSUE ----Api Trang chủ does not return Kênh cá nhân expected [true] but found [false]"
+"TS_Home_161 ","Kiểm tra nhấn chọn 1 kênh thuộc gói VIP khi đăng nhập tài khoản chưa đủ điều kiện","skipped","----DATA ISSUE ----Api Trang chủ does not return Kênh cá nhân expected [true] but found [false]"
+"TS_Home_158 ","Kiểm tra nhấn chọn 1 kênh thuộc gói MAX khi đăng nhập tài khoản đủ điều kiện","skipped","----DATA ISSUE ----Api Trang chủ does not return Kênh cá nhân expected [true] but found [false]"
+"TS_Home_158 ","Kiểm tra nhấn chọn 1 kênh thuộc gói VIP khi đăng nhập tài khoản đủ điều kiện","skipped","----DATA ISSUE ----Api Trang chủ does not return Kênh cá nhân expected [true] but found [false]"
+"TS_Home_160 ","Kiểm tra nhấn chọn 1 kênh thuộc gói MAX khi đăng nhập tài khoản đủ điều kiện","skipped","----DATA ISSUE ----Api Trang chủ does not return Kênh cá nhân expected [true] but found [false]"
+"TS_Home_160 ","Kiểm tra nhấn chọn 1 kênh thuộc gói VIP khi đăng nhập tài khoản đủ điều kiện","skipped","----DATA ISSUE ----Api Trang chủ does not return Kênh cá nhân expected [true] but found [false]"
+"TS_Home_124 ","Kiểm tra giao diện block Top 10 phim bộ trên FPT Play","skipped","----DATA ISSUE ----Api Trang chủ does not return Top 10 phim bộ trên FPT Play expected [true] but found [false]"
+"TS_Home_127 ","Kiểm tra redirect khi nhấn vào 1 item trong block Top 10 phim bộ trên FPT Play","skipped","----DATA ISSUE ----Api Trang chủ does not return Top 10 phim bộ trên FPT Play expected [true] but found [false]"
+"TS_Home_86 ","Kiểm tra giao diện block Sắp công chiếu","skipped","----DATA ISSUE ----Api Trang chủ does not return Sắp công chiếu expected [true] but found [false]"
+"TS_Home_94 ","Kiểm tra khi người dùng thao tác nhấn vào button Nhắc tôi khi chưa đăng nhập tài khoản FPT Play","skipped","----DATA ISSUE ----Api Trang chủ does not return Sắp công chiếu expected [true] but found [false]"
+"TS_Home_93 ","Kiểm tra khi người dùng thao tác nhấn vào button Nhắc tôi khi đã đăng nhập tài khoản FPT Play","skipped","----DATA ISSUE ----Api Trang chủ does not return Sắp công chiếu expected [true] but found [false]"
+"TS_Home_99 ","Kiểm tra giao diện block chứa VOD phim lẻ","passed",""
+"TS_Home_104 ","Kiểm ra redirect khi nhấn 1 item VOD trong block VOD phim bộ, phim lẻ","passed",""
+"TS_Home_110 ","Kiểm tra nhấn chọn 1 item trong block xem tất cả","passed",""
+"TS_Home_111 ","Kiểm tra giao diện block chứa VOD âm nhạc","passed",""
+"TS_Home_112 ","Kiểm tra hiển thị các VOD Âm nhạc khi được hover vào","passed",""
+"TS_Home_114 ","Kiểm tra số lượng item >= 30","skipped","----DATA ISSUE ----Data issue: Block Âm nhạc having less than 30 items expected [true] but found [false]"
+"TS_Home_115 ","Kiểm tra số lượng item < 30","passed",""
+"TS_Home_117 ","Kiểm tra redirect khi nhấn 1 item VOD trong block VOD Âm nhạc - Chưa đăng nhập tài khoản FPT Play","passed",""
+"TS_Home_116 ","Kiểm tra redirect khi nhấn 1 item VOD trong block VOD Âm nhạc - Đã đăng nhập tài khoản FPT Play","passed",""
+"TS_Home_128 ","Kiểm tra giao diện block VOD Mới ra mắt","passed",""
+"TS_Home_131 ","Kiểm tra số lượng item >= 30","skipped","----DATA ISSUE ----Data issue: Block Mới ra mắt having less than 30 items expected [true] but found [false]"
+"TS_Home_132 ","Kiểm tra số lượng item < 30","passed",""
+"TS_Home_117 ","Kiểm tra redirect khi nhấn 1 item VOD trong block VOD Mới ra mắt","passed",""
+"TS_Home_99 ","Kiểm tra giao diện block chứa VOD Phim bộ","passed",""
+"TS_Home_104 ","Kiểm tra giao diện block chứa VOD Phim bộ","passed",""
+"TS_Home_110 ","Kiểm tra nhấn chọn 1 item trong block xem tất cả","skipped","----DATA ISSUE ----Data issue: Block Phim bộ hot having less than 30 items expected [true] but found [false]"
+"TS_Home_111 ","Kiểm tra giao diện block chứa VOD Thể thao","passed",""
+"TS_Home_112 ","Kiểm tra hiển thị các VOD Thể thao khi được hover vào","passed",""
+"TS_Home_114 ","Kiểm tra số lượng item > 30","skipped","----DATA ISSUE ----Data issue: Block Thể thao having less than 30 items expected [true] but found [false]"
+"TS_Home_115 ","Kiểm tra số lượng item <= 30","passed",""
+"TS_Home_117 ","Kiểm tra redirect khi nhấn 1 item VOD trong block VOD Thể thao - Chưa đăng nhập tài khoản FPT Play","passed",""
+"TS_Home_116 ","Kiểm tra redirect khi nhấn 1 item VOD trong block VOD Thể thao - Đã đăng nhập tài khoản FPT Play","passed",""
+"TS_Home_59 ","Kiểm tra giao diện block Đang xem khi chưa đăng nhập tài khoản FPT Play","passed",""
+"TS_Home_58 ","Kiểm tra giao diện block Đang xem khi đã đăng nhập tài khoản FPT Play, có VOD đang xem","passed",""
+"TS_Home_69 ","Kiểm tra nhấn chọn 1 item trong block xem tất cả - Số lượng VOD >=30 items","passed",""
+"TS_Home_62 ","Kiểm tra add thêm item vào block Đang xem đã đăng nhập tài khoản FPT Play","failed","INFO BLOCK CATEGORY: Phim lẻ, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Sài Gòn Trong Cơn Mưa of Block: Phim lẻ
+ERROR: Cannot find [Label [Title] in VOD Detail Page]"
+"TS_Home_05 ","Kiểm tra hiển thị trang chủ từ 1 trang nội dung khác","passed",""
+"TS_Home_09 ","Kiểm tra giao diện ở Top Left navigation bar","passed",""
+"TS_Home_12 ","Kiểm tra behavior nhấn vào mục Truyền hình - Chưa đăng nhập tài khoản FPT Play","passed",""
+"TS_Home_14 ","Kiểm tra behavior nhấn vào mục Truyền hình - Đã đăng nhập tài khoản FPT Play, đã play kênh lúc trước","passed",""
+"TS_Home_28 ","Kiểm tra focus vào icon Mega","passed",""
+"TS_Home_13 ","Kiểm tra behavior nhấn vào mục Truyền hình - Đã đăng nhập tài khoản FPT Play, chưa play kênh nào lúc trước","passed",""
+"TS_Home_31 ","Kiểm tra behavior khi nhấn vào mục đã set chế độ giám sát trẻ em","passed",""

@@ -1,0 +1,11 @@
+"TS_PL_03 ","Kiểm tra số lượng VODs hiển thị trên thumbnail với tag name bên trong Detail Playlist","passed",""
+"TS_PL_26 ","Kiểm tra auto next VOD","passed",""
+"TS_PL_54 ","Kiểm tra hiển thị màn hình next playlist - VOD có set credit","failed","INFO BLOCK CATEGORY: Trung Thu, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Tổng hợp các thể loại VOD of Block: Trung Thu
+Check [Button [Tap tiep theo] in Player Page] present
+"">>>> Check [Button [Tap tiep theo] in Player Page] present actual: false ,expect: true"
+"TS_PL_55 ","Kiểm tra hiển thị màn hình next playlist - VOD không có set credit","passed",""
+"TS_PL_62 ","Kiểm tra nhấn chọn button Xem ngay ở màn hình next playlist trong thời gian countdown 5s","failed","INFO BLOCK CATEGORY: Âm nhạc, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Lòng Em Tội Lỗi of Block: Âm nhạc
+Check [Text Player Title in Player Page] has text: [Đời Và Tiền], actual Text: Phận Buồn Dang Dở
+"">>>> Check [Text Player Title in Player Page] has text: [Đời Và Tiền], actual Text: Phận Buồn Dang Dở actual: Phận Buồn Dang Dở ,expect: Đời Và Tiền"

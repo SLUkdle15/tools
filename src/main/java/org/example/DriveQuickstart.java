@@ -24,7 +24,6 @@ import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 /* class to demonstrate use of Drive files list API */
 public class DriveQuickstart {
@@ -99,12 +98,11 @@ public class DriveQuickstart {
             //create new folder
             //get system millisecond time
             String newId = System.currentTimeMillis() + "";
-            File aFolder = createFolder(service, folderName + "_" + newId);
-            List<String> clones = duplicateFiles(service, files, aFolder.getId());
+            //File aFolder = createFolder(service, folderName + "_" + newId);
+            //List<File> clones = duplicateFiles(service, files, aFolder.getId());
 
-            List<TestResult> testResults = TestResultFactory.readAll(Path.of(csvLocation));
-            Map<String, CSVResultType> map = testResults.stream().collect(Collectors.toMap(TestResult::getId, TestResult::getResult));
-            System.out.println(map);
+            List<SheetUpdateAction> testResults = SheetUpdateActionFactory.from(Path.of(csvLocation));
+            System.out.println("Processing " + testResults.size() + " files");
 
             //updateSheets(service2, map, newId);
         } catch (ArrayIndexOutOfBoundsException e) {
@@ -132,8 +130,8 @@ public class DriveQuickstart {
     }
 
     //duplicate multiple files in a folder
-    private static List<String> duplicateFiles(Drive service, List<File> files, String folderId) throws IOException {
-        List<String> newIds = new ArrayList<>();
+    private static List<File> duplicateFiles(Drive service, List<File> files, String folderId) throws IOException {
+        List<File> newIds = new ArrayList<>();
         for (File file : files) {
             System.out.println("Uploading: " + file.getName());
             File fileMetadata = new File();
@@ -145,27 +143,16 @@ public class DriveQuickstart {
                     .copy(file.getId(), fileMetadata)
                     .setFields("id")
                     .execute();
-            newIds.add(upload.getId());
+            newIds.add(upload);
             System.out.println("DOnE: " + file.getName());
         }
         return newIds;
     }
 
-    private static String duplicate(Drive service, String fileId, String fileName) throws IOException {
-        File fileMetadata = new File();
-        fileMetadata.setName(fileName + "_" + System.currentTimeMillis());
-        fileMetadata.setMimeType("application/vnd.google-apps.spreadsheet");
-        File upload = service.files()
-                .copy(fileId, fileMetadata)
-                .setFields("id")
-                .execute();
-        return upload.getId();
-    }
-
     /**
      * @param service2      Sheet Driver
      * @param testResults   processed data extracted from csv file
-     * @param spreadsheetId id of sheet want to update
+     * @param spreadsheetId id of sheet want to update/ file id
      * @throws IOException process of updating data from google sheet requires handle this exception
      */
     private static void updateSheets(Sheets service2, Map<String, CSVResultType> testResults, String spreadsheetId) throws IOException {

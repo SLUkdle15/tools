@@ -1,5 +1,5 @@
 package org.example;
 
 public enum  CSVResultType {
-    PASSED, FAILED
+    PASSED, FAILED, SKIPPED
 }

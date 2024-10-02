@@ -3,24 +3,24 @@ package org.example;
 import java.util.Locale;
 
 public class TestResult {
-    private final String id;
-    private final String name;
+    private final String tags;
+    private final String testName;
     private final CSVResultType result;
     private final String note;
 
-    public TestResult(String id, String name, String result, String note) {
-        this.id = id.replaceAll("\\s", "");
-        this.name = name;
+    public TestResult(String tags, String name, String result, String note) {
+        this.tags = tags.replaceAll("\\s", "");
+        this.testName = name;
         this.result = CSVResultType.valueOf(result.toUpperCase(Locale.ROOT));
         this.note = note;
     }
 
-    public String getId() {
-        return id;
+    public String getTags() {
+        return tags;
     }
 
-    public String getName() {
-        return name;
+    public String getTestName() {
+        return testName;
     }
 
     public CSVResultType getResult() {
