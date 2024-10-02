@@ -5,12 +5,16 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class SheetUpdateAction {
-    private final String csvFileName;
+    private final String sheetId;
     private final List<TestResult> changes;
 
-    public SheetUpdateAction(String csvFileName, List<TestResult> changes) {
-        this.csvFileName = csvFileName;
+    public SheetUpdateAction(String sheetId, List<TestResult> changes) {
+        this.sheetId = sheetId;
         this.changes = changes;
+    }
+
+    public String getSheetId() {
+        return sheetId;
     }
 
     public Map<String, CSVResultType> getChanges() {

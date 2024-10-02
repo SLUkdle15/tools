@@ -1,5 +1,6 @@
 package org.example;
 
+import com.google.api.services.drive.model.File;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 
@@ -9,6 +10,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class SheetUpdateActionFactory {
@@ -45,13 +48,17 @@ public class SheetUpdateActionFactory {
     }
 
     //create a function to read multiple csv file from directory
-    public static List<SheetUpdateAction> from(Path directory) {
+    public static List<SheetUpdateAction> from(Path directory, List<File> excelFiles) {
+        Map<String, File> excelFileMap = excelFiles.stream().collect(Collectors.toMap(File::getName, file -> file));
+
         try {
             List<SheetUpdateAction> list = new ArrayList<>();
             Files.list(directory)
                     .filter(path -> path.toString().endsWith(".csv"))
                     .forEach(path -> {
-                        SheetUpdateAction action = new SheetUpdateAction(path.getFileName().toString(), readFile(path));
+                        File excelFile = excelFileMap.get(FileNameMapping.fileCSVToExcel(path.getFileName().toString()));
+                        System.out.println(path.getFileName().toString());
+                        SheetUpdateAction action = new SheetUpdateAction(excelFile.getId(), readFile(path));
                         list.add(action);
                     });
             return list;

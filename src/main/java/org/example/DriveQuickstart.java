@@ -98,13 +98,16 @@ public class DriveQuickstart {
             //create new folder
             //get system millisecond time
             String newId = System.currentTimeMillis() + "";
-            //File aFolder = createFolder(service, folderName + "_" + newId);
-            //List<File> clones = duplicateFiles(service, files, aFolder.getId());
+            File aFolder = createFolder(service, folderName + "_" + newId);
+            List<File> clones = duplicateFiles(service, files, aFolder.getId());
 
-            List<SheetUpdateAction> testResults = SheetUpdateActionFactory.from(Path.of(csvLocation));
+            List<SheetUpdateAction> testResults = SheetUpdateActionFactory.from(Path.of(csvLocation), clones);
             System.out.println("Processing " + testResults.size() + " files");
 
-            //updateSheets(service2, map, newId);
+            //update sheets
+            for (SheetUpdateAction action : testResults) {
+                updateSheets(service2, action.getChanges(), action.getSheetId());
+            }
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("ArrayIndexOutOfBoundsException caught");
         }
@@ -139,12 +142,9 @@ public class DriveQuickstart {
             fileMetadata.setParents(List.of(folderId));
             fileMetadata.setName(name);
             fileMetadata.setMimeType("application/vnd.google-apps.spreadsheet");
-            File upload = service.files()
-                    .copy(file.getId(), fileMetadata)
-                    .setFields("id")
-                    .execute();
+            File upload = service.files().copy(file.getId(), fileMetadata).setFields("id, name").execute();
             newIds.add(upload);
-            System.out.println("DOnE: " + file.getName());
+            System.out.println("DOnE: " + upload.getName() + ", id: " + upload.getId());
         }
         return newIds;
     }
