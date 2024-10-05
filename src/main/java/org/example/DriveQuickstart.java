@@ -101,16 +101,20 @@ public class DriveQuickstart {
             File aFolder = createFolder(service, folderName + "_" + newId);
             List<File> clones = duplicateFiles(service, files, aFolder.getId());
 
-            List<SheetUpdateAction> testResults = SheetUpdateActionFactory.from(Path.of(csvLocation), clones);
-            System.out.println("Processing " + testResults.size() + " csv files");
-
-            //update sheets
-            for (SheetUpdateAction action : testResults) {
-                System.out.println("Updating sheet: " + action.getSheetName());
-                updateSheets(service2, action.getChanges(), action.getSheetId());
-            }
+            update(csvLocation, clones, service2);
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("ArrayIndexOutOfBoundsException caught");
+        }
+    }
+
+    private static void update(String csvLocation, List<File> clones, Sheets service2) throws IOException {
+        List<SheetUpdateAction> testResults = SheetUpdateActionFactory.from(Path.of(csvLocation), clones);
+        System.out.println("Processing " + testResults.size() + " csv files");
+
+        //update sheets
+        for (SheetUpdateAction action : testResults) {
+            System.out.println("Updating sheet: " + action.getSheetName());
+            updateSheets(service2, action.getChanges(), action.getSheetId());
         }
     }
 
@@ -121,9 +125,9 @@ public class DriveQuickstart {
         fileMetadata.setMimeType("application/vnd.google-apps.folder");
         try {
             File file = service.files().create(fileMetadata)
-                    .setFields("id")
+                    .setFields("id, name")
                     .execute();
-            System.out.println("new Folder created with ID: " + file.getId());
+            System.out.println("new Folder created with ID: " + file.getId() + ", name: " + file.getName());
             return file;
         } catch (GoogleJsonResponseException e) {
             System.err.println("Unable to create folder: " + e.getDetails());
@@ -133,7 +137,7 @@ public class DriveQuickstart {
         }
     }
 
-    //duplicate multiple files in a folder
+    //duplicate multiple files in a folder and convert them to google sheet
     private static List<File> duplicateFiles(Drive service, List<File> files, String folderId) throws IOException {
         List<File> newIds = new ArrayList<>();
         for (File file : files) {

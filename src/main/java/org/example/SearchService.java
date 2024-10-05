@@ -27,10 +27,12 @@ public class SearchService {
         }
     }
 
-    //create a function list all files xlsx in a folder
+    //create a function list all files xlsx and google sheet in a folder
     static List<File> listXLSX(Drive service, String folderId) throws IOException {
+        String mimeType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+        String mimeType2 = "application/vnd.google-apps.spreadsheet";
         FileList result = service.files().list()
-                .setQ("'" + folderId + "' in parents and mimeType='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'")
+                .setQ("'" + folderId + "' in parents and (mimeType='" + mimeType + "' or mimeType='" + mimeType2 + "')")
                 .setSpaces("drive")
                 .execute();
         List<File> files = result.getFiles();
