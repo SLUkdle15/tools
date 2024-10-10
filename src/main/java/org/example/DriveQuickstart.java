@@ -77,7 +77,9 @@ public class DriveQuickstart {
     public static void main(String... args) throws IOException, GeneralSecurityException {
         try {
             String csvLocation = args[0];
-            String folderName = args[1];
+            //get the csv file name at the end of the path
+            String parentId = "1leW8tih4ct-axPkhfkW9mh5WiHwOqlB3";
+            String clonesName = Path.of(csvLocation).getFileName().toString().replace(".csv", "");
 
             // Build a new authorized API client service for drive.
             final NetHttpTransport HTTP_TRANSPORT = GoogleNetHttpTransport.newTrustedTransport();
@@ -90,18 +92,20 @@ public class DriveQuickstart {
                     new Sheets.Builder(HTTP_TRANSPORT, JSON_FACTORY, getCredentials(HTTP_TRANSPORT))
                             .setApplicationName(APPLICATION_NAME)
                             .build();
+            //check if the testResult exists
+            File testResultFolder = SearchService.getFolder(service, clonesName, parentId);
+            if (testResultFolder == null) {
+                testResultFolder = SearchService.getFolder(service, "TestReport", parentId);
+                List<File> xlsxs = SearchService.listXLSX(service, testResultFolder.getId());
 
-            //get files from drive
-            File folder = SearchService.getFolder(service, folderName);
-            List<File> files = SearchService.listXLSX(service, folder.getId());
-
-            //create new folder
-            //get system millisecond time
-            String newId = System.currentTimeMillis() + "";
-            File aFolder = createFolder(service, folderName + "_" + newId);
-            List<File> clones = duplicateFiles(service, files, aFolder.getId());
-
-            update(csvLocation, clones, service2);
+                //create new folder in shared folder
+                File aFolder = createFolder(service, clonesName, parentId);
+                List<File> clones = duplicateFiles(service, xlsxs, aFolder.getId());
+                update(csvLocation, clones, service2);
+            } else {
+                List<File> xlsxs = SearchService.listXLSX(service, testResultFolder.getId());
+                update(csvLocation, xlsxs, service2);
+            }
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("ArrayIndexOutOfBoundsException caught");
         }
@@ -118,9 +122,10 @@ public class DriveQuickstart {
         }
     }
 
-    private static File createFolder(Drive service, String folderName) throws GoogleJsonResponseException {
+    private static File createFolder(Drive service, String folderName, String parentId) throws GoogleJsonResponseException {
         // File's metadata.
         File fileMetadata = new File();
+        fileMetadata.setParents(List.of(parentId));
         fileMetadata.setName(folderName);
         fileMetadata.setMimeType("application/vnd.google-apps.folder");
         try {
@@ -264,3 +269,8 @@ public class DriveQuickstart {
     }
 }
 // [END drive_quickstart]
+
+/**
+ * note 1: tss id phai dung
+ * note 2: format is messup
+ */

@@ -56,9 +56,11 @@ public class SheetUpdateActionFactory {
             Files.list(directory)
                     .filter(path -> path.toString().endsWith(".csv"))
                     .forEach(path -> {
-                        File excelFile = excelFileMap.get(FileNameMapping.fileCSVToExcel(path.getFileName().toString()));
-                        SheetUpdateAction action = new SheetUpdateAction(excelFile.getId(), excelFile.getName(), readFile(path));
-                        list.add(action);
+                        File excelFile = excelFileMap.getOrDefault(FileNameMapping.fileCSVToExcel(path.getFileName().toString()), null);
+                       if(excelFile != null) {
+                           SheetUpdateAction action = new SheetUpdateAction(excelFile.getId(), excelFile.getName(), readFile(path));
+                           list.add(action);
+                       }
                     });
             return list;
         } catch (IOException e) {

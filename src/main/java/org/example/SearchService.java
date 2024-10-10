@@ -9,16 +9,15 @@ import java.io.IOException;
 import java.util.List;
 
 public class SearchService {
-
-    //create a function to get folder by name
-    static File getFolder(Drive service, String folderName) throws IOException {
+    //get Folder by its parent id
+    static File getFolder(Drive service, String folderName, String parentId) throws IOException {
         FileList result = service.files().list()
-                .setQ("mimeType='application/vnd.google-apps.folder' and name='" + folderName + "'")
-                .setSpaces("drive")
+                .setQ("mimeType='application/vnd.google-apps.folder' and name='" + folderName + "' and '" + parentId + "' in parents and trashed=false")
+                .setSupportsAllDrives(true)
                 .execute();
         List<File> files = result.getFiles();
         if (files == null || files.isEmpty()) {
-            throw new FileNotFoundException("No files found.");
+            return null;
         } else {
             for (File file : files) {
                 System.out.println("Folder processing: " + file.getName() + " (" + file.getId() + ")" + " contains: ");
