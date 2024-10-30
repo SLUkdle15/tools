@@ -1,0 +1,20 @@
+"Tags","Testname","Result","Note"
+"TS_TC_55 ","Tập 1 xem free, next qua tập 2","failed","ERROR: Cannot find [Left menu [HGV] in Homepage]"
+"TS_TC_56 ","Tập 1 xem free, next qua tập 2, ấn back trên remote","failed","ERROR: Cannot find [Left menu [HGV] in Homepage]"
+"TS_TC_58 ","Đang play phim có preview, chọn lại chính tập đó","failed","ERROR: Cannot find [Left menu [HGV] in Homepage]"
+"TS_TC_25 ","Kiểm tra giao diện player khi ấn vào button Đăng ký, chọn gói bất kỳ và đăng nhập thành công","failed","Element Option 'Mở rộng' in menu not null
+"">>>> Element Option 'Mở rộng' in menu not null actual: false ,expect: true"
+"TS_TC_26 ","Kiểm tra giao diện player khi ấn vào button Đăng ký, chọn gói bất kỳ và Thanh toán thành công","failed","Element Option 'Mở rộng' in menu not null
+"">>>> Element Option 'Mở rộng' in menu not null actual: false ,expect: true"
+"TS_TC_29 ","Kiểm tra giao diện player sau khi snackbar biến mất","failed","ERROR: Cannot find [Left menu [HGV] in Homepage]"
+"TS_TC_35 ","Kiểm tra giao diện player sau khi snackbar biến mất, seek tới lui","failed","Element Option 'Mở rộng' in menu not null
+"">>>> Element Option 'Mở rộng' in menu not null actual: false ,expect: true"
+"TS_TC_38 ","Kiểm tra giao diện player khi xem hết 5p","failed","ERROR: Cannot find [Left menu [HGV] in Homepage]"
+"TS_TC_71 ","Snack Bar - Kiểm tra khi ấn vào button đăng ký snackbar","failed","Element Option 'Mở rộng' in menu not null
+"">>>> Element Option 'Mở rộng' in menu not null actual: false ,expect: true"
+"TS_TC_74 ","Player control - Kiểm tra khi ấn vào button đăng ký ở player","failed","Element Option 'Mở rộng' in menu not null
+"">>>> Element Option 'Mở rộng' in menu not null actual: false ,expect: true"
+"TS_TC_77 ","Giao diện khi xem hết 5p - Kiểm tra khi ấn vào button đăng ký","failed","ERROR: Cannot find [Category Block Danh mục]"
+"TS_TC_52 ","Kiểm tra giao diện player khi xem hết 5p khi login tài khoản không có gói phù hợp","passed",""
+"TS_TC_04 ","Kiểm tra khi ấn vào button xem ngay khi chưa login - phim có set preview","skipped","----DATA ISSUE ----Not found VOD required RANDOM WITH_PREVIEW VOD expected [true] but found [false]"
+"TS_TC_05 ","Kiểm tra khi ấn vào button xem ngay khi chưa login - phim không set preview","passed",""

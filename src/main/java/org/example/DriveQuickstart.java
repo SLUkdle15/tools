@@ -11,6 +11,7 @@ import com.google.api.client.googleapis.json.GoogleJsonResponseException;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.gson.GsonFactory;
+import com.google.api.client.util.Data;
 import com.google.api.client.util.store.FileDataStoreFactory;
 import com.google.api.services.drive.Drive;
 import com.google.api.services.drive.DriveScopes;
@@ -118,7 +119,7 @@ public class DriveQuickstart {
         //update sheets
         for (SheetUpdateAction action : testResults) {
             System.out.println("Updating sheet: " + action.getSheetName());
-            updateSheets(service2, action.getChanges(), action.getSheetId());
+            updateSheets(service2, action.getTestResults(), action.getSheetId());
         }
     }
 
@@ -165,7 +166,7 @@ public class DriveQuickstart {
      * @param spreadsheetId id of sheet want to update/ file id
      * @throws IOException process of updating data from google sheet requires handle this exception
      */
-    private static void updateSheets(Sheets service2, Map<String, CSVResultType> testResults, String spreadsheetId) throws IOException {
+    private static void updateSheets(Sheets service2, Map<String, TestResult> testResults, String spreadsheetId) throws IOException {
         // default first sheet and max
         final String range = "A:ZZZ";
         ValueRange response = service2.spreadsheets().values()
@@ -174,16 +175,17 @@ public class DriveQuickstart {
         List<List<Object>> values = response.getValues();
         int[] calculatedIndexes = calculateSelectedRow(values);
         int header = calculatedIndexes[0];
-        int resultColumn = calculatedIndexes[1];
+        int resultColumn = calculatedIndexes[1]; //first
         int tsIdColumn = calculatedIndexes[2];
+        int noteIdColumn = calculatedIndexes[3]; //end
         //update
-        List<List<Object>> updatedValues = calculateChange(header + 1, tsIdColumn, testResults, values);
+        List<List<Object>> updatedValues = calculateChange(header + 1, resultColumn, tsIdColumn, noteIdColumn, testResults, values);
 
         UpdateValuesResponse result;
         try {
             // Updates the values in the specified range.
             int starting = header + 1;
-            String processedRanged = Character.toString(resultColumn + 65) + starting + ":" + Character.toString(tsIdColumn + 65) + values.size();
+            String processedRanged = Character.toString(resultColumn + 65) + starting + ":" + Character.toString(noteIdColumn + 65) + values.size();
             System.out.println("Updating range: " + processedRanged);
             ValueRange body = new ValueRange()
                     .setValues(updatedValues);
@@ -210,9 +212,11 @@ public class DriveQuickstart {
         int header = 0;
         int resultColumn = 0;
         int tsIdColumn = 0;
+        int noteColumn = 0;
+
         for (int i = 0; i < values.size(); i++) {
             List<Object> row = values.get(i);
-            if (!row.isEmpty() && row.get(0).equals("TC_ID")) {
+            if (!row.isEmpty() && row.get(0).equals("TC_ID")) { //assuming Note is the final column
                 header = i; //contains TC_ID counting from 0
                 for (int j = 0; j < row.size(); j++) {
                     String column = row.get(j).toString();
@@ -220,12 +224,14 @@ public class DriveQuickstart {
                         resultColumn = j;
                     } else if (column.equals("TS_ID")) {
                         tsIdColumn = j;
+                    } else if (column.equals("Note")) {
+                        noteColumn = j;
                     }
                 }
                 break;
             }
         }
-        return new int[]{header, resultColumn, tsIdColumn};
+        return new int[]{header, resultColumn, tsIdColumn, noteColumn};
     }
 
     /**
@@ -236,7 +242,7 @@ public class DriveQuickstart {
      *                    Dont need result column index because it is always start from this column
      * @return 2d list of updated values
      */
-    private static List<List<Object>> calculateChange(int starting, int tsIdColumn, Map<String, CSVResultType> testResults, List<List<Object>> values) {
+    private static List<List<Object>> calculateChange(int starting, int resultColumn, int tsIdColumn, int noteColumn, Map<String, TestResult> testResults, List<List<Object>> values) {
         List<List<Object>> updatedValues = new ArrayList<>();
         updatedValues.add(new ArrayList<>()); //header
 
@@ -244,20 +250,20 @@ public class DriveQuickstart {
         for (int i = starting; i < values.size(); i++) {
             List<Object> r = values.get(i);
 
-            //check if this row has tags column
-            if (r.size() > tsIdColumn) {
+            //check if this row has note column
+            if (r.size() > noteColumn) {
                 String testId = r.get(tsIdColumn).toString();
                 if (testResults.containsKey(testId)) {
-                    ExcelResultType resultType = ResultTypeConverter.from(testResults.get(testId));
-                    updatedValues.add(new ArrayList<>() {{
-                        add(resultType.toString());
-                        add(null);
-                        add(null);
-                        add(null);
-                        add(null);
-                        add(null);
-                        add(null);
-                    }});
+                    ExcelResultType resultType = ResultTypeConverter.from(testResults.get(testId).getResult());
+                    String notes = testResults.get(testId).getNote();
+
+                    ArrayList<Object> changes = new ArrayList<>();
+                    changes.add(resultType.toString());
+                    for (int j = resultColumn + 1; j <= noteColumn - 1; j++) {
+                        changes.add(Data.NULL_STRING);
+                    }
+                    changes.add(notes);
+                    updatedValues.add(changes);
                 } else {
                     updatedValues.add(new ArrayList<>()); //skip this row
                 }

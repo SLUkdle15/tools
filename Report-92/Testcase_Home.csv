@@ -32,7 +32,9 @@ Check [Title Img] attribute content-desc contains Shop Play, actual text attribu
 Check [Title Img] attribute content-desc contains Speed Test, actual text attribute: Game Mobi
 "">>>> Check [Title Img] attribute content-desc contains Speed Test, actual text attribute: Game Mobi actual: false ,expect: true"
 "TS_Home_147 ","Kiểm tra hiển thị khi nhấn vào item Ứng dụng","passed",""
-"TS_Home_148 ","Kiểm tra redirect khi nhấn vào các item trong block Danh mục (trừ item Ứng dụng)","passed",""
+"TS_Home_148 ","Kiểm tra redirect khi nhấn vào các item trong block Danh mục (trừ item Ứng dụng)","failed","INFO: Selected danh muc Truyền hình
+Check [Option 'Sự kiện Automation cho CHANNEL_NOT_REQUIRE_LOGIN kênh VTV1 HD 8951' in menu] present
+"">>>> Check [Option 'Sự kiện Automation cho CHANNEL_NOT_REQUIRE_LOGIN kênh VTV1 HD 8951' in menu] present actual: false ,expect: true"
 "TS_Home_150 ","Kiểm tra hiển thị của item thuộc chế độ giám sát trẻ em khi được nhấn vào","passed",""
 "TS_Home_71 ","Kiểm tra giao diện block Theo dõi khi chưa đăng nhập tài khoản FPT Play","passed",""
 "TS_Home_70 ","Kiểm tra giao diện block Theo dõi khi đã đăng nhập tài khoản FPT Play, có VOD theo dõi","passed",""
@@ -72,22 +74,27 @@ Check [Title Img] attribute content-desc contains Speed Test, actual text attrib
 "TS_Home_128 ","Kiểm tra giao diện block VOD Mới ra mắt","passed",""
 "TS_Home_131 ","Kiểm tra số lượng item >= 30","skipped","----DATA ISSUE ----Data issue: Block Mới ra mắt having less than 30 items expected [true] but found [false]"
 "TS_Home_132 ","Kiểm tra số lượng item < 30","passed",""
-"TS_Home_117 ","Kiểm tra redirect khi nhấn 1 item VOD trong block VOD Mới ra mắt","passed",""
-"TS_Home_99 ","Kiểm tra giao diện block chứa VOD Phim bộ","passed",""
+"TS_Home_133 ","Kiểm tra redirect khi nhấn 1 item VOD trong block VOD Mới ra mắt","passed",""
+"TS_Home_99 ","Kiểm tra giao diện block chứa VOD Phim bộ","failed","Check [Label] has text: [Tiệm Chụp Ảnh Ma Quái], actual Text: Playlist CDN VOD
+"">>>> Check [Label] has text: [Tiệm Chụp Ảnh Ma Quái], actual Text: Playlist CDN VOD actual: Playlist CDN VOD ,expect: Tiệm Chụp Ảnh Ma Quái"
 "TS_Home_104 ","Kiểm tra giao diện block chứa VOD Phim bộ","passed",""
 "TS_Home_110 ","Kiểm tra nhấn chọn 1 item trong block xem tất cả","skipped","----DATA ISSUE ----Data issue: Block Phim bộ hot having less than 30 items expected [true] but found [false]"
 "TS_Home_111 ","Kiểm tra giao diện block chứa VOD Thể thao","passed",""
 "TS_Home_112 ","Kiểm tra hiển thị các VOD Thể thao khi được hover vào","passed",""
-"TS_Home_114 ","Kiểm tra số lượng item > 30","skipped","----DATA ISSUE ----Data issue: Block Thể thao having less than 30 items expected [true] but found [false]"
-"TS_Home_115 ","Kiểm tra số lượng item <= 30","passed",""
+"TS_Home_114 ","Kiểm tra số lượng item > 30","passed",""
+"TS_Home_115 ","Kiểm tra số lượng item <= 30","skipped","----DATA ISSUE ----Data issue: Block Thể thao having more than 30 items expected [true] but found [false]"
 "TS_Home_117 ","Kiểm tra redirect khi nhấn 1 item VOD trong block VOD Thể thao - Chưa đăng nhập tài khoản FPT Play","passed",""
 "TS_Home_116 ","Kiểm tra redirect khi nhấn 1 item VOD trong block VOD Thể thao - Đã đăng nhập tài khoản FPT Play","passed",""
 "TS_Home_59 ","Kiểm tra giao diện block Đang xem khi chưa đăng nhập tài khoản FPT Play","passed",""
 "TS_Home_58 ","Kiểm tra giao diện block Đang xem khi đã đăng nhập tài khoản FPT Play, có VOD đang xem","passed",""
-"TS_Home_69 ","Kiểm tra nhấn chọn 1 item trong block xem tất cả - Số lượng VOD >=30 items","passed",""
+"TS_Home_69 ","Kiểm tra nhấn chọn 1 item trong block xem tất cả - Số lượng VOD >=30 items","skipped","----DATA ISSUE ----Data issue: Login Account having Block Đang xem having less than 30 items expected [true] but found [false]"
 "TS_Home_62 ","Kiểm tra add thêm item vào block Đang xem đã đăng nhập tài khoản FPT Play","failed","INFO BLOCK CATEGORY: Phim lẻ, select block condition: RANDOM
 INFO: Selected Item Info Selected Item: Sài Gòn Trong Cơn Mưa of Block: Phim lẻ
-ERROR: Cannot find [Label [Title] in VOD Detail Page]"
+ERROR: Cannot find [Label [Title] in VOD Detail Page]
+Check [Child of Category Block Đang xem having value Sài Gòn Trong Cơn Mưa] present
+"">>>> Check [Child of Category Block Đang xem having value Sài Gòn Trong Cơn Mưa] present actual: false ,expect: true
+Element Child of Category Block Đang xem having value Sài Gòn Trong Cơn Mưa not null
+"">>>> Element Child of Category Block Đang xem having value Sài Gòn Trong Cơn Mưa not null actual: false ,expect: true"
 "TS_Home_05 ","Kiểm tra hiển thị trang chủ từ 1 trang nội dung khác","passed",""
 "TS_Home_09 ","Kiểm tra giao diện ở Top Left navigation bar","passed",""
 "TS_Home_12 ","Kiểm tra behavior nhấn vào mục Truyền hình - Chưa đăng nhập tài khoản FPT Play","passed",""

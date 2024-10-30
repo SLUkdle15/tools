@@ -1,19 +1,19 @@
 "Tags","Testname","Result","Note"
-"TS_CATE_01 ","Kiểm tra hiển thị block category từ các trang nội dung","failed","INFO: Selected danh muc HBO GO
-Check [Option 'Sụp Đổ - Mùa 1' in menu] present
-"">>>> Check [Option 'Sụp Đổ - Mùa 1' in menu] present actual: false ,expect: true
-Element Option 'Sụp Đổ - Mùa 1' in menu not null
-"">>>> Element Option 'Sụp Đổ - Mùa 1' in menu not null actual: false ,expect: true"
+"TS_CATE_01 ","Kiểm tra hiển thị block category từ các trang nội dung","passed",""
 "TS_CATE_03 ","Kiểm tra nhấn button right trên remote","passed",""
 "TS_CATE_04 ","Kiểm tra nhấn button right trên remote ở vị trí cuối block category","passed",""
 "TS_CATE_05 ","Kiểm tra nhấn chọn 1 item trong block category","passed",""
 "TS_CATE_06 ","Kiểm tra nhấn back khi đang ở trang nội dung của item category","passed",""
 "TS_CATE_07 ","Kiểm tra nhấn các button di chuyển (up, down, right, left) trên remote ở trang nội dung của item category","passed",""
 "TS_CATE_10 ","Kiểm tra nhấn icon Search trên menu top right navigation","passed",""
-"TS_CATE_12 ","Kiểm tra nhấn icon Mua gói trên menu top right navigation","passed",""
+"TS_CATE_12 ","Kiểm tra nhấn icon Mua gói trên menu top right navigation","failed","INFO: Selected danh muc Phim bộ
+INFO: Selected Item Info Selected Item: Hàn Quốc of Block: Thể loại
+Menu [Label] in Packages Page values should have [Ljava.lang.String;@2aa6d982
+"">>>> Menu [Label] in Packages Page values should have [Ljava.lang.String;@2aa6d982 actual: [Giá dịch vụ, Số thiết bị xem đồng thời, 7 kênh thiết yếu và nhóm kênh địa phương, Hơn 140 kênh truyền hình*, Các giải thể thao đỉnh cao*, Quyền xem sớm nội dung phát song song, Kho phim HBO GO & kho nội dung VIP**, Kho phim Siêu Việt, Không quảng cáo trong video, 5 kênh K+**] ,expect: [Giá dịch vụ, Số thiết bị xem đồng thời, 7 kênh thiết yếu và nhóm kênh địa phương, Hơn 140 kênh truyền hình*, Các giải thể thao đỉnh cao*, Quyền xem sớm nội dung phát song song, Kho phim HBO GO & kho nội dung VIP**, Không quảng cáo trong video, 5 kênh K+**]"
 "TS_CATE_15 ","Kiểm tra nhấn icon Tài khoản trên menu top right navigation khi chưa đăng nhập","passed",""
 "TS_CATE_16 ","Kiểm tra nhấn chọn xem 1 VOD phim bộ khi chưa đăng nhập tài khoản","passed",""
 "TS_CATE_13 ","Kiểm tra nhấn icon Noti trên menu top right navigation","passed",""
 "TS_CATE_11 ","Kiểm tra nhấn icon Noti trên menu top right navigation","passed",""
 "TS_CATE_14 ","Kiểm tra nhấn icon Tài khoản trên menu top right navigation khi đã đăng nhập","passed",""
+"TS_CATE_17 ","Kiểm tra nhấn chọn xem 1 VOD khi thỏa điều kiện play","passed",""
 "TS_CATE_18 ","Kiểm tra nhấn chọn xem 1 VOD thể thao khi đã đăng nhập và thỏa điều kiện play","passed",""

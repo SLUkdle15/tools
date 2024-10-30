@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class SheetUpdateAction {
@@ -23,8 +24,7 @@ public class SheetUpdateAction {
         return sheetId;
     }
 
-    public Map<String, CSVResultType> getChanges() {
-        //return a map of tags and result and merge duplicate tags
-        return changes.stream().collect(Collectors.toMap(TestResult::getTags, TestResult::getResult, (oldValue, newValue) -> newValue));
+    public Map<String, TestResult> getTestResults() {
+        return changes.stream().collect(Collectors.toMap(TestResult::getTags, Function.identity(), (oldValue, newValue) -> newValue));
     }
 }

@@ -1,6 +1,6 @@
 "Tags","Testname","Result","Note"
-"TS_FL_01 ","Kiểm tra giao diện block Theo dõi khi chưa đăng nhập tài khoản FPT Play","failed",""
-"TS_FL_10 ","Kiểm tra nhấn chọn Theo dõi ở chi tiết VOD khi chưa đăng nhập","failed","INFO BLOCK CATEGORY: Đang xem, select block condition: RANDOM"
+"TS_FL_01 ","Kiểm tra giao diện block Theo dõi khi chưa đăng nhập tài khoản FPT Play","passed",""
+"TS_FL_10 ","Kiểm tra nhấn chọn Theo dõi ở chi tiết VOD khi chưa đăng nhập","passed",""
 "TS_FL_02 ","Kiểm tra hiển thị block Theo dõi ở màn hình Home khi đã đăng nhập và chưa theo dõi VOD","passed",""
 "TS_FL_03 ","Kiểm tra giao diện block Theo dõi khi đã đăng nhập tài khoản FPT Play, có VOD theo dõi","passed",""
 "TS_FL_09 ","Kiểm tra khi người dùng thao tác nhấn vào button Nhắc tôi khi đã đăng nhập tài khoản FPT Play","skipped","----DATA ISSUE ----Api Trang chủ does not return Sắp công chiếu expected [true] but found [false]"
