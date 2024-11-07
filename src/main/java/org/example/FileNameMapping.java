@@ -10,10 +10,10 @@ public class FileNameMapping {
                 return "Testcase_AR-WC";
             }
             case "Testcase_DetailVOD.csv" -> {
-                return "Testcase_Detail VOD";
+                return "Testcase_DetailVOD";
             }
             case "Testcase_DangXem.csv" -> {
-                return "Testcase_Đang xem";
+                return "Testcase_DangXem";
             }
             case "Testcase_Home.csv" -> {
                 return "Testcase_Home";
@@ -37,13 +37,13 @@ public class FileNameMapping {
                 return "Testcase_Search";
             }
             case "Testcase_SuKien.csv" -> {
-                return "Testcase_Sự kiện";
+                return "Testcase_SuKien";
             }
             case "Testcase_TheLoai.csv" -> {
-                return "Testcase_Thể Loại";
+                return "Testcase_TheLoai";
             }
             case "Testcase_TheThao.csv" -> {
-                return "Testcase_Thể thao";
+                return "Testcase_TheLoai";
             }
             case "Testcase_Timeshift-Catchup.csv" -> {
                 return "Testcase_Timeshift-Catchup";
@@ -52,10 +52,10 @@ public class FileNameMapping {
                 return "Testcase_Timeshift-Seek";
             }
             case "Testcase_TruyenHinh.csv" -> {
-                return "Testcase_Truyền hình";
+                return "Testcase_TruyenHinh";
             }
             case "Testcase_TheoDoi.csv" -> {
-                return "Testcase_Theo dõi";
+                return "Testcase_TheoDoi";
             }
             default -> {
                 throw new IllegalArgumentException("Invalid file name");

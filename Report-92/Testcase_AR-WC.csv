@@ -1,36 +1,28 @@
 "Tags","Testname","Result","Note"
-"TS_PLCB_51 ","Vị trí của AR tại detail","failed","INFO BLOCK CATEGORY: Tạo topic PL mới, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Nghi Lễ Chết Chóc of Block: Tạo topic PL mới
-Check [Label [Info] in VOD Detail Page] is displayed
-"">>>> Check [Label [Info] in VOD Detail Page] is displayed actual: false ,expect: true
+"TS_PLCB_051 ","Vị trí của AR tại detail","skipped","----DATA ISSUE ----Not found VOD required RANDOM FREE WITH_AR_NOT_P NO_WC IS_PLAY_0 VOD expected [true] but found [false]"
+"TS_PLCB_052 ","Vị trí và nội dung của WC tại detail","passed",""
+"TS_PLCB_001 ","Kiểm tra hiển thị phân loại: K, T13, T16, T18 tại các block nội dung","passed",""
+"TS_PLCB_002 ","Kiểm tra hiển thị phân loại: K, T13, T16, T18 tại highlight","failed","Background content
+"">>>> Background content actual: [2022, K, 1 giờ 50 phút, Hàn Quốc] ,expect: [Mới, 2022, K, 1 giờ 50 phút, Hàn Quốc]"
+"TS_PLCB_004 ","Kiểm tra hiển thị phân loại: K, T13, T16, T18 tại block đang xem","skipped","----DATA ISSUE ----Not found VOD required RANDOM WITH_AR WITH_VIEW VOD expected [true] but found [false]"
+"TS_PLCB_005 ","Kiểm tra hiển thị phân loại: K, T13, T16, T18 tại block theo dõi","passed",""
+"TS_PLCB_006 ","Kiểm tra hiển thị phân loại: K, T13, T16, T18 tại block sắp công chiếu","skipped","----DATA ISSUE ----Not found VOD required RANDOM WITH_AR VOD expected [true] but found [false]"
+"TS_PLCB_008 ","Kiểm tra hiển thị phân loại: P, K, T13, T16, T18 tại block xu hướng gần đây","failed","Check [Child of Category Block Xu hướng gần đây having value Trường Nguyệt Tẫn Minh] is focused
+"">>>> Check [Child of Category Block Xu hướng gần đây having value Trường Nguyệt Tẫn Minh] is focused actual: false ,expect: true
+Element Label not null
+"">>>> Element Label not null actual: false ,expect: true
+Element Labelnot null check
+"">>>> Element Labelnot null check actual: false ,expect: true
+Check [Label] has text: [Trường Nguyệt Tẫn Minh], actual Text: 
+"">>>> Check [Label] has text: [Trường Nguyệt Tẫn Minh], actual Text:  actual:  ,expect: Trường Nguyệt Tẫn Minh
+Check [Label] is displayed
+"">>>> Check [Label] is displayed actual: false ,expect: true
 Element Text child not null
 "">>>> Element Text child not null actual: false ,expect: true"
-"TS_PLCB_52 ","Vị trí và nội dung của WC tại detail","passed",""
-"TS_PLCB_01 ","Kiểm tra hiển thị phân loại: K, T13, T16, T18 tại các block nội dung","passed",""
-"TS_PLCB_02 ","Kiểm tra hiển thị phân loại: K, T13, T16, T18 tại highlight","passed",""
-"TS_PLCB_04 ","Kiểm tra hiển thị phân loại: K, T13, T16, T18 tại block đang xem","passed",""
-"TS_PLCB_05 ","Kiểm tra hiển thị phân loại: K, T13, T16, T18 tại block theo dõi","passed",""
-"TS_PLCB_06 ","Kiểm tra hiển thị phân loại: K, T13, T16, T18 tại block sắp công chiếu","skipped","----DATA ISSUE ----Api Trang chủ does not return Sắp công chiếu expected [true] but found [false]"
-"TS_PLCB_08 ","Kiểm tra hiển thị phân loại: P, K, T13, T16, T18 tại block xu hướng gần đây","passed",""
-"TS_PLCB_09 ","Kiểm tra hiển thị phân loại: P, K, T13, T16, T18 tại màn hình detail playlist","skipped","----DATA ISSUE ----Not found PLAYLIST required RANDOM WITH_AR PLAYLIST expected [true] but found [false]"
+"TS_PLCB_009 ","Kiểm tra hiển thị phân loại: P, K, T13, T16, T18 tại màn hình detail playlist","skipped","----DATA ISSUE ----Not found PLAYLIST required RANDOM WITH_AR PLAYLIST expected [true] but found [false]"
 "TS_PLCB_012 ","Kiểm tra metadata AR của các nội dung của Block nội dung liên quan","passed",""
 "TS_PLCB_011 ","Kiểm tra hiển thị phân loại: P, K, T13, T16, T18 tại màn hình Diễn viên & Đạo diễn","passed",""
-"TS_PLCB_73 ","Format hiển thị của AR+ WC tại player","passed",""
-"TS_PLCB_78 ","Kiểm tra animation của AR+ WC tại player sau 10s","failed","INFO BLOCK CATEGORY: Thái Lan, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Yêu Thầm Anh Xã of Block: Thái Lan
-Element Text [Tv Title] in Player Page not null
-"">>>> Element Text [Tv Title] in Player Page not null actual: false ,expect: true
-Element Text [Tv Title] in Player Pagenot null check
-"">>>> Element Text [Tv Title] in Player Pagenot null check actual: false ,expect: true
-Check [Text [Tv Title] in Player Page] has text: [T13], actual Text: 
-"">>>> Check [Text [Tv Title] in Player Page] has text: [T13], actual Text:  actual:  ,expect: T13
-Check [Label [Tv Desc] in Player Page] not present
-"">>>> Check [Label [Tv Desc] in Player Page] not present actual: true ,expect: false"
-"TS_PLCB_79 ","Kiểm tra animation của AR, trường hợp không setup WC","failed","INFO BLOCK CATEGORY: Tạo topic PL mới, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Nghi Lễ Chết Chóc of Block: Tạo topic PL mới
-Element Button [Play] not null
-"">>>> Element Button [Play] not null actual: false ,expect: true"
-"TS_PLCB_130 ","Kiểm tra animation của AR, trường hợp không setup WC","failed","INFO BLOCK CATEGORY: Tạo topic PL mới, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Nghi Lễ Chết Chóc of Block: Tạo topic PL mới
-Element Button [Play] not null
-"">>>> Element Button [Play] not null actual: false ,expect: true"
+"TS_PLCB_073 ","Format hiển thị của AR+ WC tại player","passed",""
+"TS_PLCB_078 ","Kiểm tra animation của AR+ WC tại player sau 10s","passed",""
+"TS_PLCB_079 ","Kiểm tra animation của AR, trường hợp không setup WC","skipped","----DATA ISSUE ----Not found VOD required RANDOM FREE WITH_AR_NOT_P NO_WC VOD expected [true] but found [false]"
+"TS_PLCB_130 ","Kiểm tra animation của AR, trường hợp không setup WC","skipped","----DATA ISSUE ----Not found VOD required RANDOM FREE WITH_AR_NOT_P NO_WC VOD expected [true] but found [false]"

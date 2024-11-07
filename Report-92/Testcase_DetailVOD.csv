@@ -1,61 +1,63 @@
 "Tags","Testname","Result","Note"
 "TS_VOD_111 ","Kiểm tra nhấn số tập hợp lệ ở detail VOD miễn phí/SMAX/SVIP có danh sách tập khi chưa đăng nhập","passed",""
-"TS_VOD_121 ","Kiểm tra nhấn số tập ở detail VOD không có danh sách tập khi chưa đăng nhập tài khoản","failed","INFO BLOCK CATEGORY: Hành động, select block condition: RANDOM"
-"TS_VOD_125 ","Kiểm tra nhấn số tập hợp lệ ở detail VOD vào player miễn phí/SMAX/SVIP có danh sách tập khi chưa đăng nhập","passed",""
-"TS_VOD_113 ","Kiểm tra nhấn số tập hợp lệ ở detail VOD miễn phí có danh sách tập khi đã đăng nhập","failed","INFO BLOCK CATEGORY: Thái Lan, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Lệnh Cho Trái Tim Ngừng Yêu Em  of Block: Thái Lan
-Element Child of Category Block Thái Lan having value Lệnh Cho Trái Tim Ngừng Yêu Em  not null
-"">>>> Element Child of Category Block Thái Lan having value Lệnh Cho Trái Tim Ngừng Yêu Em  not null actual: false ,expect: true"
-"TS_VOD_115 ","Kiểm tra nhấn số tập hợp lệ ở detail VOD thuộc gói SMAX có danh sách tập khi đã đăng nhập tài khoản không gói/hết hạn gói","passed",""
-"TS_VOD_117 ","Kiểm tra nhấn số tập hợp lệ ở detail VOD thuộc gói SMAX có danh sách tập khi đã đăng nhập tài khoản có gói SMAX/SVIP","passed",""
+"TS_VOD_121 ","Kiểm tra nhấn số tập ở detail VOD không có danh sách tập khi chưa đăng nhập tài khoản","passed",""
+"TS_VOD_125 ","Kiểm tra nhấn số tập hợp lệ ở detail VOD vào player miễn phí/SMAX/SVIP có danh sách tập khi chưa đăng nhập","failed","Element Option 'Mở rộng' in menu not null
+"">>>> Element Option 'Mở rộng' in menu not null actual: false ,expect: true"
+"TS_VOD_113 ","Kiểm tra nhấn số tập hợp lệ ở detail VOD miễn phí có danh sách tập khi đã đăng nhập","passed",""
+"TS_VOD_115 ","Kiểm tra nhấn số tập hợp lệ ở detail VOD thuộc gói SMAX có danh sách tập khi đã đăng nhập tài khoản không gói/hết hạn gói","failed","INFO BLOCK CATEGORY: Việt Nam, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Đường Cong Tình Yêu of Block: Việt Nam
+Press Episode match NO_PREVIEW: 1
+Check [Popup Message] contains text: [Quý khách vui lòng đăng ký Gói SMAX để xem nội dung này. Xin cảm ơn!] actual Text Quý khách vui lòng đăng ký Gói SMAX+ để xem nội dung này. Xin cảm ơn!
+"">>>> Check [Popup Message] contains text: [Quý khách vui lòng đăng ký Gói SMAX để xem nội dung này. Xin cảm ơn!] actual Text Quý khách vui lòng đăng ký Gói SMAX+ để xem nội dung này. Xin cảm ơn! actual: false ,expect: true"
+"TS_VOD_117 ","Kiểm tra nhấn số tập hợp lệ ở detail VOD thuộc gói SMAX có danh sách tập khi đã đăng nhập tài khoản có gói SMAX/SVIP","failed",""
 "TS_VOD_116 ","Kiểm tra nhấn số tập hợp lệ ở detail VOD thuộc gói SMAX có danh sách tập khi đã đăng nhập tài khoản không gói/hết hạn gói","passed",""
-"TS_VOD_119 ","Kiểm tra nhấn số tập hợp lệ chưa có bookmark ở detail VOD có danh sách tập","failed","INFO BLOCK CATEGORY: Thái Lan, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Lệnh Cho Trái Tim Ngừng Yêu Em  of Block: Thái Lan
-Element Child of Category Block Thái Lan having value Lệnh Cho Trái Tim Ngừng Yêu Em  not null
-"">>>> Element Child of Category Block Thái Lan having value Lệnh Cho Trái Tim Ngừng Yêu Em  not null actual: false ,expect: true"
-"TS_VOD_120 ","Kiểm tra nhấn số tập hợp lệ có bookmark ở detail VOD có danh sách tập","failed","Element Option 'Tài khoản' in menu not null
-"">>>> Element Option 'Tài khoản' in menu not null actual: false ,expect: true"
-"TS_VOD_127 ","Kiểm tra nhấn số tập hợp lệ ở detail VOD vào player miễn phí có danh sách tập khi đã đăng nhập","failed","Element Option 'Tài khoản' in menu not null
-"">>>> Element Option 'Tài khoản' in menu not null actual: false ,expect: true"
-"TS_VOD_132 ","Kiểm tra nhấn số tập hợp lệ chưa có bookmark ở detail VOD vào player có danh sách tập khi đã đăng nhập tài khoản","skipped","INFO BLOCK CATEGORY: Lớp 6, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Ngữ văn 6 (Chân trời sáng tạo) of Block: Lớp 6
-----DATA ISSUE ----Ngữ văn 6 (Chân trời sáng tạo) khong co tap chua xem expected [true] but found [false]"
-"TS_VOD_133 ","Kiểm tra nhấn số tập hợp lệ có bookmark ở detail VOD vào player có danh sách tập khi đã đăng nhập tài khoản","passed",""
-"TS_VOD_87 ","Kiểm tra chọn VOD bất kỳ thuộc các danh mục Giải trí / Học tập / Thể thao / Thiếu nhi / Âm nhạc / Podcast khi chưa đăng nhập","passed",""
-"TS_VOD_88 ","Kiểm tra detail VOD của các danh mục mục Giải trí / Học tập / Thể thao / Thiếu nhi / Âm nhạc / Podcast khi đã đăng nhập","passed",""
-"TS_VOD_89 ","Tiếp tục xem - Kiểm tra nhấn button Tiếp tục xem ở detail VOD vào player","passed",""
-"TS_VOD_90 ","Xem lại từ đầu - Kiểm tra nhấn button Xem lại từ đầu ở detail VOD vào player","passed",""
-"TS_VOD_85 ","Kiểm tra thực hiện login tài khoản không thỏa điều kiện play ở màn hình detail VOD","failed","INFO BLOCK CATEGORY: Phim mới ra mắt, select block condition: RANDOM
+"TS_VOD_119 ","Kiểm tra nhấn số tập hợp lệ chưa có bookmark ở detail VOD có danh sách tập","passed",""
+"TS_VOD_120 ","Kiểm tra nhấn số tập hợp lệ có bookmark ở detail VOD có danh sách tập","skipped","----DATA ISSUE ----Not found VOD required RANDOM FREE NO_PREVIEW WITH_VIEW VOD expected [true] but found [false]"
+"TS_VOD_127 ","Kiểm tra nhấn số tập hợp lệ ở detail VOD vào player miễn phí có danh sách tập khi đã đăng nhập","passed",""
+"TS_VOD_132 ","Kiểm tra nhấn số tập hợp lệ chưa có bookmark ở detail VOD vào player có danh sách tập khi đã đăng nhập tài khoản","passed",""
+"TS_VOD_133 ","Kiểm tra nhấn số tập hợp lệ có bookmark ở detail VOD vào player có danh sách tập khi đã đăng nhập tài khoản","skipped","----DATA ISSUE ----Not found VOD required RANDOM NO_PREVIEW WITH_VIEW SERIES VOD expected [true] but found [false]"
+"TS_VOD_087 ","Kiểm tra chọn VOD bất kỳ thuộc các danh mục Giải trí / Học tập / Thể thao / Thiếu nhi / Âm nhạc / Podcast khi chưa đăng nhập","passed",""
+"TS_VOD_088 ","Kiểm tra detail VOD của các danh mục mục Giải trí / Học tập / Thể thao / Thiếu nhi / Âm nhạc / Podcast khi đã đăng nhập","passed",""
+"TS_VOD_089 ","Tiếp tục xem - Kiểm tra nhấn button Tiếp tục xem ở detail VOD vào player","failed","INFO BLOCK CATEGORY: Nhạc trữ tình, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Cát Bụi (Giao Lộ Thời Gian - Hồng Nhung, Bùi Công Nam) of Block: Nhạc trữ tình"
+"TS_VOD_090 ","Xem lại từ đầu - Kiểm tra nhấn button Xem lại từ đầu ở detail VOD vào player","skipped","----DATA ISSUE ----Not found VOD required RANDOM NO_PREVIEW IS_PLAY_1 WITH_VIEW VOD expected [true] but found [false]"
+"TS_VOD_085 ","Kiểm tra thực hiện login tài khoản không thỏa điều kiện play ở màn hình detail VOD","failed","INFO BLOCK CATEGORY: Phim mới ra mắt, select block condition: RANDOM
 INFO: Selected Item Info Selected Item: Max Điên: Con Đường Cuồng Nộ of Block: Phim mới ra mắt
 Element Button [Play] not null
 "">>>> Element Button [Play] not null actual: false ,expect: true"
-"TS_VOD_86 ","Kiểm tra thanh toán thành công TVOD ở màn hình detail","failed","INFO BLOCK CATEGORY: Tài liệu, select block condition: RANDOM
+"TS_VOD_086 ","Kiểm tra thanh toán thành công TVOD ở màn hình detail","failed","INFO BLOCK CATEGORY: Tài liệu, select block condition: RANDOM
 INFO: Selected Item Info Selected Item: John Farnham: Đi Tìm Thanh Âm (Multi Sub-Audio Non-DRM) of Block: Tài liệu
 Element Button [Play] not null
 "">>>> Element Button [Play] not null actual: false ,expect: true"
-"TS_VOD_79 ","Kiểm tra thực hiện login thỏa điều kiện play ở màn hình detail VOD chưa có bookmark","passed",""
-"TS_VOD_84 ","Kiểm tra màn hình detail VOD sau khi thực hiện play VOD","passed",""
-"TS_VOD_51 ","Kiểm tra block Danh sách tập ở detail VOD","passed",""
-"TS_VOD_55 ","Kiểm tra play tập ở block Danh sách tập của detail VOD thuộc gói SMAX/SVIP","passed",""
-"TS_VOD_56 ","Kiểm tra play ở block Danh sách tập của detail VOD miễn phí khi đã đăng nhập tài khoản","failed","INFO BLOCK CATEGORY: Thái Lan, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Lệnh Cho Trái Tim Ngừng Yêu Em  of Block: Thái Lan
-Element Child of Category Block Thái Lan having value Lệnh Cho Trái Tim Ngừng Yêu Em  not null
-"">>>> Element Child of Category Block Thái Lan having value Lệnh Cho Trái Tim Ngừng Yêu Em  not null actual: false ,expect: true"
-"TS_VOD_69 ","Kiểm tra play video ở block Trailer - Clip hậu trường khi đã đăng nhập","passed",""
-"TS_VOD_12 ","Kiểm tra chọn button Play Trailer khi chưa đăng nhập tài khoản","skipped","----DATA ISSUE ----Api Trang chủ does not return Sắp công chiếu expected [true] but found [false]"
-"TS_VOD_15 ","Kiểm tra chọn button Xem ngay khi chưa đăng nhập","passed",""
-"TS_VOD_16 ","Kiểm tra chọn button Xem ngay ở detail VOD miễn phí khi đã đăng nhập","passed",""
-"TS_VOD_21 ","VOD lẻ thuộc gói - Kiểm tra chọn button Mua gói SMAX khi chưa đăng nhập tài khoản","passed",""
-"TS_VOD_23 ","VOD lẻ thuộc gói - Kiểm tra chọn button Xem ngay ở detail VOD thuộc gói SMAX khi đã đăng nhập tài khoản thỏa điều kiện play","passed",""
-"TS_VOD_25 ","VOD lẻ thuộc gói - Kiểm tra chọn button Mua gói SVIP khi chưa đăng nhập tài khoản","passed",""
-"TS_VOD_27 ","VOD lẻ thuộc gói - Kiểm tra chọn button Xem ngay ở detail VOD thuộc gói SVIP khi đã đăng nhập tài khoản thỏa điều kiện play","failed","INFO BLOCK CATEGORY: Phim mới ra mắt, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Max Điên: Con Đường Cuồng Nộ of Block: Phim mới ra mắt
-Check [Player in Player Page] present
-"">>>> Check [Player in Player Page] present actual: false ,expect: true"
-"TS_VOD_29 ","VOD bộ thuộc gói - Kiểm tra chọn button Mua gói SMAX khi chưa đăng nhập tài khoản","passed",""
-"TS_VOD_31 ","VOD bộ thuộc gói - Kiểm tra chọn button Xem ngay ở detail VOD thuộc gói SMAX khi đã đăng nhập tài khoản thỏa điều kiện play","passed",""
-"TS_VOD_33 ","VOD bộ thuộc gói - Kiểm tra chọn button Mua gói SVIP khi chưa đăng nhập tài khoản","passed",""
-"TS_VOD_35 ","VOD bộ thuộc gói - Kiểm tra chọn button Xem ngay ở detail VOD thuộc gói SVIP khi đã đăng nhập tài khoản thỏa điều kiện play","passed",""
-"TS_VOD_37 ","TVOD - Kiểm tra chọn button Thuê [giá] VND khi chưa đăng nhập tài khoản","passed",""
-"TS_VOD_42 ","VOD galaxy - Kiểm tra chọn Mua Gói ở màn hình detail VOD Galaxy Play","passed",""
-"TS_VOD_44 ","VOD galaxy - Kiểm tra chọn Xem ngay ở màn hình detail VOD Galaxy Play","passed",""
+"TS_VOD_079 ","Kiểm tra thực hiện login thỏa điều kiện play ở màn hình detail VOD chưa có bookmark","passed",""
+"TS_VOD_084 ","Kiểm tra màn hình detail VOD sau khi thực hiện play VOD","passed",""
+"TS_VOD_051 ","Kiểm tra block Danh sách tập ở detail VOD","failed","INFO BLOCK CATEGORY: Hoa ngữ, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Cô Phương Bất Tự Thưởng  of Block: Hoa ngữ
+Check [Category Block Danh sách tập:] present
+"">>>> Check [Category Block Danh sách tập:] present actual: false ,expect: true"
+"TS_VOD_055 ","Kiểm tra play tập ở block Danh sách tập của detail VOD thuộc gói SMAX/SVIP","failed",""
+"TS_VOD_056 ","Kiểm tra play ở block Danh sách tập của detail VOD miễn phí khi đã đăng nhập tài khoản","passed",""
+"TS_VOD_069 ","Kiểm tra play video ở block Trailer - Clip hậu trường khi đã đăng nhập","passed",""
+"TS_VOD_012 ","Kiểm tra chọn button Play Trailer khi chưa đăng nhập tài khoản","failed","ERROR: Cannot find [Popup Title]"
+"TS_VOD_015 ","Kiểm tra chọn button Xem ngay khi chưa đăng nhập","passed",""
+"TS_VOD_016 ","Kiểm tra chọn button Xem ngay ở detail VOD miễn phí khi đã đăng nhập","passed",""
+"TS_VOD_021 ","VOD lẻ thuộc gói - Kiểm tra chọn button Mua gói SMAX khi chưa đăng nhập tài khoản","failed","INFO BLOCK CATEGORY: Hành động, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Những Kẻ Lạc Loài of Block: Hành động
+Check [Button [Buy Package] in VOD Detail Page] has text: [Mua Gói SMAX], actual Text: Mua Gói SMAX+
+"">>>> Check [Button [Buy Package] in VOD Detail Page] has text: [Mua Gói SMAX], actual Text: Mua Gói SMAX+ actual: Mua Gói SMAX+ ,expect: Mua Gói SMAX"
+"TS_VOD_023 ","VOD lẻ thuộc gói - Kiểm tra chọn button Xem ngay ở detail VOD thuộc gói SMAX khi đã đăng nhập tài khoản thỏa điều kiện play","failed",""
+"TS_VOD_025 ","VOD lẻ thuộc gói - Kiểm tra chọn button Mua gói SVIP khi chưa đăng nhập tài khoản","passed",""
+"TS_VOD_027 ","VOD lẻ thuộc gói - Kiểm tra chọn button Xem ngay ở detail VOD thuộc gói SVIP khi đã đăng nhập tài khoản thỏa điều kiện play","passed",""
+"TS_VOD_029 ","VOD bộ thuộc gói - Kiểm tra chọn button Mua gói SMAX khi chưa đăng nhập tài khoản","failed","INFO BLOCK CATEGORY: Việt Nam, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Đường Cong Tình Yêu of Block: Việt Nam
+Element Button [Play] not null
+"">>>> Element Button [Play] not null actual: false ,expect: true"
+"TS_VOD_031 ","VOD bộ thuộc gói - Kiểm tra chọn button Xem ngay ở detail VOD thuộc gói SMAX khi đã đăng nhập tài khoản thỏa điều kiện play","failed",""
+"TS_VOD_033 ","VOD bộ thuộc gói - Kiểm tra chọn button Mua gói SVIP khi chưa đăng nhập tài khoản","passed",""
+"TS_VOD_035 ","VOD bộ thuộc gói - Kiểm tra chọn button Xem ngay ở detail VOD thuộc gói SVIP khi đã đăng nhập tài khoản thỏa điều kiện play","passed",""
+"TS_VOD_037 ","TVOD - Kiểm tra chọn button Thuê [giá] VND khi chưa đăng nhập tài khoản","passed",""
+"TS_VOD_042 ","VOD galaxy - Kiểm tra chọn Mua Gói ở màn hình detail VOD Galaxy Play","failed","INFO BLOCK CATEGORY: Bom tấn phòng vé, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Kim Ji-Young, Sinh Năm 1982 of Block: Bom tấn phòng vé
+Check [Button [Buy Package] in VOD Detail Page] has text: [Mua Gói], actual Text: Mua gói
+"">>>> Check [Button [Buy Package] in VOD Detail Page] has text: [Mua Gói], actual Text: Mua gói actual: Mua gói ,expect: Mua Gói"
+"TS_VOD_044 ","VOD galaxy - Kiểm tra chọn Xem ngay ở màn hình detail VOD Galaxy Play","passed",""

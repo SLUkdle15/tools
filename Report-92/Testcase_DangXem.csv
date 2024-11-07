@@ -1,20 +1,15 @@
 "Tags","Testname","Result","Note"
-"TS_WC_01 ","Trang chủ - Block đang xem - Kiểm tra trường hợp block đang xem không có nội dung đang xem","passed",""
-"TS_WC_02 ","Trang chủ - Block đang xem - Kiểm tra block đang xem không hiển thị khi chưa login","passed",""
-"TS_WC_07 ","Detail VOD - Xem ngay - Ghi nhận phim lẻ vào đang xem khi chọn xem ngay khi Xem phim","failed","INFO BLOCK CATEGORY: Hành động, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Cá Sấu Khổng Lồ 2 of Block: Hành động
-INFO: Selected Item Info Selected Item: SELECTED of Block: Hành động
-Check [Button [Play]] has text: [Tiếp tục xem], actual Text: Xem ngay
-"">>>> Check [Button [Play]] has text: [Tiếp tục xem], actual Text: Xem ngay actual: Xem ngay ,expect: Tiếp tục xem"
-"TS_WC_08 ","Detail VOD - Xem ngay - Ghi nhận phim bộ vào đang xem khi chọn xem ngay khi Xem phim","failed","INFO BLOCK CATEGORY: Hàn Quốc, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Nữ Thanh Tra Tài Ba  of Block: Hàn Quốc
-INFO: Selected Item Info Selected Item: SELECTED of Block: Hàn Quốc
-Check [Button [Play]] has text: [Tiếp tục xem], actual Text: Xem ngay
-"">>>> Check [Button [Play]] has text: [Tiếp tục xem], actual Text: Xem ngay actual: Xem ngay ,expect: Tiếp tục xem"
-"TS_WC_20 ","Detail VOD - Xem ngay - Kiểm tra chọn VOD phim lẻ trong block đang xem","passed",""
-"TS_WC_21 ","Detail VOD - Xem ngay - Kiểm tra chọn VOD phim bộ trong block đang xem","passed",""
-"TS_WC_36 ","Xem lại từ đầu - Xem lại từ đầu phim bộ đã có trong đang xem","passed",""
-"TS_WC_49 ","Chọn play tập phim có bookmark tại danh sách tập của phim bộ có lưu trong đang xem","passed",""
-"TS_WC_56 ","Xem tiếp phim lẻ đã có lưu bookmark khi để auto play","failed",""
-"TS_WC_65 ","Player - Xem lại từ đầu - Xem lại từ đầu phim lẻ đã có trong đang xem","failed","ERROR: Cannot find [Left menu [HGV] in Homepage]"
-"TS_WC_66 ","Player - Xem lại từ đầu - Xem lại từ đầu phim bộ đã có trong đang xem","failed","ERROR: Cannot find [Left menu [HGV] in Homepage]"
+"TS_WC_001 ","Trang chủ - Block đang xem - Kiểm tra trường hợp block đang xem không có nội dung đang xem","failed","Check [Category Block Đang xem] not present
+"">>>> Check [Category Block Đang xem] not present actual: true ,expect: false"
+"TS_WC_002 ","Trang chủ - Block đang xem - Kiểm tra block đang xem không hiển thị khi chưa login","passed",""
+"TS_WC_007 ","Detail VOD - Xem ngay - Ghi nhận phim lẻ vào đang xem khi chọn xem ngay khi Xem phim","failed","INFO BLOCK CATEGORY: Hành động, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Cá Sấu Khổng Lồ 2 of Block: Hành động"
+"TS_WC_008 ","Detail VOD - Xem ngay - Ghi nhận phim bộ vào đang xem khi chọn xem ngay khi Xem phim","failed","INFO BLOCK CATEGORY: Hoa ngữ, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Cô Phương Bất Tự Thưởng  of Block: Hoa ngữ"
+"TS_WC_020 ","Detail VOD - Xem ngay - Kiểm tra chọn VOD phim lẻ trong block đang xem","skipped","----DATA ISSUE ----Not found VOD required RANDOM WITH_VIEW VOD expected [true] but found [false]"
+"TS_WC_021 ","Detail VOD - Xem ngay - Kiểm tra chọn VOD phim bộ trong block đang xem","skipped","----DATA ISSUE ----Not found VOD required RANDOM WITH_VIEW VOD expected [true] but found [false]"
+"TS_WC_036 ","Xem lại từ đầu - Xem lại từ đầu phim bộ đã có trong đang xem","passed",""
+"TS_WC_049 ","Chọn play tập phim có bookmark tại danh sách tập của phim bộ có lưu trong đang xem","skipped","----DATA ISSUE ----Not found VOD required RANDOM WITH_VIEW VOD expected [true] but found [false]"
+"TS_WC_056 ","Xem tiếp phim lẻ đã có lưu bookmark khi để auto play","passed",""
+"TS_WC_065 ","Player - Xem lại từ đầu - Xem lại từ đầu phim lẻ đã có trong đang xem","passed",""
+"TS_WC_066 ","Player - Xem lại từ đầu - Xem lại từ đầu phim bộ đã có trong đang xem","skipped","----DATA ISSUE ----Not found VOD required RANDOM WITH_VIEW VOD expected [true] but found [false]"

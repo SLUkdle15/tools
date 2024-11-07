@@ -3,16 +3,22 @@
 "TS_Login_142 ","Kiểm tra vào màn hình đăng xuất thiết bị","passed",""
 "TS_Login_146 ","Kiểm tra button Tiếp tục trong màn hình Đăng xuất thiết bị","passed",""
 "","Logout devices","passed",""
-"TS_Login_01 ","Kiểm tra màn hình đăng nhập khi sử dụng box lần đầu","passed",""
-"TS_Login_02 ","Kiểm tra chọn button Đăng nhập ngay tại màn hình Đăng nhập 24h","passed",""
-"TS_Login_03 ","Kiểm tra chọn button Để sau tại màn hình đăng nhập 24h","passed",""
-"TS_Login_09 ","Thực hiện Đăng nhập thành công tại màn hình Đăng nhập sau 24h","passed",""
-"TS_Login_44 ","Kiểm tra giao diện màn hình Đăng nhập tài khoản","passed",""
-"TS_Login_65 ","Kiểm tra trường hợp đăng nhập thành công từ màn hình Đăng nhập 24h","passed",""
-"TS_Login_64 ","Kiểm tra trường hợp đăng nhập thành công từ Tài khoản","passed",""
-"TS_Login_73 ","Kiểm tra giao diện màn hình Đăng nhập bằng số điện thoại","passed",""
-"TS_Login_74 ","Kiểm tra giao diện màn hình Đăng nhập bằng số điện thoại","passed",""
-"TS_Login_95 ","Kiểm tra màn hình Xác thực mã OTP khi đăng nhập tài khoản","passed",""
-"TS_Login_105 ","Kiểm tra trường hợp nhập đúng mã OTP","passed",""
-"TS_Login_43 ","Kiểm tra chọn button notification ở top right navigation bar","passed",""
+"TS_Login_001 ","Kiểm tra màn hình đăng nhập khi sử dụng box lần đầu","passed",""
+"TS_Login_002 ","Kiểm tra chọn button Đăng nhập ngay tại màn hình Đăng nhập 24h","passed",""
+"TS_Login_003 ","Kiểm tra chọn button Để sau tại màn hình đăng nhập 24h","passed",""
+"TS_Login_009 ","Thực hiện Đăng nhập thành công tại màn hình Đăng nhập sau 24h","passed",""
+"TS_Login_044 ","Kiểm tra giao diện màn hình Đăng nhập tài khoản","failed","Check [Label [Login By QR Description] in Login Page] has text: [Sử dụng máy ảnh của điện thoại quét mã QR  để đăng nhập vào FPT Play.], actual Text: Mở ứng dụng FPT Play trên điện thoại, chọn vào icon   và quét mã QR bên dưới
+"">>>> Check [Label [Login By QR Description] in Login Page] has text: [Sử dụng máy ảnh của điện thoại quét mã QR  để đăng nhập vào FPT Play.], actual Text: Mở ứng dụng FPT Play trên điện thoại, chọn vào icon   và quét mã QR bên dưới actual: Mở ứng dụng FPT Play trên điện thoại, chọn vào icon   và quét mã QR bên dưới ,expect: Sử dụng máy ảnh của điện thoại quét mã QR  để đăng nhập vào FPT Play."
+"TS_Login_065 ","Kiểm tra trường hợp đăng nhập thành công từ màn hình Đăng nhập 24h","passed",""
+"TS_Login_064 ","Kiểm tra trường hợp đăng nhập thành công từ Tài khoản","passed",""
+"TS_Login_073 ","Kiểm tra giao diện màn hình Đăng nhập bằng số điện thoại","passed",""
+"TS_Login_074 ","Kiểm tra giao diện màn hình Đăng nhập bằng số điện thoại","passed",""
+"TS_Login_095 ","Kiểm tra màn hình Xác thực mã OTP khi đăng nhập tài khoản","passed",""
+"TS_Login_105 ","Kiểm tra trường hợp nhập đúng mã OTP","failed","Element sub not null
+"">>>> Element sub not null actual: false ,expect: true
+Element subnot null check
+"">>>> Element subnot null check actual: false ,expect: true
+Check [sub] has text: [0968105938], actual Text: 
+"">>>> Check [sub] has text: [0968105938], actual Text:  actual:  ,expect: 0968105938"
+"TS_Login_043 ","Kiểm tra chọn button notification ở top right navigation bar","passed",""
 "TS_Login_106 ","Kiểm tra trường hợp gửi mã lần đầu (SMS)","passed",""

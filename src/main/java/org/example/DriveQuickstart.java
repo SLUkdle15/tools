@@ -251,7 +251,7 @@ public class DriveQuickstart {
             List<Object> r = values.get(i);
 
             //check if this row has note column
-            if (r.size() > noteColumn) {
+            if (r.size() > tsIdColumn) {
                 String testId = r.get(tsIdColumn).toString();
                 if (testResults.containsKey(testId)) {
                     ExcelResultType resultType = ResultTypeConverter.from(testResults.get(testId).getResult());
