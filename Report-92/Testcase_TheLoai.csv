@@ -1,0 +1,21 @@
+"Tags","Testname","Result","Note"
+"TS_CATE_001 ","Kiểm tra hiển thị block category từ các trang nội dung","passed",""
+"TS_CATE_003 ","Kiểm tra nhấn button right trên remote","passed",""
+"TS_CATE_004 ","Kiểm tra nhấn button right trên remote ở vị trí cuối block category","passed",""
+"TS_CATE_005 ","Kiểm tra nhấn chọn 1 item trong block category","passed",""
+"TS_CATE_006 ","Kiểm tra nhấn back khi đang ở trang nội dung của item category","passed",""
+"TS_CATE_007 ","Kiểm tra nhấn các button di chuyển (up, down, right, left) trên remote ở trang nội dung của item category","passed",""
+"TS_CATE_010 ","Kiểm tra nhấn icon Search trên menu top right navigation","passed",""
+"TS_CATE_012 ","Kiểm tra nhấn icon Mua gói trên menu top right navigation","passed",""
+"TS_CATE_015 ","Kiểm tra nhấn icon Tài khoản trên menu top right navigation khi chưa đăng nhập","passed",""
+"TS_CATE_016 ","Kiểm tra nhấn chọn xem 1 VOD phim bộ khi chưa đăng nhập tài khoản","passed",""
+"TS_CATE_013 ","Kiểm tra nhấn icon Noti trên menu top right navigation","failed","INFO: Selected danh muc Phim bộ
+INFO: Selected Item Info Selected Item: Hàn Quốc of Block: Thể loại
+Check [[Setting] in Right Panel] present
+"">>>> Check [[Setting] in Right Panel] present actual: false ,expect: true
+Check [Profile] is focused
+"">>>> Check [Profile] is focused actual: false ,expect: true"
+"TS_CATE_011 ","Kiểm tra nhấn icon Noti trên menu top right navigation","passed",""
+"TS_CATE_014 ","Kiểm tra nhấn icon Tài khoản trên menu top right navigation khi đã đăng nhập","passed",""
+"TS_CATE_017 ","Kiểm tra nhấn chọn xem 1 VOD khi thỏa điều kiện play","failed","INFO: Selected danh muc Phim bộ"
+"TS_CATE_018 ","Kiểm tra nhấn chọn xem 1 VOD thể thao khi đã đăng nhập và thỏa điều kiện play","passed",""

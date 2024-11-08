@@ -1,0 +1,87 @@
+"Tags","Testname","Result","Note"
+"TS_ACC_004 ","Kiểm tra chọn icon Tài khoản khi chưa đăng nhập","passed",""
+"TS_ACC_005 ","Kiểm tra chọn icon Profile khi đã đăng nhập tài khoản","passed",""
+"TS_ACC_008 ","Kiểm tra thông tin tài khoản standalone","failed","Element sub not null
+"">>>> Element sub not null actual: false ,expect: true
+Element subnot null check
+"">>>> Element subnot null check actual: false ,expect: true
+Check [sub] has text: [0361234521], actual Text: 
+"">>>> Check [sub] has text: [0361234521], actual Text:  actual:  ,expect: 0361234521"
+"TS_ACC_010 ","Kiểm tra thông tin tài khoản sub","failed","Element sub not null
+"">>>> Element sub not null actual: false ,expect: true
+Element subnot null check
+"">>>> Element subnot null check actual: false ,expect: true
+Check [sub] has text: [0974303989], actual Text: 
+"">>>> Check [sub] has text: [0974303989], actual Text:  actual:  ,expect: 0974303989"
+"TS_ACC_036 ","Kiểm tra thay đổi mật khẩu thành công","failed","Element sub not null
+"">>>> Element sub not null actual: false ,expect: true
+Element subnot null check
+"">>>> Element subnot null check actual: false ,expect: true
+Check [sub] has text: [0361234525], actual Text: 
+"">>>> Check [sub] has text: [0361234525], actual Text:  actual:  ,expect: 0361234525
+Check [Label Header [Account Info] in Account Info Page] is displayed
+"">>>> Check [Label Header [Account Info] in Account Info Page] is displayed actual: false ,expect: true
+Check [Label [Username] in Account Info Page] is displayed
+"">>>> Check [Label [Username] in Account Info Page] is displayed actual: false ,expect: true
+Check [Label [Username Info] in Account Info Page] is displayed
+"">>>> Check [Label [Username Info] in Account Info Page] is displayed actual: false ,expect: true
+Check [Label [ID] in Account Info Page] is displayed
+"">>>> Check [Label [ID] in Account Info Page] is displayed actual: false ,expect: true
+Check [Label [ID Info] in Account Info Page] is displayed
+"">>>> Check [Label [ID Info] in Account Info Page] is displayed actual: false ,expect: true
+Check [Label [Phone] in Account Info Page] is displayed
+"">>>> Check [Label [Phone] in Account Info Page] is displayed actual: false ,expect: true
+Check [Label [Phone Info] in Account Info Page] is displayed
+"">>>> Check [Label [Phone Info] in Account Info Page] is displayed actual: false ,expect: true
+Check [Menu [Account Info] in Account Info Page] is displayed
+"">>>> Check [Menu [Account Info] in Account Info Page] is displayed actual: false ,expect: true
+Check [Option 'Mã quản lý' in menu] is displayed
+"">>>> Check [Option 'Mã quản lý' in menu] is displayed actual: false ,expect: true
+Element sub not null
+"">>>> Element sub not null actual: false ,expect: true
+Element subnot null check
+"">>>> Element subnot null check actual: false ,expect: true
+Check [sub] has text: [0361234525], actual Text: 
+"">>>> Check [sub] has text: [0361234525], actual Text:  actual:  ,expect: 0361234525
+ERROR: Cannot find [Notification]
+Check [Notification] present
+"">>>> Check [Notification] present actual: false ,expect: true
+Check [Notification Image1] present
+"">>>> Check [Notification Image1] present actual: false ,expect: true
+Element Text child not null
+"">>>> Element Text child not null actual: false ,expect: true"
+"TS_ACC_042 ","Kiểm tra đăng xuất tài khoản","failed","Element sub not null
+"">>>> Element sub not null actual: false ,expect: true
+Element subnot null check
+"">>>> Element subnot null check actual: false ,expect: true
+Check [sub] has text: [0361234521], actual Text: 
+"">>>> Check [sub] has text: [0361234521], actual Text:  actual:  ,expect: 0361234521"
+"TS_ACC_101 ","Kiểm tra nhập Mã kích hoạt hợp lệ","passed",""
+"TS_ACC_102 ","Kiểm tra nhập Mã kích hoạt không hợp lệ","passed",""
+"TS_ACC_147 ","Kiểm tra nhập SAI mật khẩu khi chọn Giám sát trẻ em","passed",""
+"TS_ACC_148 ","Kiểm tra BẬT Chế độ giới hạn ở màn hình Giám sát trẻ em","passed",""
+"TS_ACC_149 ","Kiểm tra TẮT Chế độ giới hạn ở màn hình Giám sát trẻ em","passed",""
+"TS_ACC_151 ","Kiểm tra chọn BẬT chức năng Khóa danh mục","passed",""
+"TS_ACC_152 ","Kiểm tra chọn TẮT chức năng Khóa danh mục","passed",""
+"TS_ACC_154 ","Kiểm tra chọn danh mục đã khóa ở Block danh mục (Trang chủ) và nhập ĐÚNG mật khẩu","passed",""
+"TS_ACC_155 ","Kiểm tra chọn danh mục đã khóa ở Block danh mục (Trang chủ) và nhập SAI mật khẩu","passed",""
+"TS_ACC_156 ","Kiểm tra chọn danh mục đã khóa ở Top left navigation bar và nhập ĐÚNG mật khẩu","passed",""
+"TS_ACC_157 ","Kiểm tra chọn danh mục đã khóa ở Top left navigation bar và nhập SAI mật khẩu","passed",""
+"TS_ACC_158 ","Kiểm tra chọn danh mục đã khóa ở mega app và nhập ĐÚNG mật khẩu","passed",""
+"TS_ACC_159 ","Kiểm tra chọn danh mục đã khóa ở mega app và nhập SAI mật khẩu","passed",""
+"TS_ACC_160 ","Kiểm tra HỦY khóa danh mục","passed",""
+"TS_ACC_161 ","Kiểm tra danh mục ở block Danh mục (Trang chủ) sau khi HỦY khóa","passed",""
+"TS_ACC_162 ","Kiểm tra danh mục ở Top left navigation bar sau khi HỦY khóa","passed",""
+"TS_ACC_163 ","Kiểm tra danh mục ở Mega app sau khi HỦY khóa","passed",""
+"TS_ACC_165 ","Kiểm tra chọn BẬT chức năng Khóa ứng dụng","passed",""
+"TS_ACC_166 ","Kiểm tra chọn TẮT chức năng Khóa ứng dụng","passed",""
+"TS_ACC_167 ","Kiểm tra KHÓA ứng dụng bất kỳ","passed",""
+"TS_ACC_170 ","Kiểm tra chọn app đang khóa ở màn hình Kho ứng dụng trong Mega app và nhập ĐÚNG mật khẩu","passed",""
+"TS_ACC_171 ","Kiểm tra chọn app đang khóa ở màn hình Kho ứng dụng trong Mega app và nhập SAI mật khẩu","passed",""
+"TS_ACC_062 ","Kiểm tra xóa thiết bị ở trang Quản lý thiết bị","passed",""
+"TS_ACC_064 ","Kiểm tra xóa thiết bị đang đăng nhập ở trang Quản lý thiết bị","passed",""
+"TS_ACC_065 ","Kiểm tra xóa thiết bị whitelist","passed",""
+"TS_ACC_067 ","Kiểm tra Dịch vụ đã mua tài khoản Standalone đã từng đăng ký gói","passed",""
+"TS_ACC_068 ","Kiểm tra Dịch vụ đã mua của tài khoản chưa từng đăng ký dịch vụ","passed",""
+"TS_ACC_071 ","Kiểm tra Dịch vụ đã mua tài khoản Sub","passed",""
+"TS_ACC_092 ","Kiểm tra chọn Lịch sử giao dịch đã từng đăng ký dịch vụ","passed",""

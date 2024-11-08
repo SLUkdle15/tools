@@ -1,0 +1,115 @@
+"Tags","Testname","Result","Note"
+"TS_PLAYER_055 ","Kiểm tra trường hợp đang play next tập có bookmark","skipped","----DATA ISSUE ----Not found VOD required RANDOM FREE NEXT_VIEW_WITHVIEW VOD expected [true] but found [false]"
+"TS_PLAYER_056 ","Kiểm tra trường hợp đang play next tập không có bookmark","failed","INFO BLOCK CATEGORY: Hoa ngữ, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Cô Phương Bất Tự Thưởng  of Block: Hoa ngữ
+Press Episode match SELECTED: 1
+Check [Player Progress in Player Page] present
+"">>>> Check [Player Progress in Player Page] present actual: false ,expect: true
+Element Player Des in Player Page not null
+"">>>> Element Player Des in Player Page not null actual: false ,expect: true
+Element Player Des in Player Pagenot null check
+"">>>> Element Player Des in Player Pagenot null check actual: false ,expect: true
+Check [Player Des in Player Page] contains text: [Tập 1] actual Text 
+"">>>> Check [Player Des in Player Page] contains text: [Tập 1] actual Text  actual: false ,expect: true
+Compare Current Time from 0 -> 20s (delay)
+"">>>> Compare Current Time from 0 -> 20s (delay) actual: false ,expect: true"
+"TS_PLAYER_062 ","Kiểm tra trường hợp đang play pre tập không có bookmark","failed","INFO BLOCK CATEGORY: Hoa ngữ, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Cô Phương Bất Tự Thưởng  of Block: Hoa ngữ
+Press Episode match SELECTED: 2
+Element Player Current Duration in Player Page not null
+"">>>> Element Player Current Duration in Player Page not null actual: false ,expect: true
+Element Player Current Duration in Player Pagenot null check
+"">>>> Element Player Current Duration in Player Pagenot null check actual: false ,expect: true"
+"TS_PLAYER_104 ","Kiểm tra bật chức năng Phát ngẫu nhiên trong Playlist","failed","INFO BLOCK CATEGORY: Âm nhạc, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Lòng Em Tội Lỗi of Block: Âm nhạc"
+"TS_PLAYER_105 ","Kiểm tra tắt chức năng Phát ngẫu nhiên trong Playlist","failed","INFO BLOCK CATEGORY: Âm nhạc, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Lòng Em Tội Lỗi of Block: Âm nhạc"
+"TS_PLAYER_110 ","Kiểm tra bật chức năng Lặp lại toàn bộ trong Playlist","failed","INFO BLOCK CATEGORY: Âm nhạc, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Lòng Em Tội Lỗi of Block: Âm nhạc
+Element Text [Player Tv Title] in Player Page not null
+"">>>> Element Text [Player Tv Title] in Player Page not null actual: false ,expect: true
+Element Text [Player Tv Title] in Player Pagenot null check
+"">>>> Element Text [Player Tv Title] in Player Pagenot null check actual: false ,expect: true
+Check [Text [Player Tv Title] in Player Page] has text: [Phận Buồn Dang Dở], actual Text: 
+"">>>> Check [Text [Player Tv Title] in Player Page] has text: [Phận Buồn Dang Dở], actual Text:  actual:  ,expect: Phận Buồn Dang Dở
+Element Button [Repeat] in Player Page not null
+"">>>> Element Button [Repeat] in Player Page not null actual: false ,expect: true"
+"TS_PLAYER_111 ","Kiểm tra bật chức năng Lặp lại 1 VOD trong Playlist","failed","INFO BLOCK CATEGORY: Âm nhạc, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Lòng Em Tội Lỗi of Block: Âm nhạc
+Element Button [Repeat] in Player Page not null
+"">>>> Element Button [Repeat] in Player Page not null actual: false ,expect: true"
+"TS_PLAYER_112 ","Kiểm tra tắt chức năng Lặp lại trong Playlist","failed","INFO BLOCK CATEGORY: Âm nhạc, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Lòng Em Tội Lỗi of Block: Âm nhạc"
+"TS_PLAYER_048 ","VOD không có bookmark (đang xem) - Kiểm tra button khi VOD đang play","failed","INFO BLOCK CATEGORY: Hành động, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Cá Sấu Khổng Lồ 2 of Block: Hành động
+Element Player Current Duration in Player Page not null
+"">>>> Element Player Current Duration in Player Page not null actual: false ,expect: true
+Element Player Current Duration in Player Pagenot null check
+"">>>> Element Player Current Duration in Player Pagenot null check actual: false ,expect: true"
+"TS_PLAYER_050 ","Kiểm tra button khi play từ bookmark và VOD đang play","skipped","----DATA ISSUE ----Not found VOD required RANDOM FREE WITH_VIEW VOD expected [true] but found [false]"
+"TS_PLAYER_052 ","Kiểm tra button khi seek VOD và VOD đang play","failed","INFO BLOCK CATEGORY: Hành động, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Cá Sấu Khổng Lồ 2 of Block: Hành động"
+"TS_PLAYER_165 ","Kiểm tra giao diện popup danh sách tập","failed","INFO BLOCK CATEGORY: Hoa ngữ, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Cô Phương Bất Tự Thưởng  of Block: Hoa ngữ
+Check [duration from root1] present
+"">>>> Check [duration from root1] present actual: false ,expect: true
+Element Get each Group Episode UI not null
+"">>>> Element Get each Group Episode UI not null actual: false ,expect: true"
+"TS_PLAYER_171 ","Kiểm tra chọn tập không có bookmark","passed",""
+"TS_PLAYER_089 ","Kiểm tra chọn button Pause trên player","passed",""
+"TS_PLAYER_090 ","Kiểm tra giao diện popup tiếp tục xem","passed",""
+"TS_PLAYER_092 ","Kiểm tra chọn button Tiếp tục xem trên popup tiếp tục xem","passed",""
+"TS_PLAYER_094 ","Kiểm tra nhấn button Play trên player","passed",""
+"TS_PLAYER_006 ","Kiểm tra hiển thị button Bỏ qua giới thiệu khi chọn Xem ngay/ Chọn tập","passed",""
+"TS_PLAYER_132 ","Kiểm tra mở popup chất lượng hình ảnh","failed","INFO BLOCK CATEGORY: Nhạc trữ tình, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Cát Bụi (Giao Lộ Thời Gian - Hồng Nhung, Bùi Công Nam) of Block: Nhạc trữ tình
+Element Button Setting in Player Page not null
+"">>>> Element Button Setting in Player Page not null actual: false ,expect: true
+Element Button Setting in Player Pagenot null check
+"">>>> Element Button Setting in Player Pagenot null check actual: false ,expect: true
+Check [Button Setting in Player Page] has text: [Auto], actual Text: 
+"">>>> Check [Button Setting in Player Page] has text: [Auto], actual Text:  actual:  ,expect: Auto
+Check [Menu Screen Quality in Right Panel] present
+"">>>> Check [Menu Screen Quality in Right Panel] present actual: false ,expect: true
+Element Title Quality  in Right Panel not null
+"">>>> Element Title Quality  in Right Panel not null actual: false ,expect: true
+Element Title Quality  in Right Panelnot null check
+"">>>> Element Title Quality  in Right Panelnot null check actual: false ,expect: true
+Check [Title Quality  in Right Panel] has text: [Chất lượng hình ảnh], actual Text: 
+"">>>> Check [Title Quality  in Right Panel] has text: [Chất lượng hình ảnh], actual Text:  actual:  ,expect: Chất lượng hình ảnh
+Check [Check Icon] present
+"">>>> Check [Check Icon] present actual: false ,expect: true"
+"TS_PLAYER_138 ","Kiểm tra chuyển từng CLHA hiện có. Trường hợp VOD đang play","failed","INFO BLOCK CATEGORY: Nhạc trữ tình, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Cát Bụi (Giao Lộ Thời Gian - Hồng Nhung, Bùi Công Nam) of Block: Nhạc trữ tình
+Element Button Setting in Player Page not null
+"">>>> Element Button Setting in Player Page not null actual: false ,expect: true"
+"TS_PLAYER_150 ","Kiểm tra chuyển tốc độ phát khi đang Play VOD","failed","INFO BLOCK CATEGORY: Nhạc trẻ, select block condition: Nhạc trẻ
+INFO: Selected Item Info Selected Item: Bống Không Là Bống (Giao Lộ Thời Gian - Hồng Nhung, Bùi Công Nam) of Block: Nhạc trẻ
+Element Button Speed in Player Page not null
+"">>>> Element Button Speed in Player Page not null actual: false ,expect: true"
+"TS_PLAYER_151 ","Kiểm tra chuyển tốc độ phát khi đang Pause VOD","failed","INFO BLOCK CATEGORY: Nhạc trẻ, select block condition: Nhạc trẻ
+INFO: Selected Item Info Selected Item: Bống Không Là Bống (Giao Lộ Thời Gian - Hồng Nhung, Bùi Công Nam) of Block: Nhạc trẻ
+Check [Player Progress in Player Page] present
+"">>>> Check [Player Progress in Player Page] present actual: false ,expect: true
+Check [Check Icon] present
+"">>>> Check [Check Icon] present actual: false ,expect: true"
+"TS_PLAYER_077 ","Kiểm tra nhấn số tập tại VOD bộ","passed",""
+"TS_PLAYER_084 ","Kiểm tra nhấn số tập hợp lệ tại VOD phim bộ. Trường hợp tập chọn đã có bookmark","skipped","----DATA ISSUE ----Not found VOD required RANDOM FREE NEXT_VIEW_WITHVIEW VOD expected [true] but found [false]"
+"TS_PLAYER_198 ","Kiểm tra hiển thị icon Báo cáo khi chọn play VOD yêu cầu đăng nhập - Trường hợp chưa đăng nhập tài khoản","passed",""
+"TS_PLAYER_199 ","Kiểm tra hiển thị icon Báo cáo khi chọn play VOD yêu cầu đăng nhập - Trường hợp đã đăng nhập tài khoản fpt play","passed",""
+"TS_PLAYER_202 ","Kiểm tra màn hình Báo cáo cho VOD","failed","INFO BLOCK CATEGORY: Tạo topic PL mới, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Madame Web of Block: Tạo topic PL mới
+Check [Menu Screen Report in Right Panel] present
+"">>>> Check [Menu Screen Report in Right Panel] present actual: false ,expect: true
+Check [Title Sort in Right Panel] has text: [Bạn đang gặp sự cố gì?], actual Text: Thông báo
+"">>>> Check [Title Sort in Right Panel] has text: [Bạn đang gặp sự cố gì?], actual Text: Thông báo actual: Thông báo ,expect: Bạn đang gặp sự cố gì?
+Element Get list of menu [Menu Screen Report in Right Panel] not null
+"">>>> Element Get list of menu [Menu Screen Report in Right Panel] not null actual: false ,expect: true"
+"TS_PLAYER_205 ","Kiểm tra nhấn chọn nội dung Báo cáo","failed","INFO BLOCK CATEGORY: Tạo topic PL mới, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Madame Web of Block: Tạo topic PL mới
+Element Get list of menu [Menu Screen Report in Right Panel] not null
+"">>>> Element Get list of menu [Menu Screen Report in Right Panel] not null actual: false ,expect: true"
+"TS_PLAYER_207 ","Kiểm tra gửi nội dung Báo cáo cho VOD","failed","INFO BLOCK CATEGORY: Tạo topic PL mới, select block condition: RANDOM
+INFO: Selected Item Info Selected Item: Madame Web of Block: Tạo topic PL mới
+Element Get list of menu [Menu Screen Report in Right Panel] not null
+"">>>> Element Get list of menu [Menu Screen Report in Right Panel] not null actual: false ,expect: true"

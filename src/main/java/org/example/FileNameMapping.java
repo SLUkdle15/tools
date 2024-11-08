@@ -43,7 +43,7 @@ public class FileNameMapping {
                 return "Testcase_TheLoai";
             }
             case "Testcase_TheThao.csv" -> {
-                return "Testcase_TheLoai";
+                return "Testcase_TheThao";
             }
             case "Testcase_Timeshift-Catchup.csv" -> {
                 return "Testcase_Timeshift-Catchup";

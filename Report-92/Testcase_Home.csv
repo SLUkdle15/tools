@@ -1,0 +1,198 @@
+"Tags","Testname","Result","Note"
+"TS_Home_144 ","Kiểm tra giao diện block Danh mục","passed",""
+"TS_Home_147 ","Kiểm tra hiển thị khi nhấn vào item Ứng dụng","passed",""
+"TS_Home_148 ","Kiểm tra redirect khi nhấn vào các item trong block Danh mục (trừ item Ứng dụng)","passed",""
+"TS_Home_150 ","Kiểm tra hiển thị của item thuộc chế độ giám sát trẻ em khi được nhấn vào","passed",""
+"TS_Home_071 ","Kiểm tra giao diện block Theo dõi khi chưa đăng nhập tài khoản FPT Play","passed",""
+"TS_Home_070 ","Kiểm tra giao diện block Theo dõi khi đã đăng nhập tài khoản FPT Play, có VOD theo dõi","passed",""
+"TS_Home_074 ","Kiểm tra số lượng item <= số lượng tối đa trong block - Đã đăng nhập tài khoản FPT Play, có VOD Theo dõi","skipped","----DATA ISSUE ----Data issue: Block Theo dõi having more than 30 items expected [true] but found [false]"
+"TS_Home_075 ","Kiểm tra số lượng item > số lượng tối đa trong block - Đã đăng nhập tài khoản FPT Play, có VOD Theo dõi","passed",""
+"TS_Home_076 ","Kiểm tra thao tác click vào item ""Xem tất cả"" thành công - Đã đăng nhập tài khoản FPT Play, có VOD Theo dõi","passed",""
+"TS_Home_077 ","Kiểm tra add thêm item vào block Đang xem đã đăng nhập tài khoản FPT Play/ Kiểm tra remove 1 item ra khỏi block Theo dõi","failed","INFO BLOCK CATEGORY: Phim lẻ, select block condition: Phim lẻ
+INFO: Selected Item Info Selected Item: Miss case 1 dolby vision và hdr 10 plus of Block: Phim lẻ
+Check [Button [Follow] in VOD Detail Page] has text: [Theo dõi], actual Text: Bỏ theo dõi
+"">>>> Check [Button [Follow] in VOD Detail Page] has text: [Theo dõi], actual Text: Bỏ theo dõi actual: Bỏ theo dõi ,expect: Theo dõi
+Check [Button [Follow] in VOD Detail Page] has text: [Bỏ theo dõi], actual Text: Theo dõi
+"">>>> Check [Button [Follow] in VOD Detail Page] has text: [Bỏ theo dõi], actual Text: Theo dõi actual: Theo dõi ,expect: Bỏ theo dõi
+Check [Child of Category Block Theo dõi having value Miss case 1 dolby vision và hdr 10 plus] present
+"">>>> Check [Child of Category Block Theo dõi having value Miss case 1 dolby vision và hdr 10 plus] present actual: false ,expect: true"
+"TS_Home_078 ","Kiểm tra add thêm item vào block Đang xem đã đăng nhập tài khoản FPT Play/ Kiểm tra remove 1 item ra khỏi block Theo dõi","failed","INFO BLOCK CATEGORY: Phim lẻ, select block condition: Phim lẻ
+INFO: Selected Item Info Selected Item: Miss case 1 dolby vision và hdr 10 plus of Block: Phim lẻ"
+"TS_Home_046 ","Kiểm tra vị trí block highlight","passed",""
+"TS_Home_151 ","Kiểm tra giao diện block Kênh cá nhân","failed","Check [Label] has text: [Vĩnh Long 3 HD], actual Text: FPT Play
+"">>>> Check [Label] has text: [Vĩnh Long 3 HD], actual Text: FPT Play actual: FPT Play ,expect: Vĩnh Long 3 HD
+Check [Label] has text: [Vĩnh Long 2 HD], actual Text: Vĩnh Long 3 HD
+"">>>> Check [Label] has text: [Vĩnh Long 2 HD], actual Text: Vĩnh Long 3 HD actual: Vĩnh Long 3 HD ,expect: Vĩnh Long 2 HD
+Check [Label] has text: [Đồng Tháp], actual Text: VTV5 HD
+"">>>> Check [Label] has text: [Đồng Tháp], actual Text: VTV5 HD actual: VTV5 HD ,expect: Đồng Tháp
+Check [Label] has text: [FPT Play], actual Text: Vĩnh Long 2 HD
+"">>>> Check [Label] has text: [FPT Play], actual Text: Vĩnh Long 2 HD actual: Vĩnh Long 2 HD ,expect: FPT Play
+Check [Label] has text: [Vĩnh Long 4 HD], actual Text: Đồng Tháp
+"">>>> Check [Label] has text: [Vĩnh Long 4 HD], actual Text: Đồng Tháp actual: Đồng Tháp ,expect: Vĩnh Long 4 HD
+Check [Label] has text: [VTV5 HD], actual Text: VTV2 HD
+"">>>> Check [Label] has text: [VTV5 HD], actual Text: VTV2 HD actual: VTV2 HD ,expect: VTV5 HD
+Check [Label] has text: [Hậu Giang], actual Text: VTV Cần Thơ
+"">>>> Check [Label] has text: [Hậu Giang], actual Text: VTV Cần Thơ actual: VTV Cần Thơ ,expect: Hậu Giang
+Check [Label] has text: [HTV7 HD], actual Text: Vĩnh Long 4 HD
+"">>>> Check [Label] has text: [HTV7 HD], actual Text: Vĩnh Long 4 HD actual: Vĩnh Long 4 HD ,expect: HTV7 HD
+Check [Label] has text: [VTV2 HD], actual Text: Hậu Giang
+"">>>> Check [Label] has text: [VTV2 HD], actual Text: Hậu Giang actual: Hậu Giang ,expect: VTV2 HD
+Check [Label] has text: [ANTV HD], actual Text: HTV7 HD
+"">>>> Check [Label] has text: [ANTV HD], actual Text: HTV7 HD actual: HTV7 HD ,expect: ANTV HD
+Check [Label] has text: [VTV Cần Thơ], actual Text: VTV4 HD
+"">>>> Check [Label] has text: [VTV Cần Thơ], actual Text: VTV4 HD actual: VTV4 HD ,expect: VTV Cần Thơ
+Check [Label] has text: [VTV4 HD], actual Text: ANTV HD
+"">>>> Check [Label] has text: [VTV4 HD], actual Text: ANTV HD actual: ANTV HD ,expect: VTV4 HD
+Check [Label] has text: [HTV Thể Thao], actual Text: VTV5 Tây Nam Bộ
+"">>>> Check [Label] has text: [HTV Thể Thao], actual Text: VTV5 Tây Nam Bộ actual: VTV5 Tây Nam Bộ ,expect: HTV Thể Thao
+Check [Label] has text: [VTV9 HD], actual Text: HTV Thể Thao
+"">>>> Check [Label] has text: [VTV9 HD], actual Text: HTV Thể Thao actual: HTV Thể Thao ,expect: VTV9 HD
+Check [Label] has text: [An Giang HD], actual Text: VTV9 HD
+"">>>> Check [Label] has text: [An Giang HD], actual Text: VTV9 HD actual: VTV9 HD ,expect: An Giang HD
+Check [Label] has text: [Cần Thơ HD], actual Text: Quốc Hội HD
+"">>>> Check [Label] has text: [Cần Thơ HD], actual Text: Quốc Hội HD actual: Quốc Hội HD ,expect: Cần Thơ HD
+Check [Label] has text: [VTC14 HD], actual Text: An Giang HD
+"">>>> Check [Label] has text: [VTC14 HD], actual Text: An Giang HD actual: An Giang HD ,expect: VTC14 HD
+Check [Label] has text: [VTV5 Tây Nam Bộ], actual Text: VTV7 HD
+"">>>> Check [Label] has text: [VTV5 Tây Nam Bộ], actual Text: VTV7 HD actual: VTV7 HD ,expect: VTV5 Tây Nam Bộ"
+"TS_Home_154 ","Kiểm tra redirect khi nhấn vào các item trong block Kênh cá nhân - Đối với kênh số 1 - Chưa đăng nhập tài khoản FPT Play","failed",""
+"TS_Home_156 ","Kiểm tra redirect khi nhấn vào các item trong block Kênh cá nhân - Đối với các kênh khác kênh số 1 - Chưa đăng nhập tài khoản FPT Play","failed",""
+"TS_Home_155 ","Kiểm tra redirect khi nhấn vào các item trong block Kênh cá nhân - Đối với kênh số 1 - Đã đăng nhập tài khoản FPT Play","failed",""
+"TS_Home_157 ","Kiểm tra redirect khi nhấn vào các item trong block Kênh cá nhân - Đối với các kênh khác kênh số 1 - Đã đăng nhập tài khoản FPT Play","failed",""
+"TS_Home_0159 TS_Home_161 ","Kiểm tra nhấn chọn 1 kênh thuộc gói MAX khi đăng nhập tài khoản chưa đủ điều kiện","passed",""
+"TS_Home_0159 TS_Home_161 ","Kiểm tra nhấn chọn 1 kênh thuộc gói VIP khi đăng nhập tài khoản chưa đủ điều kiện","passed",""
+"TS_Home_161 ","Kiểm tra nhấn chọn 1 kênh thuộc gói MAX khi đăng nhập tài khoản chưa đủ điều kiện","passed",""
+"TS_Home_161 ","Kiểm tra nhấn chọn 1 kênh thuộc gói VIP khi đăng nhập tài khoản chưa đủ điều kiện","passed",""
+"TS_Home_158 ","Kiểm tra nhấn chọn 1 kênh thuộc gói MAX khi đăng nhập tài khoản đủ điều kiện","failed",""
+"TS_Home_158 ","Kiểm tra nhấn chọn 1 kênh thuộc gói VIP khi đăng nhập tài khoản đủ điều kiện","failed",""
+"TS_Home_160 ","Kiểm tra nhấn chọn 1 kênh thuộc gói MAX khi đăng nhập tài khoản đủ điều kiện","failed",""
+"TS_Home_160 ","Kiểm tra nhấn chọn 1 kênh thuộc gói VIP khi đăng nhập tài khoản đủ điều kiện","failed",""
+"TS_Home_124 ","Kiểm tra giao diện block Top 10 phim bộ xu hướng","skipped","----DATA ISSUE ----Api Trang chủ does not return Top 10 phim bộ trên FPT Play expected [true] but found [false]"
+"TS_Home_127 ","Kiểm tra redirect khi nhấn vào 1 item trong block Top 10 phim bộ xu hướng","skipped","----DATA ISSUE ----Api Trang chủ does not return Top 10 phim bộ trên FPT Play expected [true] but found [false]"
+"TS_Home_086 ","Kiểm tra giao diện block Sắp công chiếu","passed",""
+"TS_Home_094 ","Kiểm tra khi người dùng thao tác nhấn vào button Nhắc tôi khi chưa đăng nhập tài khoản FPT Play","passed",""
+"TS_Home_093 ","Kiểm tra khi người dùng thao tác nhấn vào button Nhắc tôi khi đã đăng nhập tài khoản FPT Play","skipped","Block Sắp công chiếu should contain Item having Button Remind Me
+"">>>> Block Sắp công chiếu should contain Item having Button Remind Me actual: false ,expect: true
+Data Issue: Not found Item having Button Remind Me
+Check [Button [Coming Notification]] is displayed
+"">>>> Check [Button [Coming Notification]] is displayed actual: false ,expect: true
+Check [Button [Coming Notification]] has text: [Nhắc tôi], actual Text: Đã đặt lời nhắc
+"">>>> Check [Button [Coming Notification]] has text: [Nhắc tôi], actual Text: Đã đặt lời nhắc actual: Đã đặt lời nhắc ,expect: Nhắc tôi
+Check [Button [Coming Notification]] is displayed
+"">>>> Check [Button [Coming Notification]] is displayed actual: false ,expect: true
+Check [Button [Coming Notification]] is displayed
+"">>>> Check [Button [Coming Notification]] is displayed actual: false ,expect: true"
+"TS_Home_099 ","Kiểm tra giao diện block chứa VOD phim lẻ","passed",""
+"TS_Home_104 ","Kiểm ra redirect khi nhấn 1 item VOD trong block VOD phim bộ, phim lẻ","passed",""
+"TS_Home_110 ","Kiểm tra nhấn chọn 1 item trong block xem tất cả","passed",""
+"TS_Home_111 ","Kiểm tra giao diện block chứa VOD âm nhạc","failed","Check [Label] has text: [Giao Lộ Thời Gian - Lưu Bích, Vicky Nhung], actual Text: Giao Lộ Thời Gian - Quang Hà, Hà Nhi
+"">>>> Check [Label] has text: [Giao Lộ Thời Gian - Lưu Bích, Vicky Nhung], actual Text: Giao Lộ Thời Gian - Quang Hà, Hà Nhi actual: Giao Lộ Thời Gian - Quang Hà, Hà Nhi ,expect: Giao Lộ Thời Gian - Lưu Bích, Vicky Nhung
+Check [Label] has text: [Giao Lộ Thời Gian - Quang Hà, Hà Nhi], actual Text: Giao Lộ Thời Gian - Tuyết Loan, Uyên Linh
+"">>>> Check [Label] has text: [Giao Lộ Thời Gian - Quang Hà, Hà Nhi], actual Text: Giao Lộ Thời Gian - Tuyết Loan, Uyên Linh actual: Giao Lộ Thời Gian - Tuyết Loan, Uyên Linh ,expect: Giao Lộ Thời Gian - Quang Hà, Hà Nhi
+Check [Label] has text: [Giao Lộ Thời Gian - Tuyết Loan, Uyên Linh], actual Text: Những Sáng Tác Của Châu Đăng Khoa
+"">>>> Check [Label] has text: [Giao Lộ Thời Gian - Tuyết Loan, Uyên Linh], actual Text: Những Sáng Tác Của Châu Đăng Khoa actual: Những Sáng Tác Của Châu Đăng Khoa ,expect: Giao Lộ Thời Gian - Tuyết Loan, Uyên Linh
+Check [Label] has text: [Những Sáng Tác Của Châu Đăng Khoa], actual Text: Giao Lộ Thời Gian - Thanh Hoa, Hòa Minzy
+"">>>> Check [Label] has text: [Những Sáng Tác Của Châu Đăng Khoa], actual Text: Giao Lộ Thời Gian - Thanh Hoa, Hòa Minzy actual: Giao Lộ Thời Gian - Thanh Hoa, Hòa Minzy ,expect: Những Sáng Tác Của Châu Đăng Khoa
+Check [Label] has text: [Giao Lộ Thời Gian - Thanh Hoa, Hòa Minzy], actual Text: Giao Lộ Thời Gian - Phương Thanh, DatKaa
+"">>>> Check [Label] has text: [Giao Lộ Thời Gian - Thanh Hoa, Hòa Minzy], actual Text: Giao Lộ Thời Gian - Phương Thanh, DatKaa actual: Giao Lộ Thời Gian - Phương Thanh, DatKaa ,expect: Giao Lộ Thời Gian - Thanh Hoa, Hòa Minzy
+Check [Label] has text: [Giao Lộ Thời Gian - Phương Thanh, DatKaa], actual Text: Em Thích Là Được
+"">>>> Check [Label] has text: [Giao Lộ Thời Gian - Phương Thanh, DatKaa], actual Text: Em Thích Là Được actual: Em Thích Là Được ,expect: Giao Lộ Thời Gian - Phương Thanh, DatKaa
+Check [Label] has text: [Em Thích Là Được], actual Text: Giao Lộ Thời Gian - Thanh Hà, Lân Nhã
+"">>>> Check [Label] has text: [Em Thích Là Được], actual Text: Giao Lộ Thời Gian - Thanh Hà, Lân Nhã actual: Giao Lộ Thời Gian - Thanh Hà, Lân Nhã ,expect: Em Thích Là Được
+Check [Label] has text: [Giao Lộ Thời Gian - Thanh Hà, Lân Nhã], actual Text: Top Hits Trịnh Thăng Bình
+"">>>> Check [Label] has text: [Giao Lộ Thời Gian - Thanh Hà, Lân Nhã], actual Text: Top Hits Trịnh Thăng Bình actual: Top Hits Trịnh Thăng Bình ,expect: Giao Lộ Thời Gian - Thanh Hà, Lân Nhã
+Check [Label] has text: [Top Hits Trịnh Thăng Bình], actual Text: Giao Lộ Thời Gian - Ưng Hoàng Phúc, Đức Phúc
+"">>>> Check [Label] has text: [Top Hits Trịnh Thăng Bình], actual Text: Giao Lộ Thời Gian - Ưng Hoàng Phúc, Đức Phúc actual: Giao Lộ Thời Gian - Ưng Hoàng Phúc, Đức Phúc ,expect: Top Hits Trịnh Thăng Bình
+Check [Label] has text: [Giao Lộ Thời Gian - Ưng Hoàng Phúc, Đức Phúc], actual Text: Lối Đi Cho Em
+"">>>> Check [Label] has text: [Giao Lộ Thời Gian - Ưng Hoàng Phúc, Đức Phúc], actual Text: Lối Đi Cho Em actual: Lối Đi Cho Em ,expect: Giao Lộ Thời Gian - Ưng Hoàng Phúc, Đức Phúc
+Check [Label] has text: [Lối Đi Cho Em], actual Text: Giao Lộ Thời Gian - Anh Thơ, Dương Hoàng Yến
+"">>>> Check [Label] has text: [Lối Đi Cho Em], actual Text: Giao Lộ Thời Gian - Anh Thơ, Dương Hoàng Yến actual: Giao Lộ Thời Gian - Anh Thơ, Dương Hoàng Yến ,expect: Lối Đi Cho Em
+Check [Label] has text: [Giao Lộ Thời Gian - Anh Thơ, Dương Hoàng Yến], actual Text: Top Hits Đàm Vĩnh Hưng
+"">>>> Check [Label] has text: [Giao Lộ Thời Gian - Anh Thơ, Dương Hoàng Yến], actual Text: Top Hits Đàm Vĩnh Hưng actual: Top Hits Đàm Vĩnh Hưng ,expect: Giao Lộ Thời Gian - Anh Thơ, Dương Hoàng Yến"
+"TS_Home_112 ","Kiểm tra hiển thị các VOD Âm nhạc khi được hover vào","passed",""
+"TS_Home_114 ","Kiểm tra số lượng item >= 30","skipped","----DATA ISSUE ----Data issue: Block Âm nhạc having less than 30 items expected [true] but found [false]"
+"TS_Home_115 ","Kiểm tra số lượng item < 30","failed","Check [Child of Category Block Âm nhạc having value Giao Lộ Thời Gian - Anh Thơ, Dương Hoàng Yến] is focused
+"">>>> Check [Child of Category Block Âm nhạc having value Giao Lộ Thời Gian - Anh Thơ, Dương Hoàng Yến] is focused actual: false ,expect: true
+Check [Label] has text: [Giao Lộ Thời Gian - Anh Thơ, Dương Hoàng Yến], actual Text: Top Hits Đàm Vĩnh Hưng
+"">>>> Check [Label] has text: [Giao Lộ Thời Gian - Anh Thơ, Dương Hoàng Yến], actual Text: Top Hits Đàm Vĩnh Hưng actual: Top Hits Đàm Vĩnh Hưng ,expect: Giao Lộ Thời Gian - Anh Thơ, Dương Hoàng Yến
+Labelhas element 0text: 13 videos ,expect Text 10 videos
+"">>>> Labelhas element 0text: 13 videos ,expect Text 10 videos actual: false ,expect: true"
+"TS_Home_117 ","Kiểm tra redirect khi nhấn 1 item VOD trong block VOD Âm nhạc - Chưa đăng nhập tài khoản FPT Play","passed",""
+"TS_Home_116 ","Kiểm tra redirect khi nhấn 1 item VOD trong block VOD Âm nhạc - Đã đăng nhập tài khoản FPT Play","passed",""
+"TS_Home_128 ","Kiểm tra giao diện block VOD Mới ra mắt","failed","Check [Title Img] attribute content-desc contains DOLBY AUDIO DRM [TECHDAY], actual text attribute: DOLBY AUDIO - DOLBY
+"">>>> Check [Title Img] attribute content-desc contains DOLBY AUDIO DRM [TECHDAY], actual text attribute: DOLBY AUDIO - DOLBY actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Tuyển Tập Nhạc Xuân Của Lưu Ánh Loan, actual text attribute: DOLBY AUDIO - GALAXY
+"">>>> Check [Title Img] attribute content-desc contains Tuyển Tập Nhạc Xuân Của Lưu Ánh Loan, actual text attribute: DOLBY AUDIO - GALAXY actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Case 4 miss hdr 10 và AV1 (DRM), actual text attribute: DOLBY AUDIO - GIAO LỘ THỜI GIAN
+"">>>> Check [Title Img] attribute content-desc contains Case 4 miss hdr 10 và AV1 (DRM), actual text attribute: DOLBY AUDIO - GIAO LỘ THỜI GIAN actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Case 4 miss hdr 10 và AV1, actual text attribute: DOLBY AUDIO - SONY PICTURES
+"">>>> Check [Title Img] attribute content-desc contains Case 4 miss hdr 10 và AV1, actual text attribute: DOLBY AUDIO - SONY PICTURES actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Miss case 2 hdr 10 plus và HDR 10 (DRM), actual text attribute: DOLBY AUDIO DRM [TECHDAY]
+"">>>> Check [Title Img] attribute content-desc contains Miss case 2 hdr 10 plus và HDR 10 (DRM), actual text attribute: DOLBY AUDIO DRM [TECHDAY] actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Miss case 1 dolby vision và hdr 10 plus (DRM), actual text attribute: Tuyển Tập Nhạc Xuân Của Lưu Ánh Loan
+"">>>> Check [Title Img] attribute content-desc contains Miss case 1 dolby vision và hdr 10 plus (DRM), actual text attribute: Tuyển Tập Nhạc Xuân Của Lưu Ánh Loan actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Miss case 2 hdr 10 plus và HDR 10, actual text attribute: Case 4 miss hdr 10 và AV1 (DRM)
+"">>>> Check [Title Img] attribute content-desc contains Miss case 2 hdr 10 plus và HDR 10, actual text attribute: Case 4 miss hdr 10 và AV1 (DRM) actual: false ,expect: true
+Check [Title Img] attribute content-desc contains TEST DOLBY AUDIO, actual text attribute: Case 4 miss hdr 10 và AV1
+"">>>> Check [Title Img] attribute content-desc contains TEST DOLBY AUDIO, actual text attribute: Case 4 miss hdr 10 và AV1 actual: false ,expect: true
+Check [Title Img] attribute content-desc contains TEST DOLBY AUDIO [GALAXY], actual text attribute: Miss case 2 hdr 10 plus và HDR 10 (DRM)
+"">>>> Check [Title Img] attribute content-desc contains TEST DOLBY AUDIO [GALAXY], actual text attribute: Miss case 2 hdr 10 plus và HDR 10 (DRM) actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Bản Lĩnh Phái Đẹp, actual text attribute: Miss case 1 dolby vision và hdr 10 plus (DRM)
+"">>>> Check [Title Img] attribute content-desc contains Bản Lĩnh Phái Đẹp, actual text attribute: Miss case 1 dolby vision và hdr 10 plus (DRM) actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Miss case 1 dolby vision và hdr 10 plus, actual text attribute: Miss case 2 hdr 10 plus và HDR 10
+"">>>> Check [Title Img] attribute content-desc contains Miss case 1 dolby vision và hdr 10 plus, actual text attribute: Miss case 2 hdr 10 plus và HDR 10 actual: false ,expect: true
+Check [Title Img] attribute content-desc contains MULTI CODECS (DRM), actual text attribute: MULTI CODECS (NON-DRM)
+"">>>> Check [Title Img] attribute content-desc contains MULTI CODECS (DRM), actual text attribute: MULTI CODECS (NON-DRM) actual: false ,expect: true
+Check [Title Img] attribute content-desc contains TEST D2G REVISION, actual text attribute: Miss case 1 dolby vision và hdr 10 plus
+"">>>> Check [Title Img] attribute content-desc contains TEST D2G REVISION, actual text attribute: Miss case 1 dolby vision và hdr 10 plus actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Lòng Em Tội Lỗi, actual text attribute: MULTI CODECS (DRM)
+"">>>> Check [Title Img] attribute content-desc contains Lòng Em Tội Lỗi, actual text attribute: MULTI CODECS (DRM) actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Không Là Tình Nhân, actual text attribute: TEST D2G REVISION
+"">>>> Check [Title Img] attribute content-desc contains Không Là Tình Nhân, actual text attribute: TEST D2G REVISION actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Giọng Ca Nam Hay Nhất GLTG, actual text attribute: Lòng Em Tội Lỗi
+"">>>> Check [Title Img] attribute content-desc contains Giọng Ca Nam Hay Nhất GLTG, actual text attribute: Lòng Em Tội Lỗi actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Lòng Nghe Tái Tê, actual text attribute: Không Là Tình Nhân
+"">>>> Check [Title Img] attribute content-desc contains Lòng Nghe Tái Tê, actual text attribute: Không Là Tình Nhân actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Khi Anh Chạy Về Phía Em, actual text attribute: Giọng Ca Nam Hay Nhất GLTG
+"">>>> Check [Title Img] attribute content-desc contains Khi Anh Chạy Về Phía Em, actual text attribute: Giọng Ca Nam Hay Nhất GLTG actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Thám Tử Lừng Danh Conan: Đội Thám Tử Nhí Lớp 1B, actual text attribute: Lòng Nghe Tái Tê
+"">>>> Check [Title Img] attribute content-desc contains Thám Tử Lừng Danh Conan: Đội Thám Tử Nhí Lớp 1B, actual text attribute: Lòng Nghe Tái Tê actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Điền Canh Kỷ, actual text attribute: Khi Anh Chạy Về Phía Em
+"">>>> Check [Title Img] attribute content-desc contains Điền Canh Kỷ, actual text attribute: Khi Anh Chạy Về Phía Em actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Mối Liên Kết Bí Ẩn, actual text attribute: Thám Tử Lừng Danh Conan: Đội Thám Tử Nhí Lớp 1B
+"">>>> Check [Title Img] attribute content-desc contains Mối Liên Kết Bí Ẩn, actual text attribute: Thám Tử Lừng Danh Conan: Đội Thám Tử Nhí Lớp 1B actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Paw Patrol - Giải Cứu Chú Khỉ Phi Hành Gia, actual text attribute: Điền Canh Kỷ
+"">>>> Check [Title Img] attribute content-desc contains Paw Patrol - Giải Cứu Chú Khỉ Phi Hành Gia, actual text attribute: Điền Canh Kỷ actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Cho Nó Một Tí, actual text attribute: Mối Liên Kết Bí Ẩn
+"">>>> Check [Title Img] attribute content-desc contains Cho Nó Một Tí, actual text attribute: Mối Liên Kết Bí Ẩn actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Biệt Đội Săn Ma: Kỷ Nguyên Băng Giá, actual text attribute: Paw Patrol - Giải Cứu Chú Khỉ Phi Hành Gia
+"">>>> Check [Title Img] attribute content-desc contains Biệt Đội Săn Ma: Kỷ Nguyên Băng Giá, actual text attribute: Paw Patrol - Giải Cứu Chú Khỉ Phi Hành Gia actual: false ,expect: true
+Check [Title Img] attribute content-desc contains Phi Hổ 3, actual text attribute: Cho Nó Một Tí
+"">>>> Check [Title Img] attribute content-desc contains Phi Hổ 3, actual text attribute: Cho Nó Một Tí actual: false ,expect: true"
+"TS_Home_131 ","Kiểm tra số lượng item >= 30","skipped","----DATA ISSUE ----Data issue: Block Mới ra mắt having less than 30 items expected [true] but found [false]"
+"TS_Home_132 ","Kiểm tra số lượng item < 30","failed","Check [Child of Category Block Mới ra mắt having value Phi Hổ 3] is focused
+"">>>> Check [Child of Category Block Mới ra mắt having value Phi Hổ 3] is focused actual: false ,expect: true"
+"TS_Home_133 ","Kiểm tra redirect khi nhấn 1 item VOD trong block VOD Mới ra mắt","passed",""
+"TS_Home_099 ","Kiểm tra giao diện block chứa VOD Phim bộ","passed",""
+"TS_Home_104 ","Kiểm tra giao diện block chứa VOD Phim bộ","passed",""
+"TS_Home_110 ","Kiểm tra nhấn chọn 1 item trong block xem tất cả","skipped","----DATA ISSUE ----Data issue: Block Phim bộ hot having less than 30 items expected [true] but found [false]"
+"TS_Home_111 ","Kiểm tra giao diện block chứa VOD Thể thao","passed",""
+"TS_Home_112 ","Kiểm tra hiển thị các VOD Thể thao khi được hover vào","passed",""
+"TS_Home_114 ","Kiểm tra số lượng item > 30","skipped","----DATA ISSUE ----Data issue: Block Thể thao having less than 30 items expected [true] but found [false]"
+"TS_Home_115 ","Kiểm tra số lượng item <= 30","passed",""
+"TS_Home_117 ","Kiểm tra redirect khi nhấn 1 item VOD trong block VOD Thể thao - Chưa đăng nhập tài khoản FPT Play","passed",""
+"TS_Home_116 ","Kiểm tra redirect khi nhấn 1 item VOD trong block VOD Thể thao - Đã đăng nhập tài khoản FPT Play","passed",""
+"TS_Home_059 ","Kiểm tra giao diện block Đang xem khi chưa đăng nhập tài khoản FPT Play","passed",""
+"TS_Home_058 ","Kiểm tra giao diện block Đang xem khi đã đăng nhập tài khoản FPT Play, có VOD đang xem","passed",""
+"TS_Home_069 ","Kiểm tra nhấn chọn 1 item trong block xem tất cả - Số lượng VOD >=30 items","passed",""
+"TS_Home_062 ","Kiểm tra add thêm item vào block Đang xem đã đăng nhập tài khoản FPT Play","passed",""
+"TS_Home_005 ","Kiểm tra hiển thị trang chủ từ 1 trang nội dung khác","passed",""
+"TS_Home_009 ","Kiểm tra giao diện ở Top Left navigation bar","passed",""
+"TS_Home_012 ","Kiểm tra behavior nhấn vào mục Truyền hình - Chưa đăng nhập tài khoản FPT Play","failed","Check [Text Player Title in Player Page] has text: [FPT PLAY], actual Text: 0. FPT PLAY
+"">>>> Check [Text Player Title in Player Page] has text: [FPT PLAY], actual Text: 0. FPT PLAY actual: 0. FPT PLAY ,expect: FPT PLAY"
+"TS_Home_014 ","Kiểm tra behavior nhấn vào mục Truyền hình - Đã đăng nhập tài khoản FPT Play, đã play kênh lúc trước","failed","INFO: Selected Item Info Selected Item: Bình Dương 2 HD of Block: Kênh địa phương
+Check [Text Player Title in Player Page] has text: [BÌNH DƯƠNG 2 HD], actual Text: 127. BÌNH DƯƠNG 2 HD
+"">>>> Check [Text Player Title in Player Page] has text: [BÌNH DƯƠNG 2 HD], actual Text: 127. BÌNH DƯƠNG 2 HD actual: 127. BÌNH DƯƠNG 2 HD ,expect: BÌNH DƯƠNG 2 HD"
+"TS_Home_028 ","Kiểm tra focus vào icon Mega","passed",""
+"TS_Home_031 ","Kiểm tra behavior khi nhấn vào mục đã set chế độ giám sát trẻ em","failed","Element Option 'Truyền hình' in menu not null
+"">>>> Element Option 'Truyền hình' in menu not null actual: false ,expect: true"

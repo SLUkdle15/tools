@@ -1,0 +1,134 @@
+"Tags","Testname","Result","Note"
+"TS_MP_130 ","Kiểm tra tạo mới profile khi đang sử dụng profile thường (chưa tạo đủ 5 profile)","passed",""
+"TS_MP_147 ","Kiểm tra tắt mode trẻ em ở màn hình Tạo hồ sơ","failed","Element Option 'Tài khoản' in menu not null
+"">>>> Element Option 'Tài khoản' in menu not null actual: false ,expect: true"
+"TS_MP_159 ","Kiểm tra Đổi mã PIN hồ sơ tại màn hình Mã PIN hồ sơ","failed","Element Option 'Tài khoản' in menu not null
+"">>>> Element Option 'Tài khoản' in menu not null actual: false ,expect: true"
+"TS_MP_164 ","Kiểm tra bật kid mode sau khi đã thiết lập mã PIN profile","failed","Element Option 'Tài khoản' in menu not null
+"">>>> Element Option 'Tài khoản' in menu not null actual: false ,expect: true"
+"TS_MP_167 ","Kiểm tra tạo mới hồ sơ trẻ em thành công","failed","Button Add Profile displayed
+"">>>> Button Add Profile displayed actual: false ,expect: true
+Check [Text [Add]] is displayed
+"">>>> Check [Text [Add]] is displayed actual: false ,expect: true
+Check [Label Header [Add Profile]] is displayed
+"">>>> Check [Label Header [Add Profile]] is displayed actual: false ,expect: true
+Check [Icon] is displayed
+"">>>> Check [Icon] is displayed actual: false ,expect: true
+Check [Button Finish] is displayed
+"">>>> Check [Button Finish] is displayed actual: false ,expect: true
+Check [Button Cancel] is displayed
+"">>>> Check [Button Cancel] is displayed actual: false ,expect: true
+Check [Menu Vgv User Profile Dashboard] is displayed
+"">>>> Check [Menu Vgv User Profile Dashboard] is displayed actual: false ,expect: true
+Element Option 'Tên' in menu not null
+"">>>> Element Option 'Tên' in menu not null actual: false ,expect: true"
+"TS_MP_131 ","Kiểm tra tạo mới profile khi đang sử dụng profile thường (khi đã tạo đủ 5 profiles)","failed","Element Option 'Tài khoản' in menu not null
+"">>>> Element Option 'Tài khoản' in menu not null actual: false ,expect: true"
+"TS_MP_184 ","Kiểm tra chọn chỉnh sửa profile thường không PIN đang sử dụng","failed","Option 'Mã PIN hồ sơ' in menuhas element 1text: Chỉnh sửa ,expect Text Chưa thiết lập
+"">>>> Option 'Mã PIN hồ sơ' in menuhas element 1text: Chỉnh sửa ,expect Text Chưa thiết lập actual: false ,expect: true"
+"TS_MP_185 ","Kiểm tra chọn chỉnh sửa profile thường có PIN đang sử dụng","failed","Element Text [Phone] in Login Page not null
+"">>>> Element Text [Phone] in Login Page not null actual: false ,expect: true
+Element Text [Phone] in Login Pagenot null check
+"">>>> Element Text [Phone] in Login Pagenot null check actual: false ,expect: true
+Check [Text [Phone] in Login Page] has text: [0929088224], actual Text: 
+"">>>> Check [Text [Phone] in Login Page] has text: [0929088224], actual Text:  actual:  ,expect: 0929088224
+Check [Button Continue] is focused
+"">>>> Check [Button Continue] is focused actual: false ,expect: true
+Element Button Continue not null
+"">>>> Element Button Continue not null actual: false ,expect: true"
+"TS_MP_188 ","Kiểm tra chọn chỉnh sửa hồ sơ kid","failed","Element Option 'Tài khoản' in menu not null
+"">>>> Element Option 'Tài khoản' in menu not null actual: false ,expect: true"
+"TS_MP_199 ","Kiểm tra thay đổi mã PIN hồ sơ đã thiết lập mã PIN","failed","Element Option 'Tài khoản' in menu not null
+"">>>> Element Option 'Tài khoản' in menu not null actual: false ,expect: true"
+"TS_MP_207 ","Kiểm tra chọn chỉnh sửa profile kid đang sử dụng","skipped","----DATA ISSUE ----ACCOUNT LITE DOESN'T SATISFY PRECONDITION FOR TESTING: HAS AT LEAST 1 KID PROFILE expected [true] but found [false]"
+"TS_MP_210 ","Kiểm tra chỉnh sửa tên profile kid hợp lệ","skipped","----DATA ISSUE ----ACCOUNT LITE DOESN'T SATISFY PRECONDITION FOR TESTING: HAS AT LEAST 1 KID PROFILE expected [true] but found [false]"
+"TS_MP_205 ","Kiểm tra chuyển đổi profile kid thành profile thường không PIN","skipped","----DATA ISSUE ----ACCOUNT LITE DOESN'T SATISFY PRECONDITION FOR TESTING: HAS AT LEAST 1 KID PROFILE expected [true] but found [false]"
+"TS_MP_206 ","Kiểm tra chuyển đổi profile kid thành profile thường có PIN","skipped","----DATA ISSUE ----ACCOUNT LITE DOESN'T SATISFY PRECONDITION FOR TESTING: HAS AT LEAST 1 KID PROFILE expected [true] but found [false]"
+"TS_MP_016 ","Kiểm tra giao diện home app khi sử dụng profile Thường","passed",""
+"TS_MP_017 ","Kiểm tra giao diện home app khi sử dụng profile kid","skipped","----DATA ISSUE ----ACCOUNT NORMAL DOESN'T SATISFY PRECONDITION FOR TESTING: HAS KID AT POSITION 1 expected [true] but found [false]"
+"TS_MP_004 ","Kiểm tra chọn item profile mode khi chưa login tài khoản","passed",""
+"TS_MP_010 ","Kiểm tra logout-login tài khoản luôn vào profile thường mặc định","failed","Element sub not null
+"">>>> Element sub not null actual: false ,expect: true
+Element subnot null check
+"">>>> Element subnot null check actual: false ,expect: true
+Check [sub] has text: [0929088224], actual Text: 
+"">>>> Check [sub] has text: [0929088224], actual Text:  actual:  ,expect: 0929088224"
+"TS_MP_244 ","Kiểm tra màn hình Nhập mật khẩu tài khoản ở Quên mã PIN","passed",""
+"TS_MP_247 ","Kiểm tra Đặt lại mật khẩu khi chuyển sang profile thường có pin từ quick menu","skipped","----DATA ISSUE ----ACCOUNT CHANGE_PASS DOESN'T SATISFY PRECONDITION FOR TESTING: HAS LOCKED PROFILE expected [true] but found [false]"
+"TS_MP_252 ","Kiểm tra Đặt lại mật khẩu khi chuyển sang profile thường có pin ở Ai đang xem","skipped","----DATA ISSUE ----ACCOUNT CHANGE_PASS DOESN'T SATISFY PRECONDITION FOR TESTING: HAS LOCKED PROFILE expected [true] but found [false]"
+"TS_MP_257 ","Kiểm tra Đặt lại mật khẩu khi chỉnh sửa profile khác","skipped","----DATA ISSUE ----ACCOUNT CHANGE_PASS DOESN'T SATISFY PRECONDITION FOR TESTING: HAS LOCKED PROFILE expected [true] but found [false]"
+"TS_MP_236 ","Kiểm tra chọn button Quên mã pin, khi chọn chuyển hồ sơ từ quick menu","failed","Check [Label [Enter Profile PIN]] is displayed
+"">>>> Check [Label [Enter Profile PIN]] is displayed actual: false ,expect: true
+Check [Password 1] is displayed
+"">>>> Check [Password 1] is displayed actual: false ,expect: true
+Check [Password 2] is displayed
+"">>>> Check [Password 2] is displayed actual: false ,expect: true
+Check [Password 3] is displayed
+"">>>> Check [Password 3] is displayed actual: false ,expect: true
+Check [Password 4] is displayed
+"">>>> Check [Password 4] is displayed actual: false ,expect: true
+Check [Label Description] is displayed
+"">>>> Check [Label Description] is displayed actual: false ,expect: true
+Check [Keyboard Common] is displayed
+"">>>> Check [Keyboard Common] is displayed actual: false ,expect: true
+Check [Button Forget PIN] is displayed
+"">>>> Check [Button Forget PIN] is displayed actual: false ,expect: true
+Check [Button Confirm] is displayed
+"">>>> Check [Button Confirm] is displayed actual: false ,expect: true
+Element Button Cancel not null
+"">>>> Element Button Cancel not null actual: false ,expect: true"
+"TS_MP_237 ","Kiểm tra chọn button Quên mã pin, khi chọn chuyển hồ sơ từ Ai đang xem","failed","Check [Label [Enter Profile PIN]] is displayed
+"">>>> Check [Label [Enter Profile PIN]] is displayed actual: false ,expect: true
+Check [Password 1] is displayed
+"">>>> Check [Password 1] is displayed actual: false ,expect: true
+Check [Password 2] is displayed
+"">>>> Check [Password 2] is displayed actual: false ,expect: true
+Check [Password 3] is displayed
+"">>>> Check [Password 3] is displayed actual: false ,expect: true
+Check [Password 4] is displayed
+"">>>> Check [Password 4] is displayed actual: false ,expect: true
+Check [Label Description] is displayed
+"">>>> Check [Label Description] is displayed actual: false ,expect: true
+Check [Keyboard Common] is displayed
+"">>>> Check [Keyboard Common] is displayed actual: false ,expect: true
+Check [Button Forget PIN] is displayed
+"">>>> Check [Button Forget PIN] is displayed actual: false ,expect: true
+Check [Button Confirm] is displayed
+"">>>> Check [Button Confirm] is displayed actual: false ,expect: true
+Element Button Cancel not null
+"">>>> Element Button Cancel not null actual: false ,expect: true"
+"TS_MP_241 ","Kiểm tra thiết lập lại mã Pin hồ sơ thành công","failed","Check [Label [Enter Profile PIN]] is displayed
+"">>>> Check [Label [Enter Profile PIN]] is displayed actual: false ,expect: true
+Check [Password 1] is displayed
+"">>>> Check [Password 1] is displayed actual: false ,expect: true
+Check [Password 2] is displayed
+"">>>> Check [Password 2] is displayed actual: false ,expect: true
+Check [Password 3] is displayed
+"">>>> Check [Password 3] is displayed actual: false ,expect: true
+Check [Password 4] is displayed
+"">>>> Check [Password 4] is displayed actual: false ,expect: true
+Check [Label Description] is displayed
+"">>>> Check [Label Description] is displayed actual: false ,expect: true
+Check [Keyboard Common] is displayed
+"">>>> Check [Keyboard Common] is displayed actual: false ,expect: true
+Check [Button Forget PIN] is displayed
+"">>>> Check [Button Forget PIN] is displayed actual: false ,expect: true
+Check [Button Confirm] is displayed
+"">>>> Check [Button Confirm] is displayed actual: false ,expect: true
+Element Button Cancel not null
+"">>>> Element Button Cancel not null actual: false ,expect: true"
+"TS_MP_041 ","Kiểm tra giao diện popup Quick menu. Trường hợp đang sử dụng profile thường","passed",""
+"TS_MP_048 ","Kiểm tra chọn tài khoản từ popup Quick menu","passed",""
+"TS_MP_050 ","Kiểm tra chọn cài đặt từ popup Quick menu","passed",""
+"TS_MP_042 ","Kiểm tra giao diện popup Quick menu. Trường hợp đang sử dụng profile kid","skipped","----DATA ISSUE ----ACCOUNT NORMAL DOESN'T SATISFY PRECONDITION FOR TESTING: HAS KID AT POSITION 1 expected [true] but found [false]"
+"TS_MP_096 ","Kiểm tra chọn Quản lý hồ sơ","passed",""
+"TS_MP_104 ","Kiểm tra chuyển profile thành công khi chuyển profile từ profile thường sang profile thường có mã Pin tại Quick menu","failed","Element Option 'Tài khoản' in menu not null
+"">>>> Element Option 'Tài khoản' in menu not null actual: false ,expect: true"
+"TS_MP_108 ","Kiểm tra chuyển profile thành công từ profile thường sang profile kid tại Quick menu","skipped","----DATA ISSUE ----ACCOUNT TWO_KID_PROFILES DOESN'T SATISFY PRECONDITION FOR TESTING: HAS 2 KID PROFILES AND 1 LOCKED PROFILE expected [true] but found [false]"
+"TS_MP_109 ","Kiểm tra chuyển profile từ profile thường sang profile kid tại Ai đang xem?","skipped","----DATA ISSUE ----ACCOUNT TWO_KID_PROFILES DOESN'T SATISFY PRECONDITION FOR TESTING: HAS 2 KID PROFILES AND 1 LOCKED PROFILE expected [true] but found [false]"
+"TS_MP_110 ","Kiểm tra chuyển đổi từ profile kid sang profile thường tại quick menu","skipped","----DATA ISSUE ----ACCOUNT TWO_KID_PROFILES DOESN'T SATISFY PRECONDITION FOR TESTING: HAS 2 KID PROFILES AND 1 LOCKED PROFILE expected [true] but found [false]"
+"TS_MP_114 ","Kiểm tra chuyển đổi từ profile kid sang profile thường tại Ai dang xem","skipped","----DATA ISSUE ----ACCOUNT TWO_KID_PROFILES DOESN'T SATISFY PRECONDITION FOR TESTING: HAS 2 KID PROFILES AND 1 LOCKED PROFILE expected [true] but found [false]"
+"TS_MP_120 ","Kiểm tra chuyển profile thành công khi chuyển profile từ profile kid sang profile thường có mã Pin tại Quick menu","skipped","----DATA ISSUE ----ACCOUNT TWO_KID_PROFILES DOESN'T SATISFY PRECONDITION FOR TESTING: HAS 2 KID PROFILES AND 1 LOCKED PROFILE expected [true] but found [false]"
+"TS_MP_123 ","Kiểm tra chuyển profile thành công khi chuyển profile từ profile kid sang profile thường có mã Pin tại Ai đang xem?","skipped","----DATA ISSUE ----ACCOUNT TWO_KID_PROFILES DOESN'T SATISFY PRECONDITION FOR TESTING: HAS 2 KID PROFILES AND 1 LOCKED PROFILE expected [true] but found [false]"
+"TS_MP_124 ","Kiểm tra chuyển profile thành công từ profile kid sang profile kid tại Quick menu","skipped","----DATA ISSUE ----ACCOUNT TWO_KID_PROFILES DOESN'T SATISFY PRECONDITION FOR TESTING: HAS 2 KID PROFILES AND 1 LOCKED PROFILE expected [true] but found [false]"
+"TS_MP_125 ","Kiểm tra chuyển profile thành công từ profile kid sang profile kid tại Ai dang xem","skipped","----DATA ISSUE ----ACCOUNT TWO_KID_PROFILES DOESN'T SATISFY PRECONDITION FOR TESTING: HAS 2 KID PROFILES AND 1 LOCKED PROFILE expected [true] but found [false]"
