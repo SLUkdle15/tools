@@ -219,7 +219,8 @@ public class DriveQuickstart {
             if (!row.isEmpty() && row.get(0).equals("TC_ID")) { //assuming Note is the final column
                 header = i; //contains TC_ID counting from 0
                 for (int j = 0; j < row.size(); j++) {
-                    String column = row.get(j).toString();
+                    //trim string
+                    String column = row.get(j).toString().trim();
                     if (column.equals("Result")) {
                         resultColumn = j;
                     } else if (column.equals("TS_ID")) {

@@ -6,27 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0d396cdd-75dd-4900-9ef5-ed5b3545f7e6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_AR-WC.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Report-92/Testcase_AR-WC.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_Account.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Report-92/Testcase_Account.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_DangXem.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Report-92/Testcase_DangXem.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_DetailVOD.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Report-92/Testcase_DetailVOD.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_Home.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Report-92/Testcase_Home.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_Login.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Report-92/Testcase_Login.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_Multiprofile.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Report-92/Testcase_Multiprofile.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_Player.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Report-92/Testcase_Player.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_Playlist.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Report-92/Testcase_Playlist.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_DangXem.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Report-92/Testcase_Preview5p.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Report-92/Testcase_Preview5p.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Report-92/Testcase_Search.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Report-92/Testcase_Search.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_SuKien.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Report-92/Testcase_SuKien.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_TheLoai.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Report-92/Testcase_TheLoai.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_TheThao.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Report-92/Testcase_TheThao.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_TheoDoi.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Report-92/Testcase_TheoDoi.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_Timeshift-Catchup.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Report-92/Testcase_Timeshift-Catchup.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_Timeshift-Seek.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Report-92/Testcase_Timeshift-Seek.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_TruyenHinh.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Report-92/Testcase_TruyenHinh.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DriveQuickstart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DriveQuickstart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FileNameMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FileNameMapping.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tokens/StoredCredential" beforeDir="false" afterPath="$PROJECT_DIR$/tokens/StoredCredential" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +35,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.DriveQuickstart.executor": "Run",
+    "Application.DriveQuickstart.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
@@ -141,7 +123,9 @@
       <workItem from="1730876076209" duration="2064000" />
       <workItem from="1730880812734" duration="1008000" />
       <workItem from="1730963595350" duration="3055000" />
-      <workItem from="1730966682401" duration="689000" />
+      <workItem from="1730966682401" duration="1611000" />
+      <workItem from="1731027036237" duration="624000" />
+      <workItem from="1731051750871" duration="1511000" />
     </task>
     <servers />
   </component>
@@ -155,6 +139,26 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/SearchService.java</url>
           <line>38</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/DriveQuickstart.java</url>
+          <line>189</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/DriveQuickstart.java</url>
+          <line>246</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/DriveQuickstart.java</url>
+          <line>250</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/DriveQuickstart.java</url>
+          <line>225</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
