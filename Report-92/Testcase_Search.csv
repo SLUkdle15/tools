@@ -1,9 +1,0 @@
-"Tags","Testname","Result","Note"
-"TS_SR_027 ","Kiểm tra chọn vào suggest search","failed","Check [Menu [Search Result] in Search Result Page] is displayed
-"">>>> Check [Menu [Search Result] in Search Result Page] is displayed actual: false ,expect: true"
-"TS_SR_028 ","Kiểm tra vào màn hình Search khi đã lưu 5 nội dung","failed","Element Button Search not null
-"">>>> Element Button Search not null actual: false ,expect: true"
-"TS_SR_002 ","Kiểm tra nhập text bằng Keyboard ảo","passed",""
-"TS_SR_006 ","Kiểm tra màn hình trả về kết quả giống với input khi nhập 1 ký tự","passed",""
-"TS_SR_003 ","Kiểm tra SL trending search","passed",""
-"TS_SR_022 ","Kiểm tra SL trending VOD","passed",""

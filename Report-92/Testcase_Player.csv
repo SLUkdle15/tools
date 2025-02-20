@@ -1,115 +1,118 @@
 "Tags","Testname","Result","Note"
-"TS_PLAYER_055 ","Kiểm tra trường hợp đang play next tập có bookmark","skipped","----DATA ISSUE ----Not found VOD required RANDOM FREE NEXT_VIEW_WITHVIEW VOD expected [true] but found [false]"
-"TS_PLAYER_056 ","Kiểm tra trường hợp đang play next tập không có bookmark","failed","INFO BLOCK CATEGORY: Hoa ngữ, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Cô Phương Bất Tự Thưởng  of Block: Hoa ngữ
-Press Episode match SELECTED: 1
-Check [Player Progress in Player Page] present
-"">>>> Check [Player Progress in Player Page] present actual: false ,expect: true
-Element Player Des in Player Page not null
-"">>>> Element Player Des in Player Page not null actual: false ,expect: true
-Element Player Des in Player Pagenot null check
-"">>>> Element Player Des in Player Pagenot null check actual: false ,expect: true
-Check [Player Des in Player Page] contains text: [Tập 1] actual Text 
-"">>>> Check [Player Des in Player Page] contains text: [Tập 1] actual Text  actual: false ,expect: true
-Compare Current Time from 0 -> 20s (delay)
-"">>>> Compare Current Time from 0 -> 20s (delay) actual: false ,expect: true"
-"TS_PLAYER_062 ","Kiểm tra trường hợp đang play pre tập không có bookmark","failed","INFO BLOCK CATEGORY: Hoa ngữ, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Cô Phương Bất Tự Thưởng  of Block: Hoa ngữ
-Press Episode match SELECTED: 2
-Element Player Current Duration in Player Page not null
-"">>>> Element Player Current Duration in Player Page not null actual: false ,expect: true
-Element Player Current Duration in Player Pagenot null check
-"">>>> Element Player Current Duration in Player Pagenot null check actual: false ,expect: true"
-"TS_PLAYER_104 ","Kiểm tra bật chức năng Phát ngẫu nhiên trong Playlist","failed","INFO BLOCK CATEGORY: Âm nhạc, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Lòng Em Tội Lỗi of Block: Âm nhạc"
-"TS_PLAYER_105 ","Kiểm tra tắt chức năng Phát ngẫu nhiên trong Playlist","failed","INFO BLOCK CATEGORY: Âm nhạc, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Lòng Em Tội Lỗi of Block: Âm nhạc"
-"TS_PLAYER_110 ","Kiểm tra bật chức năng Lặp lại toàn bộ trong Playlist","failed","INFO BLOCK CATEGORY: Âm nhạc, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Lòng Em Tội Lỗi of Block: Âm nhạc
-Element Text [Player Tv Title] in Player Page not null
-"">>>> Element Text [Player Tv Title] in Player Page not null actual: false ,expect: true
-Element Text [Player Tv Title] in Player Pagenot null check
-"">>>> Element Text [Player Tv Title] in Player Pagenot null check actual: false ,expect: true
-Check [Text [Player Tv Title] in Player Page] has text: [Phận Buồn Dang Dở], actual Text: 
-"">>>> Check [Text [Player Tv Title] in Player Page] has text: [Phận Buồn Dang Dở], actual Text:  actual:  ,expect: Phận Buồn Dang Dở
-Element Button [Repeat] in Player Page not null
-"">>>> Element Button [Repeat] in Player Page not null actual: false ,expect: true"
-"TS_PLAYER_111 ","Kiểm tra bật chức năng Lặp lại 1 VOD trong Playlist","failed","INFO BLOCK CATEGORY: Âm nhạc, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Lòng Em Tội Lỗi of Block: Âm nhạc
-Element Button [Repeat] in Player Page not null
-"">>>> Element Button [Repeat] in Player Page not null actual: false ,expect: true"
-"TS_PLAYER_112 ","Kiểm tra tắt chức năng Lặp lại trong Playlist","failed","INFO BLOCK CATEGORY: Âm nhạc, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Lòng Em Tội Lỗi of Block: Âm nhạc"
-"TS_PLAYER_048 ","VOD không có bookmark (đang xem) - Kiểm tra button khi VOD đang play","failed","INFO BLOCK CATEGORY: Hành động, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Cá Sấu Khổng Lồ 2 of Block: Hành động
-Element Player Current Duration in Player Page not null
-"">>>> Element Player Current Duration in Player Page not null actual: false ,expect: true
-Element Player Current Duration in Player Pagenot null check
-"">>>> Element Player Current Duration in Player Pagenot null check actual: false ,expect: true"
-"TS_PLAYER_050 ","Kiểm tra button khi play từ bookmark và VOD đang play","skipped","----DATA ISSUE ----Not found VOD required RANDOM FREE WITH_VIEW VOD expected [true] but found [false]"
-"TS_PLAYER_052 ","Kiểm tra button khi seek VOD và VOD đang play","failed","INFO BLOCK CATEGORY: Hành động, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Cá Sấu Khổng Lồ 2 of Block: Hành động"
-"TS_PLAYER_165 ","Kiểm tra giao diện popup danh sách tập","failed","INFO BLOCK CATEGORY: Hoa ngữ, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Cô Phương Bất Tự Thưởng  of Block: Hoa ngữ
-Check [duration from root1] present
-"">>>> Check [duration from root1] present actual: false ,expect: true
-Element Get each Group Episode UI not null
-"">>>> Element Get each Group Episode UI not null actual: false ,expect: true"
-"TS_PLAYER_171 ","Kiểm tra chọn tập không có bookmark","passed",""
+"TS_PLAYER_001","Kiểm tra giao diện player Phim lẻ","passed","test"
+"TS_PLAYER_002","Kiểm tra giao diện player Phim bộ","passed",""
+"TS_PLAYER_003","Kiểm tra giao diện player Playlist","passed",""
+"TS_PLAYER_004","Tua có thumnail - Kiểm tra nhấn button Left thực hiện tua lùi, khi VOD đang play và không hiện player","passed",""
+"TS_PLAYER_005 ","Kiểm tra giao diện player Preview VOD","passed",""
+"TS_PLAYER_006 ","Kiểm tra ẩn player khi bắt đầu vào xem VOD","passed",""
+"TS_PLAYER_007 ","Kiểm tra hiển thị button Bỏ qua giới thiệu khi chọn button Xem từ đầu","passed",""
+"TS_PLAYER_008 ","Kiểm tra tự động tắt button Bỏ qua giới thiệu khi không thao tác","passed",""
+"TS_PLAYER_009 ","Kiểm tra ẩn player khi nhấn Back trên remote","passed",""
+"TS_PLAYER_010 ","Kiểm tra ẩn player khi đang focus vào các button và nhấn Back trên remote","passed",""
+"TS_PLAYER_011 ","Kiểm tra hiển thị button Bỏ qua giới thiệu khi chọn Xem ngay/ Chọn tập","passed",""
+"TS_PLAYER_012","Kiểm tra ẩn player khi không thao tác trong 10s","passed",""
+"TS_PLAYER_013 ","Kiểm tra thoát player khi nhấn button back trên remote","passed",""
+"TS_PLAYER_014","VOD không có bookmark (đang xem) - Kiểm tra button khi VOD đang pause","passed",""
+"TS_PLAYER_015 ","Kiểm tra tắt button Bỏ qua giới thiệu khi nhấn OK","passed",""
+"TS_PLAYER_016","Kiểm tra button khi play từ bookmark và VOD đang play","passed",""
+"TS_PLAYER_017 ","Kiểm tra button khi seek VOD và VOD đang pause","passed",""
+"TS_PLAYER_018 ","Kiểm tra trường hợp đang pause next tập có bookmark","passed",""
+"TS_PLAYER_019 ","Kiểm tra trường hợp đang pause next tập không có bookmark","passed",""
+"TS_PLAYER_020 ","Tua không có thumnail - Kiểm tra nhấn button Right thực hiện tua tới, khi VOD đang play và không hiện player","passed",""
+"TS_PLAYER_021 ","Kiểm tra trường hợp đang play pre tập có bookmark","passed",""
+"TS_PLAYER_022 ","Kiểm tra trường hợp đang pause pre tập có bookmark","passed",""
+"TS_PLAYER_023 ","Kiểm tra trường hợp đang pause pre tập không có bookmark","passed",""
+"TS_PLAYER_024 ","Kiểm tra giao diện màn hình Auto next tập","passed",""
+"TS_PLAYER_025 ","Kiểm tra chọn button Xem tập tiếp theo khi tập tiếp theo có bookmark","passed",""
+"TS_PLAYER_026 ","Kiểm tra trường hợp play hết tập auto next tập kế tiếp có bookmark","passed",""
+"TS_PLAYER_027 ","Tua không có thumnail - Kiểm tra nhấn button Left thực hiện tua lùi, khi VOD đang play và không hiện player","passed",""
+"TS_PLAYER_028 ","Kiểm tra nhấn số tập hợp lệ, trường hợp tập có 3 chữ số","passed","----DATA ISSUE ----Not found VOD required RANDOM SOME_FREE_AND_SOME_PREVIEW IGNORE_INTRO_CONDITION VOD expected [true] but found [false]"
+"TS_PLAYER_029 ","Kiểm tra nhấn số tập hợp lệ tại VOD phim bộ. Trường hợp tập chọn đã yêu cầu mua gói, với tài khoản đang login chưa có gói","skipped",""
+"TS_PLAYER_030 ","Kiểm tra nhấn số tập không hợp lệ tại VOD phim bộ. Trường hợp VOD đã full tập","passed","----DATA ISSUE ----Not found VOD required RANDOM FREE NOT_FULL_EPISODES VOD expected [true] but found [false]"
+"TS_PLAYER_031 ","Kiểm tra nhấn số tập không hợp lệ tại VOD phim bộ. Trường hợp VOD chưa full tập","skipped",""
+"TS_PLAYER_034 ","Tua có thumnail - Kiểm tra nhấn button Right thực hiện tua tới, khi VOD đang play và không hiện player","passed",""
+"TS_PLAYER_036 ","Kiểm tra lưu chức năng phát ngẫu nhiên khi next VOD khác trong playlist","passed",""
+"TS_PLAYER_037 ","Kiểm tra lưu chức năng phát ngẫu nhiên khi chọn tập khác","passed",""
+"TS_PLAYER_038 ","Kiểm tra lưu chức năng phát ngẫu nhiên khi next playlist khác","passed",""
+"TS_PLAYER_039","Kiểm tra mở popup chất lượng hình ảnh","passed",""
+"TS_PLAYER_040 ","Kiểm tra lưu chức năng phát ngẫu nhiên khi back ra detail và play lại playlist","passed",""
+"TS_PLAYER_041 ","Kiểm tra lưu chức năng lặp lại khi next VOD khác trong playlist","passed",""
+"TS_PLAYER_042 ","Kiểm tra lưu chức năng lặp lại khi chọn tập khác","passed",""
+"TS_PLAYER_043 ","Kiểm tra lưu chức năng lặp lại khi next playlist khác","passed",""
+"TS_PLAYER_045 ","Kiểm tra lưu chức năng lặp lại khi back ra detail và play lại playlist","passed",""
+"TS_PLAYER_048 ","VOD không có bookmark (đang xem) - Kiểm tra button khi VOD đang play","passed",""
+"TS_PLAYER_050 ","Kiểm tra button khi play từ bookmark và VOD đang play","passed",""
+"TS_PLAYER_052 ","Kiểm tra button khi seek VOD và VOD đang play","passed",""
+"TS_PLAYER_053 ","Kiểm tra đóng popup chất lượng hình ảnh khi nhấn Back","passed",""
+"TS_PLAYER_055 ","Kiểm tra trường hợp đang play next tập có bookmark","passed",""
+"TS_PLAYER_056 ","Kiểm tra trường hợp đang play next tập không có bookmark","passed",""
+"TS_PLAYER_057 ","Kiểm tra nhấn OK trên remote để pause VOD đang play và khi không hiện player","passed",""
+"TS_PLAYER_058 ","Kiểm tra giao diện button tốc độ phát","passed","DATA ISSUE"
+"TS_PLAYER_059 ","Kiểm tra trường hợp next tập kế tiếp yêu cầu mua gói","skipped",""
+"TS_PLAYER_060","Kiểm tra đóng popup Tốc độ phát","passed",""
+"TS_PLAYER_061 ","Tua không có thumnail - Kiểm tra nhấn button Right thực hiện tua tới, khi VOD đang pause và không hiện player","passed",""
+"TS_PLAYER_061 ","Tua có thumnail - Kiểm tra nhấn button Right thực hiện tua tới, khi VOD đang pause và không hiện player","passed",""
+"TS_PLAYER_062 ","Kiểm tra trường hợp đang play pre tập không có bookmark","passed",""
+"TS_PLAYER_063 ","Kiểm tra lưu tốc độ phát khi auto chuyển tập","passed",""
+"TS_PLAYER_064 ","Kiểm tra lưu tốc độ phát khi auto nhấn Next/ Pre","passed","Code issues"
+"TS_PLAYER_065 ","Kiểm tra lưu tốc độ phát khi chọn tập trong DS tập","",""
+"TS_PLAYER_066 ","Kiểm tra lưu tốc độ phát khi chọn button Replay trong Player","passed",""
+"TS_PLAYER_067 ","Kiểm tra lưu tốc độ phát khi Đổi chất lượng","passed",""
+"TS_PLAYER_068 ","Kiểm tra chọn button Xem tập tiếp theo khi tập tiếp theo không có bookmark","passed",""
+"TS_PLAYER_069 ","Kiểm tra lưu tốc độ phát khi seek","passed",""
+"TS_PLAYER_070 ","Kiểm tra lưu tốc độ phát khi chọn play Trailer","passed",""
+"TS_PLAYER_071 ","Kiểm tra trường hợp play hết tập auto next tập kế tiếp không có bookmark","passed",""
+"TS_PLAYER_072 ","Kiểm tra không lưu tốc độ phát khi next VOD khác","passed",""
+"TS_PLAYER_073 ","Kiểm tra không lưu tốc độ phát khi play VOD khác","passed",""
+"TS_PLAYER_077 ","Kiểm tra nhấn số tập tại VOD bộ","passed",""
+"TS_PLAYER_081 ","Kiểm tra hiển thị popup next movie khi thao tác tua đến hết duration","passed",""
+"TS_PLAYER_084 ","Tua có thumnail - Kiểm tra nhấn button Left thực hiện tua lùi, khi VOD đang pause và không hiện player","passed",""
+"TS_PLAYER_085 ","Kiểm tra nhấn Back trong popup Báo cáo","passed",""
+"TS_PLAYER_086 ","Kiểm tra button Hủy trong popup Report","passed",""
+"TS_PLAYER_087 ","Kiểm tra nhấn chọn >2 nội dung Báo cáo","passed",""
+"TS_PLAYER_088 ","Kiểm tra lưu tốc độ phát khi chọn button Play/ Pause","passed",""
 "TS_PLAYER_089 ","Kiểm tra chọn button Pause trên player","passed",""
 "TS_PLAYER_090 ","Kiểm tra giao diện popup tiếp tục xem","passed",""
+"TS_PLAYER_091 ","Kiểm tra nhấn Back khi đang hiển thị popup tiếp tục xem","passed",""
 "TS_PLAYER_092 ","Kiểm tra chọn button Tiếp tục xem trên popup tiếp tục xem","passed",""
 "TS_PLAYER_094 ","Kiểm tra nhấn button Play trên player","passed",""
-"TS_PLAYER_006 ","Kiểm tra hiển thị button Bỏ qua giới thiệu khi chọn Xem ngay/ Chọn tập","passed",""
-"TS_PLAYER_132 ","Kiểm tra mở popup chất lượng hình ảnh","failed","INFO BLOCK CATEGORY: Nhạc trữ tình, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Cát Bụi (Giao Lộ Thời Gian - Hồng Nhung, Bùi Công Nam) of Block: Nhạc trữ tình
-Element Button Setting in Player Page not null
-"">>>> Element Button Setting in Player Page not null actual: false ,expect: true
-Element Button Setting in Player Pagenot null check
-"">>>> Element Button Setting in Player Pagenot null check actual: false ,expect: true
-Check [Button Setting in Player Page] has text: [Auto], actual Text: 
-"">>>> Check [Button Setting in Player Page] has text: [Auto], actual Text:  actual:  ,expect: Auto
-Check [Menu Screen Quality in Right Panel] present
-"">>>> Check [Menu Screen Quality in Right Panel] present actual: false ,expect: true
-Element Title Quality  in Right Panel not null
-"">>>> Element Title Quality  in Right Panel not null actual: false ,expect: true
-Element Title Quality  in Right Panelnot null check
-"">>>> Element Title Quality  in Right Panelnot null check actual: false ,expect: true
-Check [Title Quality  in Right Panel] has text: [Chất lượng hình ảnh], actual Text: 
-"">>>> Check [Title Quality  in Right Panel] has text: [Chất lượng hình ảnh], actual Text:  actual:  ,expect: Chất lượng hình ảnh
-Check [Check Icon] present
-"">>>> Check [Check Icon] present actual: false ,expect: true"
-"TS_PLAYER_138 ","Kiểm tra chuyển từng CLHA hiện có. Trường hợp VOD đang play","failed","INFO BLOCK CATEGORY: Nhạc trữ tình, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Cát Bụi (Giao Lộ Thời Gian - Hồng Nhung, Bùi Công Nam) of Block: Nhạc trữ tình
-Element Button Setting in Player Page not null
-"">>>> Element Button Setting in Player Page not null actual: false ,expect: true"
-"TS_PLAYER_150 ","Kiểm tra chuyển tốc độ phát khi đang Play VOD","failed","INFO BLOCK CATEGORY: Nhạc trẻ, select block condition: Nhạc trẻ
-INFO: Selected Item Info Selected Item: Bống Không Là Bống (Giao Lộ Thời Gian - Hồng Nhung, Bùi Công Nam) of Block: Nhạc trẻ
-Element Button Speed in Player Page not null
-"">>>> Element Button Speed in Player Page not null actual: false ,expect: true"
-"TS_PLAYER_151 ","Kiểm tra chuyển tốc độ phát khi đang Pause VOD","failed","INFO BLOCK CATEGORY: Nhạc trẻ, select block condition: Nhạc trẻ
-INFO: Selected Item Info Selected Item: Bống Không Là Bống (Giao Lộ Thời Gian - Hồng Nhung, Bùi Công Nam) of Block: Nhạc trẻ
-Check [Player Progress in Player Page] present
-"">>>> Check [Player Progress in Player Page] present actual: false ,expect: true
-Check [Check Icon] present
-"">>>> Check [Check Icon] present actual: false ,expect: true"
-"TS_PLAYER_077 ","Kiểm tra nhấn số tập tại VOD bộ","passed",""
-"TS_PLAYER_084 ","Kiểm tra nhấn số tập hợp lệ tại VOD phim bộ. Trường hợp tập chọn đã có bookmark","skipped","----DATA ISSUE ----Not found VOD required RANDOM FREE NEXT_VIEW_WITHVIEW VOD expected [true] but found [false]"
-"TS_PLAYER_198 ","Kiểm tra hiển thị icon Báo cáo khi chọn play VOD yêu cầu đăng nhập - Trường hợp chưa đăng nhập tài khoản","passed",""
+"TS_PLAYER_095 ","Kiểm tra nhấn OK trên remote để play VOD đang pause và khi không hiện player","passed",""
+"TS_PLAYER_096 ","Kiểm tra lưu theo dõi khi chọn button trong player","passed",""
+"TS_PLAYER_097 ","Kiểm tra bỏ theo dõi khi chọn button trong player","passed",""
+"TS_PLAYER_104 ","Kiểm tra bật chức năng Phát ngẫu nhiên trong Playlist","passed",""
+"TS_PLAYER_105 ","Kiểm tra tắt chức năng Phát ngẫu nhiên trong Playlist","passed",""
+"TS_PLAYER_110 ","Kiểm tra bật chức năng Lặp lại toàn bộ trong Playlist","passed",""
+"TS_PLAYER_111 ","Kiểm tra bật chức năng Lặp lại 1 VOD trong Playlist","passed",""
+"TS_PLAYER_112 ","Kiểm tra tắt chức năng Lặp lại trong Playlist","passed",""
+"TS_PLAYER_126 ","Kiểm tra nhấn số tập hợp lệ, trường hợp tập có 1 chữ số","passed",""
+"TS_PLAYER_127 ","Kiểm tra nhấn số tập hợp lệ, trường hợp tập có 2 chữ số","passed",""
+"TS_PLAYER_044","Kiểm tra chuyển từng CLHA hiện có. Trường hợp VOD đang play","passed",""
+"TS_PLAYER_150 ","Kiểm tra chuyển tốc độ phát khi đang Play VOD","passed",""
+"TS_PLAYER_151 ","Kiểm tra chuyển tốc độ phát khi đang Pause VOD","passed",""
+"TS_PLAYER_154 ","Kiểm tra chuyển từng CLHA hiện có. Trường hợp VOD đang pause","passed",""
+"TS_PLAYER_165 ","Kiểm tra giao diện popup danh sách tập","passed","DATA ISSUE"
+"TS_PLAYER_168 ","Kiểm tra chọn tập đang xem trên danh sách tập","skipped",""
+"TS_PLAYER_169 ","Kiểm tra chọn tập có bookmark không tại credit","passed",""
+"TS_PLAYER_171 ","Kiểm tra chọn tập không có bookmark","passed",""
+"TS_PLAYER_174 ","Kiểm tra nhấn back từ màn hình mua gói","passed",""
+"TS_PLAYER_175 ","Kiểm tra chọn button Để sau tại màn hình yêu cầu mua gói","passed",""
+"TS_PLAYER_176 ","Kiểm tra chọn button Mua gói tại màn hình yêu cầu mua gói","passed",""
+"TS_PLAYER_178 ","Kiểm tra hiển thị popup next movie khi play VOD lẻ đến credit","passed","Code issues"
+"TS_PLAYER_179 ","Kiểm tra hiển thị popup next movie khi play tập cuối của VOD bộ đến credit","","----DATA ISSUE ----Not found VOD required RANDOM FREE IGNORE_INTRO_CONDITION VOD_WITH_CREDIT NEXT_VOD_WITH_TRAILER IGNORE_TRAILER_CONDITION VOD expected [true] but found [false]"
+"TS_PLAYER_182 ","Kiểm tra hiển thị button Phát trailer khi VOD được next tiếp theo có trailer","skipped","----DATA ISSUE ----Not found VOD required RANDOM FREE IGNORE_TRAILER_CONDITION VOD_WITH_CREDIT NO_PREVIEW NEXT_VOD_WITH_TRAILER VOD expected [true] but found [false]"
+"TS_PLAYER_183 ","Kiểm tra hiển thị button Phát trailer khi VOD được next tiếp theo có trailer","skipped",""
+"TS_PLAYER_186 ","Kiểm tra auto next movie, trường hợp VOD được next là VOD bộ/lẻ, không có trailer","passed","----DATA ISSUE ----Not found VOD required RANDOM FREE IGNORE_TRAILER_CONDITION VOD_WITH_CREDIT NEXT_VOD_WITH_TRAILER VOD expected [true] but found [false]"
+"TS_PLAYER_187 ","Kiểm tra auto next movie, trường hợp VOD được next là VOD bộ/lẻ, có trailer","skipped","----DATA ISSUE ----Not found VOD required RANDOM FREE IGNORE_TRAILER_CONDITION VOD_WITH_CREDIT VOD expected [true] but found [false]"
+"TS_PLAYER_188 ","Kiểm tra auto next movie, trường hợp VOD xem ngay không qua detail (Thiếu nhi, Thiếu nhi, thể thao)","skipped",""
+"TS_PLAYER_192 ","Kiểm tra chọn button Xem ngay trên popup next movie.","passed","----DATA ISSUE ----Not found VOD required RANDOM FREE IGNORE_TRAILER_CONDITION VOD_WITH_CREDIT VOD expected [true] but found [false]"
+"TS_PLAYER_193 ","Kiểm tra chọn button Xem ngay trên popup next movie.Trường hợp VOD tiếp theo là VOD xem ngay không qua detail (Thiếu nhi, Thiếu nhi, thể thao)","skipped",""
+"TS_PLAYER_194 ","Kiểm tra chọn button Xem ngay trên popup next movie. Trường hợp VOD được next yêu cầu mua gói, không có preview","failed","----DATA ISSUE ----Not found VOD required RANDOM FREE IGNORE_TRAILER_CONDITION VOD_WITH_CREDIT NEXT_VOD_WITH_TRAILER VOD expected [true] but found [false]"
+"TS_PLAYER_195 ","Kiểm tra chọn button Phát trailer trên popup next movie.","skipped","DATA ISSUE"
+"TS_PLAYER_198 ","Kiểm tra hiển thị icon Báo cáo khi chọn play VOD yêu cầu đăng nhập - Trường hợp chưa đăng nhập tài khoản","",""
 "TS_PLAYER_199 ","Kiểm tra hiển thị icon Báo cáo khi chọn play VOD yêu cầu đăng nhập - Trường hợp đã đăng nhập tài khoản fpt play","passed",""
-"TS_PLAYER_202 ","Kiểm tra màn hình Báo cáo cho VOD","failed","INFO BLOCK CATEGORY: Tạo topic PL mới, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Madame Web of Block: Tạo topic PL mới
-Check [Menu Screen Report in Right Panel] present
-"">>>> Check [Menu Screen Report in Right Panel] present actual: false ,expect: true
-Check [Title Sort in Right Panel] has text: [Bạn đang gặp sự cố gì?], actual Text: Thông báo
-"">>>> Check [Title Sort in Right Panel] has text: [Bạn đang gặp sự cố gì?], actual Text: Thông báo actual: Thông báo ,expect: Bạn đang gặp sự cố gì?
-Element Get list of menu [Menu Screen Report in Right Panel] not null
-"">>>> Element Get list of menu [Menu Screen Report in Right Panel] not null actual: false ,expect: true"
-"TS_PLAYER_205 ","Kiểm tra nhấn chọn nội dung Báo cáo","failed","INFO BLOCK CATEGORY: Tạo topic PL mới, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Madame Web of Block: Tạo topic PL mới
-Element Get list of menu [Menu Screen Report in Right Panel] not null
-"">>>> Element Get list of menu [Menu Screen Report in Right Panel] not null actual: false ,expect: true"
-"TS_PLAYER_207 ","Kiểm tra gửi nội dung Báo cáo cho VOD","failed","INFO BLOCK CATEGORY: Tạo topic PL mới, select block condition: RANDOM
-INFO: Selected Item Info Selected Item: Madame Web of Block: Tạo topic PL mới
-Element Get list of menu [Menu Screen Report in Right Panel] not null
-"">>>> Element Get list of menu [Menu Screen Report in Right Panel] not null actual: false ,expect: true"
+"TS_PLAYER_082","Kiểm tra hiển thị icon Báo cáo khi chọn play VOD tính phí - Trường hợp đang đăng nhập tài khoản lite","passed",""
+"TS_PLAYER_202 ","Kiểm tra màn hình Báo cáo cho VOD","passed",""
+"TS_PLAYER_205 ","Kiểm tra nhấn chọn nội dung Báo cáo","passed",""
+"TS_PLAYER_207 ","Kiểm tra gửi nội dung Báo cáo cho VOD","passed",""
+"TS_PLAYER_221 ","Tua không có thumnail - Kiểm tra nhấn button Left thực hiện tua lùi, khi VOD đang pause và không hiện player","passed",""
+"TS_PLAYER_222 ","Kiểm tra nhấn số tập hợp lệ tại VOD phim bộ. Trường hợp tập chọn đã có bookmark","passed",""
