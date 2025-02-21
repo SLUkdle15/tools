@@ -6,27 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0d396cdd-75dd-4900-9ef5-ed5b3545f7e6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_AR-WC.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_Account.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_DangXem.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_DetailVOD.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_Home.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_Login.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_Multiprofile.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_Player.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_Playlist.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_Preview5p.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_Search.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_SuKien.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_TheLoai.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_TheThao.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_TheoDoi.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_Timeshift-Catchup.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_Timeshift-Seek.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Report-92/Testcase_TruyenHinh.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/v.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv/v2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tokens/StoredCredential" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CSVResultType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CSVResultType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/DriveQuickstart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/DriveQuickstart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ExcelResultType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ExcelResultType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ResultTypeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ResultTypeConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SheetUpdateActionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SheetUpdateActionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TestResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TestResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tokens/StoredCredential" beforeDir="false" afterPath="$PROJECT_DIR$/tokens/StoredCredential" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +151,7 @@
       <workItem from="1738739650180" duration="187000" />
       <workItem from="1738739876182" duration="3000" />
       <workItem from="1738739996181" duration="13000" />
-      <workItem from="1740036960593" duration="2341000" />
+      <workItem from="1740036960593" duration="7804000" />
     </task>
     <servers />
   </component>

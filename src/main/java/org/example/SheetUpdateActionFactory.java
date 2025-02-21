@@ -36,10 +36,9 @@ public class SheetUpdateActionFactory {
             Iterable<CSVRecord> records = csvFormat.parse(reader);
             for (CSVRecord record : records) {
                 String id = record.get(0);
-                String name = record.get(1);
                 String result = record.get(2);
                 String notes = record.get(3);
-                list.add(new TestResult(id, name, result, notes));
+                list.add(new TestResult(id, result, notes));
             }
             return list;
         } catch (IOException e) {

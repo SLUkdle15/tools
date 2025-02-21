@@ -221,12 +221,10 @@ public class DriveQuickstart {
                 for (int j = 0; j < row.size(); j++) {
                     //trim string
                     String column = row.get(j).toString().trim();
-                    if (column.equals("Result")) {
-                        resultColumn = j;
-                    } else if (column.equals("TS_ID")) {
-                        tsIdColumn = j;
-                    } else if (column.equals("Note")) {
-                        noteColumn = j;
+                    switch (column) {
+                        case "Result" -> resultColumn = j;
+                        case "TS_ID" -> tsIdColumn = j;
+                        case "Note" -> noteColumn = j;
                     }
                 }
                 break;
@@ -259,7 +257,7 @@ public class DriveQuickstart {
                     String notes = testResults.get(testId).getNote();
 
                     ArrayList<Object> changes = new ArrayList<>();
-                    changes.add(resultType.toString());
+                    changes.add(resultType.getPresentation());
                     for (int j = resultColumn + 1; j <= noteColumn - 1; j++) {
                         changes.add(Data.NULL_STRING);
                     }
