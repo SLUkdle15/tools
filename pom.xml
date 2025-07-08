@@ -6,7 +6,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>tool</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <packaging>jar</packaging>
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

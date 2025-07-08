@@ -57,9 +57,10 @@ public class FileNameMapping {
             case "Testcase_TheoDoi.csv" -> {
                 return "Testcase_TheoDoi";
             }
-            default -> {
-                throw new IllegalArgumentException("Invalid file name");
+            case "Testcase_Setting.csv" -> {
+                return "Testcase_Setting";
             }
+            default -> throw new IllegalArgumentException("Invalid file name");
         }
     }
 }
