@@ -37,7 +37,11 @@ public class SheetUpdateActionFactory {
             for (CSVRecord record : records) {
                 String id = record.get(0);
                 String result = record.get(2);
-                String notes = record.get(3);
+                String notes = null; // optonal
+                try {
+                    notes = record.get(3);
+                } catch (Exception ignored) {
+                }
                 list.add(new TestResult(id, result, notes));
             }
             return list;
@@ -62,7 +66,7 @@ public class SheetUpdateActionFactory {
                        }
                     });
             return list;
-        } catch (IOException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
