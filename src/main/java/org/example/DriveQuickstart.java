@@ -257,11 +257,11 @@ public class DriveQuickstart {
                     String notes = testResults.get(testId).getNote();
 
                     ArrayList<Object> changes = new ArrayList<>();
-                    changes.add(resultType.getPresentation());
+                    changes.add(resultType.getPresentation()); // update result
                     for (int j = resultColumn + 1; j <= noteColumn - 1; j++) {
                         changes.add(Data.NULL_STRING);
                     }
-                    changes.add(notes);
+                    changes.add(notes); //update notes
                     updatedValues.add(changes);
                 } else {
                     updatedValues.add(new ArrayList<>()); //skip this row
